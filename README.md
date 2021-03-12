@@ -7,7 +7,7 @@ Built using Gatsby, and deployed at [rmetcalf.rocks](https://rmetcalf.rocks/)
 **To run:**
 
 - runs using node 15
-- be sure to have gatsby-cli installed globally (`npm install -g gatsby cli`)
+- be sure to have gatsby-cli installed globally: `npm install -g gatsby-cli`
 
 ```shell
 npm i
