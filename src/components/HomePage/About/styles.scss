@@ -1,0 +1,29 @@
+@import 'src/global.scss';
+
+.about {
+    display: grid;
+    margin-top: 120px;
+    justify-content: center;
+
+    .about-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1100px;
+        grid-gap: 60px;
+
+        .about-header {
+            text-align: center;
+        }
+
+        .about-left {
+            justify-self: end;
+        }
+
+        .about-right {
+            margin-top: 80px;
+            .about-paragraph {
+                text-align: right;
+            }
+        }
+    }
+}

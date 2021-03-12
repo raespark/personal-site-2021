@@ -1,0 +1,29 @@
+$brand1-dark: #ffa5a5;
+$brand1-light: #ffd9d9;
+$brand2-dark: #a5dafb;
+$brand2-light: #dcf3ff;
+$highlight: #ffeebc;
+$text-dark: #434343;
+$text-light: #a7a7a9;
+
+$body-fonts: 'Open Sans', 'Segoe UI', sans-serif;
+$accent-fonts: 'Montserrat', 'Segoe UI', sans-serif;
+
+$header-height: 75px;
+
+body {
+    font-family: $body-fonts;
+    color: $text-dark;
+    font-weight: 400;
+    p {
+        color: $text-light;
+    }
+}
+
+.emphasis {
+    color: $brand1-dark;
+}
+
+.text-center {
+    text-align: center;
+}
