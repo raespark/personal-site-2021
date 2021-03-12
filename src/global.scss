@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $brand1-dark: #ffa5a5;
 $brand1-light: #ffd9d9;
 $brand2-dark: #a5dafb;
@@ -14,7 +16,7 @@ $max-width: 1400px;
 $body-fonts: 'Open Sans', 'Segoe UI', sans-serif;
 $accent-fonts: 'Montserrat', 'Segoe UI', sans-serif;
 
-$header-height: 75px;
+$header-height: 55px;
 
 $lg-screen-min: 1020px;
 $md-screen-min: 700px;
@@ -27,7 +29,12 @@ body {
     font-weight: 400;
     p {
         color: $text-light;
-        font-size: 0.9rem;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
 

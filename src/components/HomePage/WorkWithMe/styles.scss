@@ -1,0 +1,57 @@
+@import 'src/global.scss';
+
+.work-with-me {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 180px;
+    padding: 0 $desktop-side-padding;
+
+    .work-with-me-background {
+        display: grid;
+        align-items: center;
+        background-color: rgba($text-light, 0.15);
+        grid-template-columns: min-content min-content;
+        grid-gap: 20px;
+        padding: 20px 50px;
+        border-radius: 10px;
+
+        .work-with-me-text {
+            display: grid;
+            margin-bottom: 0;
+            text-align: end;
+            white-space: nowrap;
+            font-family: $accent-fonts;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .contact-button {
+            background-color: $brand2-dark;
+            border-color: transparent;
+            width: min-content;
+            padding: 10px;
+            border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $brand1-light;
+            }
+
+            .contact-link {
+                display: grid;
+                align-items: center;
+                grid-template-columns: min-content min-content;
+
+                .reach-out-text {
+                    font-weight: 800;
+                    color: white;
+                }
+
+                .reach-out-arrow {
+                    stroke: white;
+                }
+            }
+        }
+    }
+}

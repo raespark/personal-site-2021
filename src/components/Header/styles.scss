@@ -11,7 +11,7 @@
 
 .header {
     width: 100vw;
-    position: absolute;
+    position: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr min-content;
     grid-gap: 20px;
@@ -22,7 +22,6 @@
 
     &.full-width {
         padding: 0 40px;
-        position: fixed;
         background-color: rgba($brand2-light, 0.85);
 
         .header-menu {
@@ -57,7 +56,6 @@
         grid-gap: 20px;
 
         .nav-link {
-            text-decoration: none;
             font-weight: 600;
             align-items: center;
             display: grid;

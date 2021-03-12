@@ -36,6 +36,7 @@ const Header: React.FC<HeaderProps> = ({
     useEffect(() => {
         if (homePage) {
             window.onscroll = handleScroll;
+            handleScroll();
         }
     }, []);
 
