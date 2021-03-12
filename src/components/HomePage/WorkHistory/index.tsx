@@ -5,7 +5,7 @@ import './styles.scss';
 const WorkHistory: React.FC = () => {
     return (
         <div className="work-history-container">
-            <h2 className="work-history-title">Work History</h2>
+            <h2 className="work-history-title">Whave have I done?</h2>
             <div className="work-history">
                 <div className="accent-circle-left" />
                 <div className="accent-circle-right" />
