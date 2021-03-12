@@ -6,11 +6,12 @@
     background-color: $brand2-light;
     margin-bottom: 100px;
     display: grid;
-    justify-content: center;
 
     .hero-container {
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 2fr 1fr;
+        max-width: 1400px;
+        justify-self: center;
         grid-gap: 40px;
 
         .hero-text {
