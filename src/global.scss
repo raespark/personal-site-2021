@@ -2,7 +2,7 @@ $brand1-dark: #ffa5a5;
 $brand1-light: #ffd9d9;
 $brand2-dark: #a5dafb;
 $brand2-light: #dcf3ff;
-$highlight: #ffeebc;
+$brand-accent: #ffeebc;
 $text-dark: #434343;
 $text-light: #a7a7a9;
 
@@ -26,4 +26,8 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+hr {
+    border-top: 1px solid $text-light;
 }

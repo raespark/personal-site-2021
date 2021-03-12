@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rmetcalf-portfolio-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A site to house general information and skillset of software developer Rachael Metcalf",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rachael Metcalf <rmetcalf.codes@gmail.com",
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^3.0.1",

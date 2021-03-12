@@ -5,6 +5,31 @@ module.exports = {
         author: `@raespark`,
     },
     plugins: [
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-image`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `rmetcalf-website`,
+                short_name: `rmetcalf`,
+                start_url: `/`,
+                background_color: `#FFFFFF`,
+                theme_color: `#FFA5A5`,
+                display: `standalone`,
+                icon: `src/images/face-icon.png`, // This path is relative to the root of the site.
+            },
+        },
+        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/src/images`,
+            },
+        },
+        `gatsby-plugin-gatsby-cloud`,
         {
             resolve: `gatsby-plugin-webfonts`,
             options: {
@@ -22,31 +47,6 @@ module.exports = {
                 },
             },
         },
-        `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-image`,
-        `gatsby-plugin-sass`,
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`,
-            },
-        },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
-        {
-            resolve: `gatsby-plugin-manifest`,
-            options: {
-                name: `rmetcalf-website`,
-                short_name: `rmetcalf`,
-                start_url: `/`,
-                background_color: `#FFFFFF`,
-                theme_color: `#FFA5A5`,
-                display: `minimal-ui`,
-                icon: `src/images/face-icon.png`, // This path is relative to the root of the site.
-            },
-        },
-        `gatsby-plugin-gatsby-cloud`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

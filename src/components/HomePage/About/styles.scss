@@ -3,12 +3,14 @@
 .about {
     display: grid;
     margin-top: 120px;
+    margin-bottom: 200px;
     justify-content: center;
 
     .about-columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 1100px;
+        max-width: 1300px;
+        padding: 0 80px;
         grid-gap: 60px;
 
         .about-header {

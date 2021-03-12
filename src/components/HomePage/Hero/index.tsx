@@ -3,7 +3,7 @@ import React from 'react';
 
 import './styles.scss';
 
-const HomePageContents: React.FC = () => {
+const Hero: React.FC = () => {
     return (
         <div className="hero">
             <div className="hero-container">
@@ -28,7 +28,7 @@ const HomePageContents: React.FC = () => {
                 <div className="hero-image-container">
                     <StaticImage
                         className="hero-image"
-                        src="../../images/self-portrait-cropped.png"
+                        src="self-portrait-cropped.png"
                         alt="A stylized drawing of me, Rachael Metcalf"
                         placeholder="blurred"
                         quality={95}
@@ -40,4 +40,4 @@ const HomePageContents: React.FC = () => {
     );
 };
 
-export default HomePageContents;
+export default Hero;

@@ -6,11 +6,13 @@ Built using Gatsby, and deployed at [rmetcalf.rocks](https://rmetcalf.rocks/)
 
 **To run:**
 
-    ```shell
-    gatsby develop
-    ```
+-runs using node 15
+-be sure to have gatsby-cli installed globally (`npm install -g gatsby cli`)
 
-**_From Gatsby docs: _**
+    npm i
+    gatsby develop
+
+<h4>From Gatsby docs:</h4>
 
 1.  **Open the source code and start editing!**
 

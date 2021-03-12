@@ -1,0 +1,67 @@
+@import 'src/global.scss';
+
+.work-history {
+    width: 100vw;
+    background-color: $brand1-light;
+    padding: 60px 80px 80px;
+    display: grid;
+    justify-content: center;
+    position: relative;
+
+    .accent-circle-right {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        top: -100px;
+        right: -250px;
+        background-color: $brand-accent;
+        border-radius: 50%;
+    }
+
+    .accent-circle-left {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        bottom: -175px;
+        left: -150px;
+        background-color: $brand-accent;
+        border-radius: 50%;
+    }
+
+    .work-history-title {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: $accent-fonts;
+    }
+
+    .work-history-hr {
+        width: 40%;
+        justify-self: center;
+        margin-bottom: 40px;
+        border-top-color: $brand1-dark;
+        background: $brand1-dark;
+    }
+
+    .work-history-row {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
+
+        .job {
+            justify-self: center;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            z-index: 1;
+            max-width: 450px;
+
+            .job-title {
+                text-align: center;
+            }
+            .job-years {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.scss';
 
-const HomePageContents: React.FC = () => {
+const About: React.FC = () => {
     return (
         <div className="about">
             <div className="about-columns">
@@ -38,4 +38,4 @@ const HomePageContents: React.FC = () => {
     );
 };
 
-export default HomePageContents;
+export default About;
