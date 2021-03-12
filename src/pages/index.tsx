@@ -5,13 +5,13 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HomePageContents from '../components/HomePage';
 
+import Header, { NavSelected } from '../components/header';
 import '../global.scss';
-import Header from '../components/header';
 
 const HomePage: React.FC = () => (
     <Layout>
         <SEO title="Rachael Metcalf - Software Engineer" />
-        <Header />
+        <Header selected={NavSelected.about} homePage />
         <HomePageContents />
     </Layout>
 );

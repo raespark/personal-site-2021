@@ -13,9 +13,22 @@
     width: 100vw;
     position: absolute;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px $desktop-side-padding;
+    grid-template-columns: 1fr 1fr min-content;
+    grid-gap: 20px;
+    padding: 30px $desktop-side-padding;
+    background-color: $brand2-light;
     z-index: 999;
+    transition: padding ease 0.1s;
+
+    &.full-width {
+        padding: 0 40px;
+        position: fixed;
+        background-color: rgba($brand2-light, 0.85);
+
+        .header-menu {
+            padding: 10px 0;
+        }
+    }
 
     .header-menu {
         justify-self: start;
@@ -24,6 +37,7 @@
         grid-template-columns: min-content 1fr;
         grid-gap: 20px;
         cursor: pointer;
+        padding: unset;
 
         .menu-icon {
             stroke: $text-dark;
@@ -45,26 +59,55 @@
         .nav-link {
             text-decoration: none;
             font-weight: 600;
+            align-items: center;
+            display: grid;
             font-family: $accent-fonts;
             color: $text-dark;
             text-align: center;
             font-size: 1.05rem;
-            padding: 0 8px;
+            padding: 15px 8px;
             transition: border-bottom 0.07s;
             width: 100px;
 
+            $selected-underline: 3px solid $brand2-dark;
+
             &:hover {
-                border-bottom: 2px solid $text-dark;
+                border-bottom: $selected-underline;
+                border-bottom-color: $brand1-dark;
                 cursor: pointer;
+                color: $brand1-dark;
             }
 
             &.selected {
+                border-bottom: $selected-underline;
+
                 &:hover {
-                    font-weight: 600;
                     cursor: default;
+                    color: unset;
                 }
-                border-bottom: 2px solid $text-dark;
             }
+        }
+    }
+
+    .header-external-links {
+        display: grid;
+        grid-template-columns: min-content min-content;
+        grid-gap: 10px;
+        align-items: center;
+
+        a {
+            display: grid;
+            padding: 5px;
+            background-color: $brand2-dark;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: $brand1-dark;
+            }
+        }
+
+        .external-link-icon {
+            stroke: white;
         }
     }
 }
