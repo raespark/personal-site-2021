@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                         className="hero-image"
                         src="self-portrait-cropped.png"
                         alt="A stylized drawing of me, Rachael Metcalf"
-                        placeholder="blurred"
+                        placeholder="tracedSVG"
                         quality={95}
                         formats={['auto', 'webp', 'avif']}
                     />

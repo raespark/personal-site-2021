@@ -9,16 +9,21 @@
     .about-columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 1300px;
+        max-width: 1400px;
         padding: 0 80px;
         grid-gap: 60px;
 
         .about-header {
             text-align: center;
+            font-family: $accent-fonts;
         }
 
         .about-left {
             justify-self: end;
+        }
+
+        .about-paragraph {
+            font-size: 0.9rem;
         }
 
         .about-right {
