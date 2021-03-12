@@ -9,8 +9,8 @@
     .about-columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 1400px;
-        padding: 0 80px;
+        max-width: $max-width;
+        padding: 0 $desktop-side-padding;
         grid-gap: 60px;
 
         .about-header {

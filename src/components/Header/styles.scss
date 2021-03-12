@@ -14,7 +14,7 @@
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 50px 80px;
+    padding: 50px $desktop-side-padding;
     z-index: 999;
 
     .header-menu {
