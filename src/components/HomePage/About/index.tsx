@@ -7,7 +7,7 @@ const About: React.FC = () => {
         <div className="about">
             <div className="about-columns">
                 <div className="about-left">
-                    <h3 className="about-header">Who am I?</h3>
+                    <h3 className="about-header text-center">Who am I?</h3>
                     <p className="about-paragraph">
                         Hey! I'm Rachael, or Rae! I'm a programmer that also
                         dabbles in other hobbies like drawing and crafting and
@@ -24,7 +24,7 @@ const About: React.FC = () => {
                     </p>
                 </div>
                 <div className="about-right">
-                    <h3 className="about-header">What am I?</h3>
+                    <h3 className="about-header text-center">What am I?</h3>
                     <p className="about-paragraph">
                         I've been a professional software engineer since
                         graduating from the{' '}

@@ -13,13 +13,26 @@ const Header: React.FC = () => {
                 <div className="header-brand">Rachael Metcalf</div>
             </div>
             <div className="header-navigation">
-                <Link to="/" className={classnames('nav-link', 'selected')}>
+                <Link
+                    to="/"
+                    className={classnames(
+                        'nav-link',
+                        'text-center',
+                        'selected'
+                    )}
+                >
                     About
                 </Link>
-                <Link to="/projects" className={classnames('nav-link')}>
+                <Link
+                    to="/projects"
+                    className={classnames('nav-link', 'text-center')}
+                >
                     Projects
                 </Link>
-                <Link to="/contact" className={classnames('nav-link')}>
+                <Link
+                    to="/contact"
+                    className={classnames('nav-link', 'text-center')}
+                >
                     Contact
                 </Link>
             </div>

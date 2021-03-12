@@ -1,73 +1,86 @@
 @import 'src/global.scss';
 
-.work-history {
-    width: 100vw;
-    background-color: $brand1-light;
-    padding: 60px 80px 80px;
-    display: grid;
-    justify-content: center;
-    position: relative;
+.work-history-container {
     margin-bottom: 100px;
-
-    .accent-circle-right {
-        position: absolute;
-        height: 500px;
-        width: 250px;
-        top: -100px;
-        right: 0px;
-        background-color: $brand-accent;
-        border-top-left-radius: 250px;
-        border-bottom-left-radius: 250px;
-        border-right: 0;
-    }
-
-    .accent-circle-left {
-        position: absolute;
-        height: 300px;
-        width: 150px;
-        bottom: -100px;
-        left: 0;
-        background-color: $brand-accent;
-        border-top-right-radius: 150px;
-        border-bottom-right-radius: 150px;
-    }
 
     .work-history-title {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         font-family: $accent-fonts;
+        margin-bottom: 20px;
+        z-index: 1;
     }
 
-    .work-history-hr {
-        width: 30%;
-        justify-self: center;
-        margin-bottom: 40px;
-        border-top-color: $brand1-dark;
-        background: $brand1-dark;
-    }
-
-    .work-history-row {
+    .work-history {
+        width: 100vw;
+        background-color: $brand1-light;
+        padding: 40px 80px 120px;
         display: grid;
         justify-content: center;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 60px;
+        position: relative;
 
-        .job {
+        .accent-circle-left {
+            position: absolute;
+            height: 500px;
+            width: 250px;
+            top: -100px;
+            left: 0px;
+            background-color: $brand-accent;
+            border-top-right-radius: 250px;
+            border-bottom-right-radius: 250px;
+            border-right: 0;
+        }
+
+        .accent-circle-right {
+            position: absolute;
+            height: 300px;
+            width: 150px;
+            bottom: -100px;
+            right: 0;
+            background-color: $brand-accent;
+            border-top-left-radius: 150px;
+            border-bottom-left-radius: 150px;
+        }
+
+        .work-history-hr {
+            width: 30px;
+            margin: 10px;
             justify-self: center;
-            padding: 50px;
-            background-color: white;
-            border-radius: 8px;
-            z-index: 1;
-            max-width: 450px;
-            box-shadow: $shadow;
+        }
 
-            .job-title {
-                text-align: center;
-                font-size: 1.25rem;
-                margin-bottom: 15px;
-            }
-            .job-years {
-                text-align: center;
+        .work-history-row {
+            $column-gap: 40px;
+            $column-width: calc(50% - #{$column-gap});
+
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, minmax($column-width, 480px));
+            grid-gap: $column-gap;
+            margin-top: 40px;
+
+            .job {
+                justify-self: center;
+                padding: 50px;
+                background-color: white;
+                border-radius: 8px;
+                z-index: 1;
+                box-shadow: $shadow;
+
+                .job-title {
+                    display: grid;
+                    justify-content: center;
+                    text-align: center;
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                .job-years {
+                    text-align: center;
+                }
+
+                .job-information {
+                    text-align: justify;
+                    font-size: 16px;
+                }
             }
         }
     }

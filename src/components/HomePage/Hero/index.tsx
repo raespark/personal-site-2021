@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         <div className="hero">
             <div className="hero-container">
                 <div className="hero-text">
-                    <h1 className="hero-quote">
+                    <h1 className="hero-quote text-center">
                         I want to build{' '}
                         <span className="emphasis">great experiences</span> for
                         your users
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
                         <h3 className="hero-description-text">
                             Rachael Metcalf
                         </h3>
-                        <div className="text-center">—</div>
+                        <hr className="hero-hr" />
                         <h3 className="hero-description-text subtitle">
                             Professional UI/Full Stack
                             <br />

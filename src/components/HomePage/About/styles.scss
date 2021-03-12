@@ -2,21 +2,20 @@
 
 .about {
     padding: 0 $desktop-side-padding;
-    margin: 100px 0 180px;
+    margin: 120px 0 160px;
     display: grid;
     justify-content: center;
 
-    $column-gap: 60px;
-    $column-width: calc(50% - #{$column-gap});
-
     .about-columns {
+        $column-gap: 60px;
+        $column-width: calc(50% - #{$column-gap});
+
         display: grid;
         grid-template-columns: repeat(2, minmax($column-width, 480px));
         max-width: $max-width;
         grid-gap: $column-gap;
 
         .about-header {
-            text-align: center;
             font-family: $accent-fonts;
         }
 

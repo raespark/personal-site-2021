@@ -29,25 +29,31 @@
 
         .hero-quote {
             color: black;
-            text-align: center;
             font-family: $accent-fonts;
-            font-size: 1.9rem;
+            font-size: 34px;
         }
 
         .hero-description {
             margin-top: 40px;
             padding: 0 30px;
             font-family: $accent-fonts;
+            display: grid;
 
             .hero-description-text {
                 text-align: center;
                 margin: 0;
                 font-weight: 400;
-                font-size: 1.25rem;
+                font-size: 22px;
+            }
+
+            .hero-hr {
+                width: 30px;
+                justify-self: center;
+                margin: 8px;
             }
 
             .subtitle {
-                font-size: 0.9rem;
+                font-size: 18px;
             }
         }
 
