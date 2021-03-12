@@ -13,7 +13,7 @@ const About: React.FC = () => {
                         dabbles in other hobbies like drawing and crafting and
                         sewing and cosplaying and writing and...wow I have too
                         many hobbies don't I? I'm a huge Nintendo nerd, and a
-                        natural born texan, currently residing in the beautiful{' '}
+                        natural born Texan, currently residing in the beautiful{' '}
                         <span className="emphasis">Austin, Texas</span>! I'm a
                         huge fan of pastel anything and also my current
                         obsession is cute pastel keyboards. You can also never

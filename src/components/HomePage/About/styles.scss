@@ -1,16 +1,19 @@
 @import 'src/global.scss';
 
 .about {
-    display: grid;
+    padding: 0 $desktop-side-padding;
     margin: 100px 0 180px;
+    display: grid;
     justify-content: center;
+
+    $column-gap: 60px;
+    $column-width: calc(50% - #{$column-gap});
 
     .about-columns {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax($column-width, 480px));
         max-width: $max-width;
-        padding: 0 $desktop-side-padding;
-        grid-gap: 100px;
+        grid-gap: $column-gap;
 
         .about-header {
             text-align: center;
@@ -19,12 +22,10 @@
 
         .about-left {
             justify-self: start;
-            max-width: 450px;
         }
 
         .about-right {
             justify-self: end;
-            max-width: 450px;
             margin-top: 80px;
             .about-paragraph {
                 text-align: right;
