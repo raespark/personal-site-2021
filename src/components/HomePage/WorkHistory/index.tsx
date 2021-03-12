@@ -12,7 +12,7 @@ const WorkHistory: React.FC = () => {
             <div className="work-history-row">
                 <div className="job">
                     <h3 className="job-title">Place I Worked • Title </h3>
-                    <h4 className="job-years">2020-2021</h4>
+                    <h4 className="job-years emphasis">2020-2021</h4>
                     <p className="job-information">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -22,7 +22,7 @@ const WorkHistory: React.FC = () => {
                 </div>
                 <div className="job">
                     <h3 className="job-title">Place I Worked • Title </h3>
-                    <h4 className="job-years">2017-2019</h4>
+                    <h4 className="job-years emphasis">2017-2019</h4>
                     <p className="job-information">
                         Viverra orci sagittis eu volutpat odio facilisis mauris
                         sit amet. Dictum sit amet justo donec enim diam
