@@ -3,4 +3,17 @@
 .homepage {
     justify-content: center;
     display: grid;
+
+    .final-cta {
+        width: 100vw;
+        padding: $section-margin-bottom;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color: $brand2-light;
+
+        .work-with-me {
+            margin-bottom: 0;
+        }
+    }
 }

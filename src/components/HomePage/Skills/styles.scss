@@ -1,7 +1,7 @@
 @import 'src/global.scss';
 
 .skills {
-    margin-bottom: $section-margin-bottom;
+    margin-bottom: $section-margin-bottom / 2;
     display: grid;
     justify-content: center;
 
@@ -53,7 +53,9 @@
                     .skill-icon {
                         height: 50px;
                         width: 50px;
-                        stroke: $brand-accent-dark;
+                        stroke: transparent;
+                        fill: $brand-accent-dark;
+                        stroke-width: 1;
                     }
                 }
 

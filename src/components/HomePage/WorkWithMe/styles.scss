@@ -10,7 +10,7 @@
     .work-with-me-background {
         display: grid;
         align-items: center;
-        background-color: rgba($text-light, 0.15);
+        background-color: $text-lighter;
         grid-template-columns: min-content min-content;
         grid-gap: 20px;
         padding: 20px 50px;
@@ -30,18 +30,36 @@
             background-color: $brand2-dark;
             border-color: transparent;
             width: min-content;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
 
             &:hover {
                 cursor: pointer;
                 background-color: $brand1-light;
+
+                $arrow-offset: 5px;
+
+                .reach-out-arrow {
+                    margin-top: -$arrow-offset;
+                    margin-bottom: $arrow-offset;
+                    margin-right: -$arrow-offset;
+                    margin-left: $arrow-offset;
+                }
+            }
+
+            &.inverse {
+                background-color: $brand1-dark;
+
+                &:hover {
+                    background-color: $brand2-dark;
+                }
             }
 
             .contact-link {
                 display: grid;
                 align-items: center;
                 grid-template-columns: min-content min-content;
+                grid-gap: 5px;
 
                 .reach-out-text {
                     font-weight: 800;
@@ -50,6 +68,7 @@
 
                 .reach-out-arrow {
                     stroke: white;
+                    transition: margin ease 0.075s;
                 }
             }
         }

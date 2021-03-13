@@ -1,10 +1,28 @@
 import React from 'react';
 import { HelpCircle } from 'react-feather';
 
+import {
+    SVGProps,
+    Communication,
+    CSS,
+    Git,
+    Java,
+    JavaScript,
+    Leadership,
+    Mentorship,
+    Mocha,
+    Node,
+    Python,
+    ReactIcon,
+    Redux,
+    TypeScript,
+} from '../../Icons';
+
 import './styles.scss';
 
 interface Skill {
     name: string;
+    icon: React.FC<SVGProps>;
 }
 
 interface SkillCategory {
@@ -16,29 +34,29 @@ const skillList: SkillCategory[] = [
     {
         name: 'Programming Languages',
         skills: [
-            { name: 'JavaScript' },
-            { name: 'TypeScript' },
-            { name: 'Java' },
-            { name: 'Python' },
+            { name: 'JavaScript', icon: JavaScript },
+            { name: 'Java', icon: Java },
+            { name: 'Python', icon: Python },
+            { name: 'TypeScript', icon: TypeScript },
         ],
     },
     {
         name: 'Tools and Frameworks',
         skills: [
-            { name: 'React' },
-            { name: 'Redux' },
-            { name: 'Node' },
-            { name: 'Git' },
-            { name: 'CSS' },
-            { name: 'Mocha' },
+            { name: 'React', icon: ReactIcon },
+            { name: 'Redux', icon: Redux },
+            { name: 'Node', icon: Node },
+            { name: 'Git', icon: Git },
+            { name: 'CSS', icon: CSS },
+            { name: 'Mocha', icon: Mocha },
         ],
     },
     {
         name: 'Soft Skills',
         skills: [
-            { name: 'Communication' },
-            { name: 'Mentorship' },
-            { name: 'Leadership' },
+            { name: 'Communication', icon: Communication },
+            { name: 'Mentorship', icon: Mentorship },
+            { name: 'Leadership', icon: Leadership },
         ],
     },
 ];
@@ -64,10 +82,9 @@ const Skills: React.FC = () => {
                                     className="skill"
                                 >
                                     <div className="skill-bubble">
-                                        <HelpCircle
-                                            className="skill-icon"
-                                            strokeWidth={1}
-                                        />
+                                        {skill.icon({
+                                            className: 'skill-icon',
+                                        })}
                                     </div>
                                     <div className="skill-name">
                                         {skill.name}

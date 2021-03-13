@@ -1,11 +1,11 @@
 @import 'src/global.scss';
 
 .footer {
-    margin-top: 80px;
+    margin-top: $section-margin-bottom;
     font-size: 12px;
     text-align: center;
     padding: 20px;
-    background-color: rgba($text-light, 0.1);
+    background-color: $text-lighter;
 
     a {
         color: #2ea9f5;

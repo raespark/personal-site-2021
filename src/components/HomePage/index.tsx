@@ -16,7 +16,9 @@ const HomePageContents: React.FC = () => {
             <WorkWithMe />
             <WorkHistory />
             <Skills />
-            <WorkWithMe text="Like what you see?" />
+            <div className="final-cta">
+                <WorkWithMe text="Like what you see?" inverse />
+            </div>
         </div>
     );
 };
