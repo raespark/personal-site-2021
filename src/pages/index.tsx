@@ -4,8 +4,8 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HomePageContents from '../components/HomePage';
-
 import Header, { NavSelected } from '../components/header';
+
 import '../global.scss';
 
 const HomePage: React.FC = () => (

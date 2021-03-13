@@ -64,3 +64,54 @@ h4,
 h5 {
     font-family: $accent-fonts;
 }
+
+.not-found-page {
+    width: 100vw;
+
+    .not-found-page-content {
+        display: grid;
+        justify-content: center;
+        margin-top: 100px;
+        background-color: $brand2-light;
+        padding: 80px 20px;
+        position: relative;
+
+        .not-found-title {
+            margin-bottom: 10px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .not-found-subtitle {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0;
+            z-index: 1;
+        }
+
+        .not-found-hr {
+            justify-self: center;
+            width: 50px;
+            margin: 40px 0;
+            z-index: 1;
+        }
+
+        .not-found-text {
+            margin-bottom: 60px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .back-home-button {
+            justify-self: center;
+            z-index: 1;
+        }
+    }
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
