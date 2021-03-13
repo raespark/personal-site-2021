@@ -26,6 +26,8 @@ $md-screen-min: 700px;
 $sm-screen-min: 350px;
 $xs-screen-min: 0px;
 
+$animation-time: 0.1s;
+
 body {
     font-family: $body-fonts;
     color: $text-dark;

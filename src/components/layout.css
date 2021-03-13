@@ -3,6 +3,7 @@ html {
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 body {
     margin: 0;

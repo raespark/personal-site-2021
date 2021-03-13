@@ -18,7 +18,7 @@
     padding: 30px $desktop-side-padding;
     background-color: $brand2-light;
     z-index: 999;
-    transition: padding ease 0.1s;
+    transition: padding ease $animation-time;
 
     &.full-width {
         padding: 0 40px;
