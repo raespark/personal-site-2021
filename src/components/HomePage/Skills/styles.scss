@@ -1,0 +1,66 @@
+@import 'src/global.scss';
+
+.skills {
+    margin-bottom: $section-margin-bottom;
+    display: grid;
+    justify-content: center;
+
+    .skills-title {
+        text-align: center;
+    }
+
+    .skill-hr {
+        width: 50px;
+        margin-bottom: 80px;
+        justify-self: center;
+        background-color: $brand2-dark;
+        border: 1px solid $brand2-dark;
+        border-radius: 2px;
+    }
+
+    .skill-category {
+        display: grid;
+        margin-bottom: 120px;
+
+        .skill-category-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .skill-category-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 100px);
+            grid-row-gap: 80px;
+            grid-column-gap: 120px;
+            justify-content: center;
+            max-width: 900px;
+
+            .skill {
+                display: grid;
+                justify-content: center;
+
+                .skill-bubble {
+                    height: 75px;
+                    width: 75px;
+                    border-radius: 50%;
+                    background-color: $brand-accent;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+
+                    .skill-icon {
+                        height: 50px;
+                        width: 50px;
+                        stroke: $brand-accent-dark;
+                    }
+                }
+
+                .skill-name {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

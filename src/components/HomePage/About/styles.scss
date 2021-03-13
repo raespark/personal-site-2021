@@ -2,7 +2,7 @@
 
 .about {
     padding: 0 $desktop-side-padding;
-    margin: 100px 0;
+    margin: 40px 0 $section-margin-bottom;
     display: grid;
     justify-content: center;
 
@@ -14,10 +14,6 @@
         grid-template-columns: repeat(2, minmax($column-width, 480px));
         max-width: $max-width;
         grid-gap: $column-gap;
-
-        .about-header {
-            font-family: $accent-fonts;
-        }
 
         .about-left {
             justify-self: start;

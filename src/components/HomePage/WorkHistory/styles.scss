@@ -1,13 +1,12 @@
 @import 'src/global.scss';
 
 .work-history-container {
-    margin-bottom: 100px;
+    margin-bottom: $section-margin-bottom;
 
     .work-history-title {
         text-align: center;
         margin-bottom: 15px;
-        font-family: $accent-fonts;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         z-index: 1;
     }
 

@@ -1,5 +1,13 @@
 import React from 'react';
 
-const Contact: React.FC = () => <h1>CONTACT</h1>;
+import Header, { NavSelected } from '../components/header';
 
-export default Contact;
+const Projects: React.FC = () => {
+    return (
+        <>
+            <Header selected={NavSelected.contact} />
+        </>
+    );
+};
+
+export default Projects;

@@ -4,6 +4,8 @@ import Hero from './Hero';
 import About from './About';
 import WorkHistory from './WorkHistory';
 import WorkWithMe from './WorkWithMe';
+import Skills from './Skills';
+
 import './styles.scss';
 
 const HomePageContents: React.FC = () => {
@@ -13,6 +15,8 @@ const HomePageContents: React.FC = () => {
             <About />
             <WorkWithMe />
             <WorkHistory />
+            <Skills />
+            <WorkWithMe text="Like what you see?" />
         </div>
     );
 };
