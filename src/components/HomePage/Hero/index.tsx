@@ -1,5 +1,5 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import './styles.scss';
 
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                     <StaticImage
                         className="hero-image"
                         src="self-portrait-cropped.png"
-                        alt="A stylized drawing of me, Rachael Metcalf"
+                        alt="A stylized drawing of me, Rachael Metcalf, at a computer"
                         placeholder="tracedSVG"
                         quality={95}
                         formats={['auto', 'webp', 'avif']}

@@ -10,7 +10,7 @@ $text-dark: #434343;
 $text-light: #a7a7a9;
 $text-lighter: #f2f2f2;
 
-$shadow: 0px 8px 8px rgba($text-dark, 0.1);
+$shadow: 0 8px 8px rgba($text-dark, 0.1);
 
 $desktop-side-padding: 80px;
 $max-width: 1400px;
@@ -27,6 +27,7 @@ $sm-screen-min: 350px;
 $xs-screen-min: 0px;
 
 $animation-time: 0.1s;
+$slow-animation-time: 0.3s;
 
 body {
     font-family: $body-fonts;

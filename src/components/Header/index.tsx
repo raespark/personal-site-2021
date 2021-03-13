@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { Menu, GitHub, Linkedin } from 'react-feather';
 import { Link } from 'gatsby';
 
+import SideMenu from '../Menu';
 import './styles.scss';
 
 export enum NavSelected {
@@ -21,6 +22,7 @@ const Header: React.FC<HeaderProps> = ({
     homePage = false,
 }: HeaderProps) => {
     const [topOfPage, setTopOfPage] = useState(homePage);
+    const [showMenu, setShowMenu] = useState(false);
 
     const handleScroll = () => {
         if (
@@ -40,55 +42,66 @@ const Header: React.FC<HeaderProps> = ({
         }
     }, []);
 
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
     return (
-        <div className={classnames('header', { 'full-width': !topOfPage })}>
-            <div className="header-menu">
-                <Menu className="menu-icon" strokeWidth={2.5} />
-                <div className="header-brand">Rachael Metcalf</div>
+        <>
+            <div className={classnames('header', { 'full-width': !topOfPage })}>
+                <div className="header-menu">
+                    <Menu
+                        className="menu-icon"
+                        strokeWidth={2.5}
+                        onClick={toggleMenu}
+                    />
+                    <h2 className="header-brand">Rachael Metcalf</h2>
+                </div>
+                <div className="header-navigation">
+                    <Link
+                        to="/"
+                        className={classnames('nav-link', 'text-center', {
+                            selected: selected === NavSelected.about,
+                        })}
+                    >
+                        About
+                    </Link>
+                    <Link
+                        to="/projects"
+                        className={classnames('nav-link', 'text-center', {
+                            selected: selected === NavSelected.projects,
+                        })}
+                    >
+                        Projects
+                    </Link>
+                    <Link
+                        to="/contact"
+                        className={classnames('nav-link', 'text-center', {
+                            selected: selected === NavSelected.contact,
+                        })}
+                    >
+                        Contact
+                    </Link>
+                </div>
+                <div className="header-external-links">
+                    <a
+                        href="https://github.com/raespark"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <GitHub className="external-link-icon" />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/rachael-metcalf/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Linkedin className="external-link-icon" />
+                    </a>
+                </div>
             </div>
-            <div className="header-navigation">
-                <Link
-                    to="/"
-                    className={classnames('nav-link', 'text-center', {
-                        selected: selected === NavSelected.about,
-                    })}
-                >
-                    About
-                </Link>
-                <Link
-                    to="/projects"
-                    className={classnames('nav-link', 'text-center', {
-                        selected: selected === NavSelected.projects,
-                    })}
-                >
-                    Projects
-                </Link>
-                <Link
-                    to="/contact"
-                    className={classnames('nav-link', 'text-center', {
-                        selected: selected === NavSelected.contact,
-                    })}
-                >
-                    Contact
-                </Link>
-            </div>
-            <div className="header-external-links">
-                <a
-                    href="https://github.com/raespark"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <GitHub className="external-link-icon" />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/rachael-metcalf/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Linkedin className="external-link-icon" />
-                </a>
-            </div>
-        </div>
+            <SideMenu showMenu={showMenu} onHide={toggleMenu} />
+        </>
     );
 };
 

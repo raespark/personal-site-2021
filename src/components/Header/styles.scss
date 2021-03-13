@@ -1,24 +1,19 @@
 @import 'src/global.scss';
 
-@keyframes underline {
-    from {
-        padding: 0;
-    }
-    to {
-        padding: 0 8px;
-    }
-}
-
 .header {
     width: 100vw;
     position: fixed;
     display: grid;
-    grid-template-columns: 1fr 1fr min-content;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     padding: 30px $desktop-side-padding;
     background-color: $brand2-light;
-    z-index: 999;
+    z-index: 10;
     transition: padding ease $animation-time;
+
+    @media (min-width: $lg-screen-min) {
+        grid-template-columns: 1fr 1fr min-content;
+    }
 
     &.full-width {
         padding: 0 40px;
@@ -35,25 +30,40 @@
         display: grid;
         grid-template-columns: min-content 1fr;
         grid-gap: 20px;
-        cursor: pointer;
         padding: unset;
 
+        @media (min-width: $lg-screen-min) {
+            grid-template-columns: 1fr;
+        }
+
         .menu-icon {
+            cursor: pointer;
             stroke: $text-dark;
+
+            @media (min-width: $lg-screen-min) {
+                display: none;
+            }
         }
 
         .header-brand {
             font-weight: bold;
             font-family: $accent-fonts;
-            font-size: 1.25rem;
+            font-size: 22px;
+            color: $text-dark;
+            margin: 0;
+            cursor: default;
         }
     }
 
     .header-navigation {
         justify-self: end;
-        display: grid;
+        display: none;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+
+        @media (min-width: $lg-screen-min) {
+            display: grid;
+        }
 
         .nav-link {
             font-weight: 600;
@@ -64,25 +74,20 @@
             text-align: center;
             font-size: 1.05rem;
             padding: 15px 8px;
-            transition: border-bottom 0.07s;
+            transition: all 0.07s;
             width: 100px;
 
             $selected-underline: 3px solid $brand2-dark;
+
+            &.selected {
+                border-bottom: $selected-underline;
+            }
 
             &:hover {
                 border-bottom: $selected-underline;
                 border-bottom-color: $brand1-dark;
                 cursor: pointer;
                 color: $brand1-dark;
-            }
-
-            &.selected {
-                border-bottom: $selected-underline;
-
-                &:hover {
-                    cursor: default;
-                    color: unset;
-                }
             }
         }
     }
@@ -92,6 +97,11 @@
         grid-template-columns: min-content min-content;
         grid-gap: 10px;
         align-items: center;
+        justify-self: end;
+
+        @media (min-width: $lg-screen-min) {
+            justify-self: unset;
+        }
 
         a {
             display: grid;
