@@ -3,6 +3,7 @@ module.exports = {
         title: `Rachael Metcalf - Software Engineer`,
         description: `Professional UI/Front End/Full Stack Engineer since 2017. Passionate about delivering great User Experiences.`,
         author: `@raespark`,
+        image: '/images/preview-image',
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
