@@ -8,9 +8,9 @@ const ContactPage: React.FC = () => {
     return (
         <div className="contact-page">
             <div className="contact-page-contents">
-                <h2 className="contact-title">Send me an email!</h2>
+                <h2 className="contact-title text-center">Send me an email!</h2>
                 <hr className="contact-hr" />
-                <p className="contact-subtitle">
+                <p className="contact-subtitle text-center">
                     Send me a message, and I'll get back to you!
                     <br />
                     Or you can reach out to me directly at{' '}
@@ -22,6 +22,7 @@ const ContactPage: React.FC = () => {
                         name="contact"
                         method="POST"
                         data-netlify="true"
+                        action="/contact/success"
                     >
                         <div className="form-field">
                             <label className="form-label">
