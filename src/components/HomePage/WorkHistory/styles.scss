@@ -16,7 +16,6 @@
         display: grid;
         justify-content: center;
         position: relative;
-        z-index: -1;
 
         @media (min-width: $md-screen-min) {
             padding: 40px $tablet-side-padding 120px;
@@ -80,6 +79,7 @@
             grid-template-columns: 1fr;
             grid-gap: $column-gap;
             margin-top: 40px;
+            z-index: 1;
 
             @media (min-width: $lg-screen-min) {
                 grid-template-columns: repeat(2, minmax($column-width, 480px));
@@ -90,7 +90,6 @@
                 padding: 30px;
                 background-color: white;
                 border-radius: 8px;
-                z-index: 1;
                 box-shadow: $shadow;
 
                 @media (min-width: $md-screen-min) {

@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
                     minHeight: '100vh',
                 }}
             >
-                <main style={{ marginBottom: '20%' }}>{children}</main>
+                <main>{children}</main>
                 <Footer />
             </div>
         </>

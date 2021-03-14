@@ -21,13 +21,13 @@ const WorkHistory: React.FC = () => {
                             My first startup experience. At Nexus (formerly
                             Chrono.gg) I worked with a small elite team to build
                             out an entire new product from scratch that allowed
-                            content creators to create their own game stores,
-                            building to an average monthly user rate of almost
-                            64k, and both customer and creator NPS scores of
-                            over 50. From October 2020 to March 2021, GMV
+                            content creators to create their own game stores. We
+                            built to an average monthly user rate of almost 64k,
+                            and had both customer and creator NPS scores of over
+                            50, and from October 2020 to March 2021, GMV
                             increased by 200%. I worked on many parts of the
                             application and worked closely with both product and
-                            design to to quickly delivery and craft the best
+                            design to quickly deliver and craft the best
                             experience to meet the needs of our creator's and
                             their fan base.
                         </p>

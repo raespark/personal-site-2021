@@ -13,6 +13,17 @@ body {
     word-wrap: break-word;
     font-kerning: normal;
 }
+
+main {
+    margin-bottom: 200px;
+}
+
+@media (min-width: 700px) {
+    main {
+        margin-bottom: 270px;
+    }
+}
+
 article,
 aside,
 details,
