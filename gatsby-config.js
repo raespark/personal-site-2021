@@ -19,7 +19,7 @@ module.exports = {
                 background_color: `#FFFFFF`,
                 theme_color: `#FFA5A5`,
                 display: `standalone`,
-                icon: `src/static/images/face-icon.png`, // This path is relative to the root of the site.
+                icon: `static/images/face-icon.png`, // This path is relative to the root of the site.
             },
         },
         `gatsby-plugin-sass`,
@@ -27,7 +27,7 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/src/static/images`,
+                path: `${__dirname}/static/images`,
             },
         },
         `gatsby-plugin-gatsby-cloud`,
