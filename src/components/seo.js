@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, title }) {
 
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
-    const image = `rmetcalf.netlify.app/${site.siteMetadata?.image}`;
+    const image = `https://i.imgur.com/sl3mTcW.png`;
 
     return (
         <Helmet
