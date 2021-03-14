@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import { Menu, GitHub, Linkedin } from 'react-feather';
 import { Link } from 'gatsby';
+import { isDesktop } from 'react-device-detect';
 
 import SideMenu from '../Menu';
 import './styles.scss';
@@ -36,9 +37,13 @@ const Header: React.FC<HeaderProps> = ({
     };
 
     useEffect(() => {
-        if (homePage) {
+        // Due to the nature of how scroll events work on mobile
+        // I disable to scroll animation to optimize the mobile experience
+        if (homePage && isDesktop) {
             window.onscroll = handleScroll;
             handleScroll();
+        } else {
+            setTopOfPage(false);
         }
     }, []);
 
@@ -100,7 +105,11 @@ const Header: React.FC<HeaderProps> = ({
                     </a>
                 </div>
             </div>
-            <SideMenu showMenu={showMenu} onHide={toggleMenu} />
+            <SideMenu
+                showMenu={showMenu}
+                onHide={toggleMenu}
+                currentPage={selected}
+            />
         </>
     );
 };

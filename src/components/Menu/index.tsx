@@ -4,21 +4,23 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { X, Home, BookOpen, Mail, GitHub, Linkedin } from 'react-feather';
 import { Link } from 'gatsby';
 
+import { NavSelected } from '../Header';
 import './styles.scss';
 
 interface MenuProps {
     onHide: () => void;
     showMenu: boolean;
+    currentPage: NavSelected;
 }
 
 const SideMenu: React.FC<MenuProps> = ({
     onHide,
+    currentPage,
     showMenu = false,
 }: MenuProps) => {
     const [showBackdrop, setShowBackdrop] = useState(showMenu);
 
     useEffect(() => {
-        console.log('SHOW MENU');
         setShowBackdrop(showMenu);
     }, [showMenu]);
 
@@ -50,17 +52,38 @@ const SideMenu: React.FC<MenuProps> = ({
                     </div>
                     <hr className="menu-hr" />
                     <div className="menu-links">
-                        <Link to="/">
+                        <Link
+                            to="/"
+                            onClick={() => {
+                                if (currentPage === NavSelected.about) {
+                                    onHide();
+                                }
+                            }}
+                        >
                             <button className="menu-link-button">
                                 <Home className="link-icon" /> About
                             </button>
                         </Link>
-                        <Link to="/projects">
+                        <Link
+                            to="/projects"
+                            onClick={() => {
+                                if (currentPage === NavSelected.projects) {
+                                    onHide();
+                                }
+                            }}
+                        >
                             <button className="menu-link-button">
                                 <BookOpen className="link-icon" /> Projects
                             </button>
                         </Link>
-                        <Link to="/contact">
+                        <Link
+                            to="/contact"
+                            onClick={() => {
+                                if (currentPage === NavSelected.contact) {
+                                    onHide();
+                                }
+                            }}
+                        >
                             <button className="menu-link-button">
                                 <Mail className="link-icon" />
                                 Contact

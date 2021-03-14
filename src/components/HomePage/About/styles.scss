@@ -1,19 +1,41 @@
 @import 'src/global.scss';
 
 .about {
-    padding: 0 $desktop-side-padding;
-    margin: 40px 0 $section-margin-bottom;
+    padding: 0 $mobile-side-padding;
+    margin: 40px 0 80px;
     display: grid;
     justify-content: center;
+
+    @media (min-width: $md-screen-min) {
+        padding: 0 $tablet-side-padding;
+    }
+
+    @media (min-width: $lg-screen-min) {
+        padding: 0 $desktop-side-padding;
+        margin-bottom: $section-margin-bottom;
+    }
 
     .about-columns {
         $column-gap: 60px;
         $column-width: calc(50% - #{$column-gap});
 
         display: grid;
-        grid-template-columns: repeat(2, minmax($column-width, 480px));
+        grid-template-columns: 1fr;
         max-width: $max-width;
-        grid-gap: $column-gap;
+        grid-gap: 20px;
+
+        @media (min-width: $md-screen-min) {
+            grid-gap: $column-gap;
+            grid-template-columns: repeat(2, minmax($column-width, 480px));
+        }
+
+        .about-paragraph {
+            text-align: justify;
+
+            @media (min-width: $md-screen-min) {
+                text-align: left;
+            }
+        }
 
         .about-left {
             justify-self: start;
@@ -22,8 +44,14 @@
         .about-right {
             justify-self: end;
             margin-top: 80px;
-            .about-paragraph {
-                text-align: right;
+
+            @media (min-width: $md-screen-min) {
+                justify-self: end;
+                margin-top: 80px;
+
+                .about-paragraph {
+                    text-align: right;
+                }
             }
         }
     }

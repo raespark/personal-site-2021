@@ -20,6 +20,7 @@ const WorkWithMe: React.FC<WorkWitMeProps> = ({
                     link="/contact"
                     text="Reach Out"
                     inverse={inverse}
+                    className="contact-button"
                 />
             </div>
         </div>

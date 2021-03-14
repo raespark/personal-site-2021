@@ -18,35 +18,43 @@
     background-color: rgba($text-dark, 0.5);
     z-index: 19;
     animation: $slow-animation-time fade-in ease;
-    overflow-y: scroll;
 }
 
 $menu-width: 375px;
 
 .side-menu {
     position: fixed;
-    width: $menu-width;
-    left: -$menu-width;
+    width: 100vw;
+    left: -100vw;
     top: 0;
     bottom: 0;
     background-color: white;
     z-index: 20;
     transition: left ease-in-out $slow-animation-time;
-    padding: 0;
-    box-shadow: 5px 0 5px rgba($text-dark, 0.15);
+    overflow-y: scroll;
+
+    @media (min-width: $md-screen-min) {
+        width: $menu-width;
+        left: -$menu-width;
+    }
 
     &.show-menu {
         left: 0;
+        box-shadow: 5px 0 5px rgba($text-dark, 0.15);
     }
 
     .menu-top {
         display: grid;
         left: 0;
         right: 0;
-        height: 50px;
+        height: 40px;
         align-items: center;
         justify-content: end;
         padding: 0 20px;
+
+        @media (min-width: $sm-screen-min) {
+            height: 50px;
+        }
 
         .menu-close {
             cursor: pointer;
@@ -56,20 +64,33 @@ $menu-width: 375px;
     .menu-content {
         display: grid;
         justify-content: center;
-        height: 100%;
         grid-template-rows: repeat(6, min-content);
-        grid-gap: 40px;
-        padding: 20px;
+        grid-gap: 20px;
+        padding: 0 20px;
+
+        @media (min-width: $md-screen-min) {
+            grid-gap: 40px;
+        }
 
         .menu-image-container {
             display: grid;
             background-color: $brand1-light;
-            height: 175px;
-            width: 175px;
+            height: 110px;
+            width: 110px;
             border-radius: 50%;
             box-shadow: $shadow;
             justify-self: center;
             border: 5px solid $brand-accent;
+
+            @media (min-width: $sm-screen-min) {
+                height: 125px;
+                width: 125px;
+            }
+
+            @media (min-width: $md-screen-min) {
+                height: 150px;
+                width: 150px;
+            }
 
             .menu-image {
                 margin-top: -10px;
@@ -81,22 +102,35 @@ $menu-width: 375px;
             width: 275px;
 
             .menu-text-name {
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 600;
-                margin-bottom: 20px;
+                margin-bottom: 18px;
+
+                @media (min-width: $md-screen-min) {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
             }
 
             .menu-text-description {
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 400;
                 margin-bottom: 0;
+
+                @media (min-width: $md-screen-min) {
+                    font-size: 20px;
+                }
             }
         }
 
         .menu-hr {
             width: 50px;
-            margin: 0;
+            margin: 5px 0;
             justify-self: center;
+
+            @media (min-width: $md-screen-min) {
+                margin: 0;
+            }
         }
 
         .menu-links {
@@ -104,11 +138,15 @@ $menu-width: 375px;
             justify-content: center;
             grid-template-columns: 1fr;
             grid-template-rows: repeate(3, min-content);
-            grid-gap: 20px;
+            grid-gap: 15px;
+
+            @media (min-width: $md-screen-min) {
+                grid-gap: 20px;
+            }
 
             .menu-link-button {
                 width: 100%;
-                padding: 10px;
+                padding: 5px;
                 display: grid;
                 align-items: center;
                 justify-content: center;
@@ -121,6 +159,10 @@ $menu-width: 375px;
                 font-family: $accent-fonts;
                 font-weight: 600;
                 cursor: pointer;
+
+                @media (min-width: $md-screen-min) {
+                    padding: 10px;
+                }
 
                 .link-icon {
                     stroke: $brand1-dark;

@@ -7,38 +7,62 @@
         text-align: center;
         margin-bottom: 15px;
         margin-bottom: 60px;
-        z-index: 1;
     }
 
     .work-history {
         width: 100vw;
         background-color: $brand1-light;
-        padding: 40px 80px 120px;
+        padding: 40px $mobile-side-padding 120px;
         display: grid;
         justify-content: center;
         position: relative;
+        z-index: -1;
+
+        @media (min-width: $md-screen-min) {
+            padding: 40px $tablet-side-padding 120px;
+        }
+
+        @media (min-width: $lg-screen-min) {
+            padding: 40px $desktop-side-padding 120px;
+        }
+
+        $large-circle-radius: 250px;
+        $med-circle-radius: 175px;
+        $small-circle-radius: 150px;
 
         .accent-circle-left {
             position: absolute;
-            height: 500px;
-            width: 250px;
-            top: -100px;
+            height: $med-circle-radius * 2;
+            width: $med-circle-radius;
+            top: -$med-circle-radius / 3;
             left: 0px;
             background-color: $brand-accent;
-            border-top-right-radius: 250px;
-            border-bottom-right-radius: 250px;
+            border-top-right-radius: $med-circle-radius;
+            border-bottom-right-radius: $med-circle-radius;
             border-right: 0;
+
+            @media (min-width: $md-screen-min) {
+                height: $large-circle-radius * 2;
+                width: $large-circle-radius;
+                border-top-right-radius: $large-circle-radius;
+                border-bottom-right-radius: $large-circle-radius;
+                top: -$large-circle-radius / 2;
+            }
         }
 
         .accent-circle-right {
             position: absolute;
-            height: 300px;
-            width: 150px;
-            bottom: -100px;
+            height: $small-circle-radius * 2;
+            width: $small-circle-radius;
+            bottom: -$small-circle-radius / 2;
             right: 0;
             background-color: $brand-accent;
-            border-top-left-radius: 150px;
-            border-bottom-left-radius: 150px;
+            border-top-left-radius: $small-circle-radius;
+            border-bottom-left-radius: $small-circle-radius;
+
+            @media (min-width: $md-screen-min) {
+                bottom: -$small-circle-radius * 2/3;
+            }
         }
 
         .work-history-hr {
@@ -53,31 +77,56 @@
 
             display: grid;
             justify-content: center;
-            grid-template-columns: repeat(2, minmax($column-width, 480px));
+            grid-template-columns: 1fr;
             grid-gap: $column-gap;
             margin-top: 40px;
 
+            @media (min-width: $lg-screen-min) {
+                grid-template-columns: repeat(2, minmax($column-width, 480px));
+            }
+
             .job {
                 justify-self: center;
-                padding: 50px;
+                padding: 30px;
                 background-color: white;
                 border-radius: 8px;
                 z-index: 1;
                 box-shadow: $shadow;
 
+                @media (min-width: $md-screen-min) {
+                    padding: 50px;
+                }
+
                 .job-title {
                     display: grid;
                     justify-content: center;
                     text-align: center;
-                    font-size: 20px;
+                    font-size: 18px;
                     margin-bottom: 10px;
+
+                    @media (min-width: $md-screen-min) {
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                    }
                 }
                 .job-years {
                     text-align: center;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+
+                    @media (min-width: $md-screen-min) {
+                        font-size: 18px;
+                        margin-bottom: 30px;
+                    }
                 }
 
                 .job-information {
                     text-align: justify;
+                    line-height: 20px;
+
+                    @media (min-width: $md-screen-min) {
+                        line-height: 24px;
+                    }
                 }
             }
         }

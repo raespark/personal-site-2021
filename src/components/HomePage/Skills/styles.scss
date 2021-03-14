@@ -33,9 +33,20 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, 100px);
             grid-row-gap: 80px;
-            grid-column-gap: 120px;
+            grid-column-gap: 40px;
             justify-content: center;
-            max-width: 900px;
+            max-width: 300px;
+            justify-self: center;
+
+            @media (min-width: $md-screen-min) {
+                max-width: 600px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                max-width: 800px;
+                grid-row-gap: 80px;
+                grid-column-gap: 120px;
+            }
 
             .skill {
                 display: grid;

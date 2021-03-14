@@ -5,7 +5,7 @@ import './styles.scss';
 const WorkHistory: React.FC = () => {
     return (
         <div className="work-history-container">
-            <h2 className="work-history-title">Whave have I done?</h2>
+            <h2 className="work-history-title">What have I done?</h2>
             <div className="work-history">
                 <div className="accent-circle-left" />
                 <div className="accent-circle-right" />
@@ -40,12 +40,12 @@ const WorkHistory: React.FC = () => {
                         </div>
                         <h4 className="job-years emphasis">2017-2019</h4>
                         <p className="job-information">
-                            After two successful internships in Summer 2015, and
-                            Summer 2016, I was hired on full-time as a full
-                            stack engineer. I first worked with an internal
-                            tools team that developed applications that worked
-                            with new bleeding-edge technologies, both internal
-                            and external, to find issues and document their use
+                            After two successful summer internships in 2015, and
+                            2016, I was hired on full-time as a full stack
+                            engineer. I first worked with an internal tools team
+                            that developed applications that worked with new
+                            bleeding-edge technologies, both internal and
+                            external, to find issues and document their use
                             within our tech stack. I then moved to working on
                             the Profile team and working on GDPR compliance
                             across our applications, alongside building out new

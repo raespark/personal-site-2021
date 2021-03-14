@@ -13,6 +13,9 @@ $text-lighter: #f2f2f2;
 $shadow: 0 8px 8px rgba($text-dark, 0.1);
 
 $desktop-side-padding: 80px;
+$tablet-side-padding: 60px;
+$mobile-side-padding: 30px;
+
 $max-width: 1400px;
 $section-margin-bottom: 140px;
 
@@ -71,35 +74,62 @@ h5 {
     .not-found-page-content {
         display: grid;
         justify-content: center;
-        margin-top: 100px;
         background-color: $brand2-light;
-        padding: 80px 20px;
+        margin-top: 50px;
+        padding: 60px 20px;
         position: relative;
+
+        @media (min-width: $sm-screen-min) {
+            margin-top: 80px;
+        }
+
+        @media (min-width: $md-screen-min) {
+            margin-top: 100px;
+            padding: 80px 20px;
+        }
 
         .not-found-title {
             margin-bottom: 10px;
+            font-size: 28px;
             text-align: center;
             z-index: 1;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 38px;
+            }
         }
 
         .not-found-subtitle {
             font-weight: 600;
             text-align: center;
             margin-bottom: 0;
+            font-size: 22px;
             z-index: 1;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 26px;
+            }
         }
 
         .not-found-hr {
             justify-self: center;
             width: 50px;
-            margin: 40px 0;
+            margin: 30px 0;
             z-index: 1;
+
+            @media (min-width: $md-screen-min) {
+                margin: 40px 0;
+            }
         }
 
         .not-found-text {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             z-index: 1;
             text-align: center;
+
+            @media (min-width: $md-screen-min) {
+                margin-bottom: 60px;
+            }
         }
 
         .back-home-button {

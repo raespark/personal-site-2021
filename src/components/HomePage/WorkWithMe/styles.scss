@@ -5,72 +5,54 @@
     display: grid;
     justify-content: center;
     margin-bottom: 140px;
-    padding: 0 $desktop-side-padding;
+    padding: 0 $mobile-side-padding;
+
+    @media (min-width: $md-screen-min) {
+        padding: 0 $tablet-side-padding;
+    }
+
+    @media (min-width: $lg-screen-min) {
+        padding: 0 $desktop-side-padding;
+    }
 
     .work-with-me-background {
         display: grid;
         align-items: center;
         background-color: $text-lighter;
-        grid-template-columns: min-content min-content;
-        grid-gap: 20px;
-        padding: 20px 50px;
+        grid-template-columns: 1fr;
+        min-width: 300px;
+        padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba($text-dark, 0.075);
 
+        @media (min-width: $lg-screen-min) {
+            grid-template-columns: min-content min-content;
+            grid-gap: 20px;
+            padding: 20px 50px;
+        }
+
         .work-with-me-text {
             display: grid;
-            margin-bottom: 0;
-            text-align: end;
+            margin-bottom: 20px;
+            text-align: center;
             white-space: nowrap;
             font-family: $accent-fonts;
             font-weight: 400;
             text-transform: uppercase;
+
+            @media (min-width: $lg-screen-min) {
+                margin-bottom: 0;
+                text-align: end;
+            }
         }
 
         .contact-button {
-            background-color: $brand2-dark;
-            border-color: transparent;
-            width: min-content;
-            padding: 10px 15px;
-            border-radius: 5px;
+            width: 100%;
+            justify-content: center;
+            display: grid;
 
-            &:hover {
-                cursor: pointer;
-                background-color: $brand1-dark;
-
-                $arrow-offset: 5px;
-
-                .reach-out-arrow {
-                    margin-top: -$arrow-offset;
-                    margin-bottom: $arrow-offset;
-                    margin-right: -$arrow-offset;
-                    margin-left: $arrow-offset;
-                }
-            }
-
-            &.inverse {
-                background-color: $brand1-dark;
-
-                &:hover {
-                    background-color: $brand2-dark;
-                }
-            }
-
-            .contact-link {
-                display: grid;
-                align-items: center;
-                grid-template-columns: min-content min-content;
-                grid-gap: 5px;
-
-                .reach-out-text {
-                    font-weight: 800;
-                    color: white;
-                }
-
-                .reach-out-arrow {
-                    stroke: white;
-                    transition: margin ease-in-out $animation-time;
-                }
+            @media (min-width: $lg-screen-min) {
+                width: min-content;
             }
         }
     }
