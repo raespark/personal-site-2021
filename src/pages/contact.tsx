@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header, { NavSelected } from '../components/header';
+import Header, { NavSelected } from '../components/Header';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import ContactPage from '../components/ContactPage';
