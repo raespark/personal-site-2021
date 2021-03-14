@@ -23,6 +23,7 @@ $body-fonts: 'Open Sans', 'Segoe UI', sans-serif;
 $accent-fonts: 'Montserrat', 'Segoe UI', sans-serif;
 
 $header-height: 55px;
+$footer-height: 77px;
 
 $lg-screen-min: 1020px;
 $md-screen-min: 700px;
@@ -75,16 +76,16 @@ h5 {
         display: grid;
         justify-content: center;
         background-color: $brand2-light;
-        margin-top: 50px;
+        margin-top: 50px + $header-height;
         padding: 60px 20px;
         position: relative;
 
         @media (min-width: $sm-screen-min) {
-            margin-top: 80px;
+            margin-top: 80px + $header-height;
         }
 
         @media (min-width: $md-screen-min) {
-            margin-top: 100px;
+            margin-top: 100px + $header-height;
             padding: 80px 20px;
         }
 

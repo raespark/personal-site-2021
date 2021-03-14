@@ -8,7 +8,7 @@ import Skills from './Skills';
 
 import './styles.scss';
 
-const HomePageContents: React.FC = () => {
+const HomePage: React.FC = () => {
     return (
         <div className="homepage">
             <Hero />
@@ -23,4 +23,4 @@ const HomePageContents: React.FC = () => {
     );
 };
 
-export default HomePageContents;
+export default HomePage;

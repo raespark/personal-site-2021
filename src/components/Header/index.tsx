@@ -4,7 +4,7 @@ import { Menu, GitHub, Linkedin } from 'react-feather';
 import { Link } from 'gatsby';
 import { isDesktop } from 'react-device-detect';
 
-import SideMenu from '../Menu';
+import SideMenu from '../SideMenu';
 import './styles.scss';
 
 export enum NavSelected {
@@ -60,7 +60,9 @@ const Header: React.FC<HeaderProps> = ({
                         strokeWidth={2.5}
                         onClick={toggleMenu}
                     />
-                    <h2 className="header-brand">Rachael Metcalf</h2>
+                    <Link to="/">
+                        <h2 className="header-brand">Rachael Metcalf</h2>
+                    </Link>
                 </div>
                 <div className="header-navigation">
                     <Link

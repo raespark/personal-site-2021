@@ -12,9 +12,10 @@ const Layout = ({ children }) => {
                 style={{
                     display: 'grid',
                     justifyContent: 'center',
+                    minHeight: '100vh',
                 }}
             >
-                <main>{children}</main>
+                <main style={{ marginBottom: '20%' }}>{children}</main>
                 <Footer />
             </div>
         </>

@@ -2,14 +2,16 @@ import * as React from 'react';
 
 import SEO from '../components/seo';
 import LinkButton from '../components/LinkButton';
-import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 import '../global.scss';
 import '../components/layout.css';
+import Layout from '../components/layout';
 
 const NotFoundPage = () => (
-    <>
+    <Layout>
         <SEO title="404: Not found" />
+        <Header />
         <div className="not-found-page">
             <div className="not-found-page-content">
                 <h1 className="not-found-title">404</h1>
@@ -26,9 +28,8 @@ const NotFoundPage = () => (
                     inverse
                 />
             </div>
-            <Footer />
         </div>
-    </>
+    </Layout>
 );
 
 export default NotFoundPage;

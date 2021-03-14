@@ -1,15 +1,29 @@
 @import 'src/global.scss';
 
-.footer {
-    margin-top: $section-margin-bottom * 1.5;
-    font-size: 12px;
-    font-family: $body-fonts;
-    text-align: center;
-    padding: 30px;
-    background-color: $text-lighter;
-    color: $text-dark;
+.footer-container {
+    height: 100%;
+    position: relative;
 
-    a {
-        color: #2ea9f5;
+    .footer {
+        font-size: 12px;
+        font-family: $body-fonts;
+        text-align: center;
+        background-color: $text-lighter;
+        color: $text-dark;
+        position: absolute;
+        height: $footer-height;
+        display: grid;
+        white-space: nowrap;
+        grid-gap: 5px;
+        grid-template-columns: min-content min-content;
+        align-content: center;
+        justify-content: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        a {
+            color: #2ea9f5;
+        }
     }
 }
