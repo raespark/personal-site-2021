@@ -14,9 +14,9 @@ const Hero: React.FC = () => {
                         your users
                     </h1>
                     <div className="hero-description">
-                        <h3 className="hero-description-text">
+                        <h2 className="hero-description-text">
                             Rachael Metcalf
-                        </h3>
+                        </h2>
                         <hr className="hero-hr" />
                         <h3 className="hero-description-text subtitle">
                             Professional UI/Full Stack

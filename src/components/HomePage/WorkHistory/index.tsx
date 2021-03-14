@@ -16,7 +16,7 @@ const WorkHistory: React.FC = () => {
                             <hr className="work-history-hr" />
                             Software Engineer
                         </div>
-                        <h4 className="job-years emphasis">2020-2021</h4>
+                        <div className="job-years emphasis">2020-2021</div>
                         <p className="job-information">
                             My first startup experience. At Nexus (formerly
                             Chrono.gg) I worked with a small elite team to build
@@ -38,7 +38,7 @@ const WorkHistory: React.FC = () => {
                             <hr className="work-history-hr" />
                             Software Engineer
                         </div>
-                        <h4 className="job-years emphasis">2017-2019</h4>
+                        <div className="job-years emphasis">2017-2019</div>
                         <p className="job-information">
                             After two successful summer internships in 2015, and
                             2016, I was hired on full-time as a full stack

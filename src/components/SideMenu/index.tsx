@@ -101,6 +101,7 @@ const SideMenu: React.FC<MenuProps> = ({
                             href="https://github.com/raespark"
                             target="_blank"
                             rel="noopener noreferrer"
+                            title="GitHub"
                         >
                             <GitHub className="external-link-icon" />
                         </a>
@@ -108,6 +109,7 @@ const SideMenu: React.FC<MenuProps> = ({
                             href="https://www.linkedin.com/in/rachael-metcalf/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            title="LinkedIn"
                         >
                             <Linkedin className="external-link-icon" />
                         </a>

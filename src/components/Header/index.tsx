@@ -95,6 +95,7 @@ const Header: React.FC<HeaderProps> = ({
                         href="https://github.com/raespark"
                         target="_blank"
                         rel="noopener noreferrer"
+                        title="GitHub"
                     >
                         <GitHub className="external-link-icon" />
                     </a>
@@ -102,6 +103,7 @@ const Header: React.FC<HeaderProps> = ({
                         href="https://www.linkedin.com/in/rachael-metcalf/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        title="LinkedIn"
                     >
                         <Linkedin className="external-link-icon" />
                     </a>
