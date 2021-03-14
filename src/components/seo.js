@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
                         title
                         description
                         author
+                        image
                     }
                 }
             }
@@ -27,7 +28,7 @@ function SEO({ description, lang, meta, title }) {
 
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
-    const image = `https://i.imgur.com/sl3mTcW.png`;
+    const image = `https://rmetcalf.netlify.app/${site.siteMetadata.image}`;
 
     return (
         <Helmet
@@ -36,12 +37,12 @@ function SEO({ description, lang, meta, title }) {
             }}
             title={title}
             titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-            image={image}
             meta={[
                 {
                     name: `description`,
                     content: metaDescription,
                 },
+                { name: 'image', content: image },
                 {
                     property: `og:title`,
                     content: title,
