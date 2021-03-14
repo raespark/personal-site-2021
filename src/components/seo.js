@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -36,16 +36,22 @@ function SEO({ description, lang, meta, title }) {
                 lang,
             }}
             title={title}
-            titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
             meta={[
                 {
                     name: `description`,
                     content: metaDescription,
                 },
-                { name: 'image', content: image },
+                {
+                    name: 'image',
+                    content: image,
+                },
                 {
                     property: `og:title`,
-                    content: title,
+                    content: defaultTitle,
+                },
+                {
+                    property: 'og:site_name',
+                    content: defaultTitle,
                 },
                 {
                     property: `og:description`,
@@ -55,7 +61,10 @@ function SEO({ description, lang, meta, title }) {
                     property: `og:type`,
                     content: `website`,
                 },
-                { property: 'og:image', content: image },
+                {
+                    property: 'og:image',
+                    content: image,
+                },
                 {
                     name: `twitter:card`,
                     content: `summary`,
@@ -66,11 +75,15 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     name: `twitter:title`,
-                    content: title,
+                    content: defaultTitle,
                 },
                 {
                     name: `twitter:description`,
                     content: metaDescription,
+                },
+                {
+                    name: 'twitter:image',
+                    content: image,
                 },
             ].concat(meta)}
         ></Helmet>

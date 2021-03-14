@@ -164,8 +164,10 @@ $menu-width: 375px;
                     font-weight: 800;
                     color: white;
 
-                    .link-icon {
-                        stroke: white;
+                    .button-content {
+                        .link-icon {
+                            stroke: white;
+                        }
                     }
                 }
                 .button-content {
@@ -177,10 +179,6 @@ $menu-width: 375px;
                     .link-icon {
                         stroke: $brand1-dark;
                         margin-right: 10px;
-                    }
-
-                    .link-icon {
-                        stroke: $brand1-dark;
                     }
                 }
             }
