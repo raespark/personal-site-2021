@@ -30,10 +30,10 @@
     }
 
     .link-button-link {
-        display: grid;
         align-items: center;
+        display: grid;
         grid-template-columns: min-content min-content;
-        grid-gap: 5px;
+        justify-content: center;
 
         .button-text {
             display: grid;
@@ -45,6 +45,7 @@
             text-transform: uppercase;
             font-weight: 800;
             color: white;
+            margin-right: 5px;
         }
 
         .arrow-icon {

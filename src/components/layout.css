@@ -222,3 +222,10 @@ p *:last-child {
         font-size: 100%;
     }
 }
+
+.layout {
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    max-height: -webkit-fill-available;
+}

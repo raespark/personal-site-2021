@@ -8,13 +8,7 @@ import './layout.css';
 const Layout = ({ children }) => {
     return (
         <>
-            <div
-                style={{
-                    display: 'grid',
-                    justifyContent: 'center',
-                    minHeight: '100vh',
-                }}
-            >
+            <div className="layout">
                 <main>{children}</main>
                 <Footer />
             </div>

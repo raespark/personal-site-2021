@@ -137,7 +137,7 @@ $menu-width: 375px;
             display: grid;
             justify-content: center;
             grid-template-columns: 1fr;
-            grid-template-rows: repeate(3, min-content);
+            grid-template-rows: repeat(3, min-content);
             grid-gap: 15px;
 
             @media (min-width: $md-screen-min) {
@@ -147,11 +147,6 @@ $menu-width: 375px;
             .menu-link-button {
                 width: 100%;
                 padding: 5px;
-                display: grid;
-                align-items: center;
-                justify-content: center;
-                grid-template-columns: min-content min-content;
-                grid-gap: 10px;
                 background-color: $text-lighter;
                 border: none;
                 border-radius: 40px;
@@ -164,10 +159,6 @@ $menu-width: 375px;
                     padding: 10px;
                 }
 
-                .link-icon {
-                    stroke: $brand1-dark;
-                }
-
                 &:hover {
                     background-color: $brand1-dark;
                     font-weight: 800;
@@ -175,6 +166,21 @@ $menu-width: 375px;
 
                     .link-icon {
                         stroke: white;
+                    }
+                }
+                .button-content {
+                    align-items: center;
+                    justify-content: center;
+                    display: grid;
+                    grid-template-columns: min-content min-content;
+
+                    .link-icon {
+                        stroke: $brand1-dark;
+                        margin-right: 10px;
+                    }
+
+                    .link-icon {
+                        stroke: $brand1-dark;
                     }
                 }
             }

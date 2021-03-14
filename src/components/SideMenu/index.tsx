@@ -61,7 +61,9 @@ const SideMenu: React.FC<MenuProps> = ({
                             }}
                         >
                             <button className="menu-link-button">
-                                <Home className="link-icon" /> About
+                                <div className="button-content">
+                                    <Home className="link-icon" /> About
+                                </div>
                             </button>
                         </Link>
                         <Link
@@ -73,7 +75,9 @@ const SideMenu: React.FC<MenuProps> = ({
                             }}
                         >
                             <button className="menu-link-button">
-                                <BookOpen className="link-icon" /> Projects
+                                <div className="button-content">
+                                    <BookOpen className="link-icon" /> Projects
+                                </div>
                             </button>
                         </Link>
                         <Link
@@ -85,8 +89,9 @@ const SideMenu: React.FC<MenuProps> = ({
                             }}
                         >
                             <button className="menu-link-button">
-                                <Mail className="link-icon" />
-                                Contact
+                                <div className="button-content">
+                                    <Mail className="link-icon" /> Contact
+                                </div>
                             </button>
                         </Link>
                     </div>

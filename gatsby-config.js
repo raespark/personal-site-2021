@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `Rachael Metcalf - Software Engineer`,
-        description: `Hi! I'm Rachael, and I`,
+        description: `Professional UI/Front End/Full Stack Engineer since 2017. Passionate about delivering great User Experiences.`,
         author: `@raespark`,
     },
     plugins: [
