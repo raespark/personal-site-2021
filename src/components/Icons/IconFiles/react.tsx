@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SVGProps } from '../index';
 
-const JavaScript: React.FC<SVGProps> = ({
+const ReactIcon: React.FC<SVGProps> = ({
     width = 50,
     height = 50,
     className,
@@ -19,4 +19,4 @@ const JavaScript: React.FC<SVGProps> = ({
     );
 };
 
-export default JavaScript;
+export default ReactIcon;

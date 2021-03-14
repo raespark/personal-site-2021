@@ -1,13 +1,14 @@
 import React from 'react';
-import { HelpCircle } from 'react-feather';
 
 import {
     SVGProps,
     Communication,
     CSS,
     Git,
+    HTML,
     Java,
     JavaScript,
+    Jest,
     Leadership,
     Mentorship,
     Mocha,
@@ -47,8 +48,10 @@ const skillList: SkillCategory[] = [
             { name: 'Redux', icon: Redux },
             { name: 'Node', icon: Node },
             { name: 'Git', icon: Git },
+            { name: 'HTML', icon: HTML },
             { name: 'CSS', icon: CSS },
             { name: 'Mocha', icon: Mocha },
+            { name: 'Jest', icon: Jest },
         ],
     },
     {

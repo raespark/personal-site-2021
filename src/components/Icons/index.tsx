@@ -23,8 +23,10 @@ export enum IconsEnum {
 import Communication from './IconFiles/communication';
 import CSS from './IconFiles/css';
 import Git from './IconFiles/git';
+import HTML from './IconFiles/html';
 import Java from './IconFiles/java';
 import JavaScript from './IconFiles/javascript';
+import Jest from './IconFiles/jest';
 import Leadership from './IconFiles/leadership';
 import Mentorship from './IconFiles/mentorship';
 import Mocha from './IconFiles/mocha';
@@ -38,8 +40,10 @@ export {
     Communication,
     CSS,
     Git,
+    HTML,
     Java,
     JavaScript,
+    Jest,
     Leadership,
     Mentorship,
     Mocha,

@@ -19,20 +19,16 @@ const WorkWithMe: React.FC<WorkWitMeProps> = ({
     className,
 }: WorkWitMeProps) => {
     return (
-        <button
-            className={classnames(
-                'link-button',
-                {
+        <Link to={link} className={`link-button-link ${className}`}>
+            <button
+                className={classnames('link-button', {
                     inverse: inverse,
-                },
-                className
-            )}
-        >
-            <Link to={link} className="link-button-link">
+                })}
+            >
                 <h4 className="button-text">{text}</h4>
                 <ArrowUpRight className="arrow-icon" />
-            </Link>
-        </button>
+            </button>
+        </Link>
     );
 };
 
