@@ -10,7 +10,7 @@ import '../global.scss';
 const Projects: React.FC = () => {
     return (
         <Layout>
-            <SEO title="Rachael Metcalf - Projects" />
+            <SEO title="Projects - Rachael Metcalf" />
             <Header selected={NavSelected.projects} />
             <ProjectsPage />
         </Layout>

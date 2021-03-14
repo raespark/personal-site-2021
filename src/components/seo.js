@@ -28,11 +28,7 @@ function SEO({ description, lang, meta, title }) {
 
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
-    const [image, setImage] = useState('');
-
-    useEffect(() => {
-        setImage(`${window?.location.host}${site.siteMetadata?.image}`);
-    }, []);
+    const image = `https://rmetcalf.netlify.app/${site.siteMetadata?.image}`;
 
     return (
         <Helmet

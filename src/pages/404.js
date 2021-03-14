@@ -10,7 +10,7 @@ import Layout from '../components/layout';
 
 const NotFoundPage = () => (
     <Layout>
-        <SEO title="404: Not found" />
+        <SEO title="404 - Rachael Metcalf" />
         <Header />
         <div className="not-found-page">
             <div className="not-found-page-content">
