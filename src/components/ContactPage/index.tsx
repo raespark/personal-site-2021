@@ -1,10 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import classnames from 'classnames';
+import { navigate } from 'gatsby-link';
 import Tooltip from 'react-tooltip';
-import { HelpCircle } from 'react-feather';
+import { HelpCircle, Loader } from 'react-feather';
 
 import './styles.scss';
 
+function encode(data) {
+    return Object.keys(data)
+        .map(
+            (key) =>
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+}
+
 const ContactPage: React.FC = () => {
+    // Gatsby and netlify form code from
+    // https://github.com/sw-yx/gatsby-netlify-form-example-v2/blob/master/src/pages/contact.js
+
+    const [state, setState] = useState({});
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (e) => {
+        setState({ ...state, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': form.getAttribute('name'),
+                ...state,
+            }),
+        })
+            .then(() => {
+                setLoading(true);
+                setTimeout(() => {
+                    navigate(form.getAttribute('action'));
+                }, 500);
+            })
+            .catch((error) => alert(error));
+    };
     return (
         <div className="contact-page">
             <div className="contact-page-contents">
@@ -23,6 +63,7 @@ const ContactPage: React.FC = () => {
                         method="POST"
                         data-netlify="true"
                         action="/contact/success"
+                        onSubmit={handleSubmit}
                     >
                         <div className="form-field">
                             <label className="form-label">
@@ -33,6 +74,7 @@ const ContactPage: React.FC = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Jane Doe"
+                                onChange={handleChange}
                                 required
                             />
                         </div>
@@ -48,8 +90,9 @@ const ContactPage: React.FC = () => {
                             <input
                                 className="form-input"
                                 type="text"
-                                name="name"
+                                name="email"
                                 placeholder="jdoe@example.com"
+                                onChange={handleChange}
                                 required
                             />
                             <Tooltip
@@ -70,19 +113,26 @@ const ContactPage: React.FC = () => {
                             </label>
                             <textarea
                                 className="form-textarea"
-                                name="name"
+                                name="message"
                                 placeholder="Hello! I saw your website and wanted to reach out to you about..."
                                 autoCorrect="on"
                                 rows={8}
+                                onChange={handleChange}
                                 required
                             />
                         </div>
                         <div className="form-submit">
                             <button
-                                className="form-submit-button"
+                                className={classnames('form-submit-button', {
+                                    loading: loading,
+                                })}
                                 type="submit"
                             >
-                                Send
+                                {loading ? (
+                                    <Loader className="button-loading-icon" />
+                                ) : (
+                                    'Send'
+                                )}
                             </button>
                         </div>
                     </form>

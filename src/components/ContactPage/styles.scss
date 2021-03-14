@@ -1,5 +1,15 @@
 @import 'src/global.scss';
 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .contact-page {
     display: grid;
     margin-top: $header-height;
@@ -19,7 +29,6 @@
         }
 
         .contact-title {
-            text-align: center;
             margin-bottom: 20px;
             margin-top: 20px;
             font-size: 24px;
@@ -36,7 +45,6 @@
         }
 
         .contact-subtitle {
-            text-align: center;
             margin-bottom: 5px;
             font-size: 14px;
 
@@ -120,7 +128,6 @@
 
                     .form-submit-button {
                         cursor: pointer;
-                        padding: 10px 20px;
                         border-radius: 5px;
                         border: none;
                         background-color: $brand1-dark;
@@ -130,6 +137,18 @@
                         text-transform: uppercase;
                         font-size: 16px;
                         box-shadow: $shadow;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        height: 40px;
+                        width: 150px;
+
+                        .button-loading-icon {
+                            animation: spin infinite linear 1.5s;
+                            height: 24px;
+                            width: 24px;
+                            align-self: center;
+                        }
                     }
                 }
             }
