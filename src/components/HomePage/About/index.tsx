@@ -9,42 +9,46 @@ const About: React.FC = () => {
                 <div className="about-left">
                     <h3 className="about-header text-center">Who am I?</h3>
                     <p className="about-paragraph">
-                        Hey! I'm Rachael, or Rae! I'm a programmer that also
-                        dabbles in other hobbies like drawing and crafting and
-                        sewing and cosplaying and writing and...wow I have too
-                        many hobbies don't I? I'm a huge Nintendo nerd, and a
-                        natural born Texan, currently residing in the beautiful{' '}
+                        Hey!{' '}
+                        <span className="emphasis">I'm Rachael or Rae!</span>{' '}
+                        I'm a software engineer that also dabbles in other
+                        hobbies like drawing, crafting, sewing, cosplaying,
+                        writing and more! I love being creative and bringing
+                        something from an abstract idea into something tangible
+                        and real. I'm a huge Nintendo nerd, and a natural born
+                        Texan, currently residing in the beautiful{' '}
                         <span className="emphasis">Austin, Texas</span>! I'm a
-                        huge fan of pastel anything and also my current
-                        obsession is cute pastel keyboards. You can also never
-                        go wrong with Pokèmon with me. Most evenings you can
-                        either catch me chilling with online friends over
-                        discord, or hanging on a couch playing games on my
-                        Nintendo Switch.
+                        huge fan of pastel anything and my current obsession is
+                        cute, colorful, pastel keyboards. I'm also a huge fan of
+                        gaming in general, especially Pokémon! I enjoy being
+                        with friends either online or in person (when that was a
+                        thing) or hanging out on my couch playing games on my
+                        Nintendo Switch, getting lost in it's games' fantastical
+                        worlds.
                     </p>
                 </div>
                 <div className="about-right">
                     <h3 className="about-header text-center">What am I?</h3>
                     <p className="about-paragraph">
-                        I've been a professional software engineer since
-                        graduating from the{' '}
-                        <span className="emphasis">University of Texas</span> in
-                        May of 2017, and have a huge passion for building
-                        amazing user experiences. I even have some minor
-                        experience with designing UI's myself. I definitely
-                        wouldn't call myself an expert, but I designed this site
-                        you're using right now!{' '}
+                        I've been a professional software engineer for about 4
+                        years since graduating from{' '}
                         <span className="emphasis">
-                            UI and UX have always been my passion.
+                            the University of Texas
                         </span>{' '}
-                        I've worked in developing small little video games in my
-                        free time, but have also been working on production
-                        level web applications since before I graduated from
-                        college through my summer internships! I love crafting
-                        and building experiences that are a delight to use, and
-                        writing code that I'm proud of. If there's something I
-                        think feels unintuitive or clunky, I'm not afraid to let
-                        you know!
+                        with a BS in Computer Science in 2017. Since then, I
+                        have gained experience building a product from
+                        pre-launch to launch phases, and working within teams
+                        and ecosystems big and small.{' '}
+                        <span className="emphasis">
+                            I have a huge passion for building unique and
+                            pleasant user experiences.
+                        </span>{' '}
+                        I'm UX and UI obsessed and also dabble in designing UI's
+                        myself. I'm a strong advocate for the user and work to
+                        ensure my code is clean, readable and will result in a
+                        fantastic user experience. In my free time, I also do
+                        game development and content creation, creating art to
+                        share with the world.
                     </p>
                 </div>
             </div>

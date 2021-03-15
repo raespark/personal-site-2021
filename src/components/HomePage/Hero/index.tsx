@@ -9,9 +9,9 @@ const Hero: React.FC = () => {
             <div className="hero-container">
                 <div className="hero-text">
                     <h1 className="hero-quote text-center">
-                        I want to build{' '}
-                        <span className="emphasis">great experiences</span> for
-                        your users
+                        I build and create{' '}
+                        <span className="emphasis">delightful</span> user
+                        experiences
                     </h1>
                     <div className="hero-description">
                         <h2 className="hero-description-text">
