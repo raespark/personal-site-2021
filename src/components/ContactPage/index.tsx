@@ -97,7 +97,7 @@ const ContactPage: React.FC = () => {
                             </label>
                             <input
                                 className="form-input"
-                                type="text"
+                                type="email"
                                 name="email"
                                 placeholder="jdoe@example.com"
                                 onChange={handleChange}

@@ -24,6 +24,7 @@ import './styles.scss';
 interface Skill {
     name: string;
     icon: React.FC<SVGProps>;
+    description?: string;
 }
 
 interface SkillCategory {
@@ -35,31 +36,76 @@ const skillList: SkillCategory[] = [
     {
         name: 'Programming Languages',
         skills: [
-            { name: 'JavaScript', icon: JavaScript },
-            { name: 'Java', icon: Java },
-            { name: 'Python', icon: Python },
-            { name: 'TypeScript', icon: TypeScript },
+            {
+                name: 'JavaScript',
+                icon: JavaScript,
+            },
+            {
+                name: 'Java',
+                icon: Java,
+            },
+            {
+                name: 'Python',
+                icon: Python,
+            },
+            {
+                name: 'TypeScript',
+                icon: TypeScript,
+            },
         ],
     },
     {
         name: 'Tools and Frameworks',
         skills: [
-            { name: 'React', icon: ReactIcon },
-            { name: 'Redux', icon: Redux },
-            { name: 'Node', icon: Node },
-            { name: 'Git', icon: Git },
-            { name: 'HTML', icon: HTML },
-            { name: 'CSS', icon: CSS },
-            { name: 'Mocha', icon: Mocha },
-            { name: 'Jest', icon: Jest },
+            {
+                name: 'React',
+                icon: ReactIcon,
+            },
+            {
+                name: 'Redux',
+                icon: Redux,
+            },
+            {
+                name: 'Node',
+                icon: Node,
+            },
+            {
+                name: 'Git',
+                icon: Git,
+            },
+            {
+                name: 'HTML',
+                icon: HTML,
+            },
+            {
+                name: 'CSS',
+                icon: CSS,
+            },
+            {
+                name: 'Mocha',
+                icon: Mocha,
+            },
+            {
+                name: 'Jest',
+                icon: Jest,
+            },
         ],
     },
     {
         name: 'Soft Skills',
         skills: [
-            { name: 'Communication', icon: Communication },
-            { name: 'Mentorship', icon: Mentorship },
-            { name: 'Leadership', icon: Leadership },
+            {
+                name: 'Communication',
+                icon: Communication,
+            },
+            {
+                name: 'Mentorship',
+                icon: Mentorship,
+            },
+            {
+                name: 'Leadership',
+                icon: Leadership,
+            },
         ],
     },
 ];
