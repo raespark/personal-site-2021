@@ -16,10 +16,6 @@
     height: 100%;
     align-items: center;
 
-    @media (min-width: $md-screen-min) {
-        padding: 0 $desktop-side-padding;
-    }
-
     .contact-page-contents {
         width: 100vw;
         padding: 10px;

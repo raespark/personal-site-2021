@@ -11,12 +11,12 @@ const About: React.FC = () => {
                     <p className="about-paragraph">
                         Hey!{' '}
                         <span className="emphasis">I'm Rachael or Rae!</span>{' '}
-                        I'm a software engineer that also dabbles in other
-                        hobbies like drawing, crafting, sewing, cosplaying,
-                        writing and more! I love being creative and bringing
-                        something from an abstract idea into something tangible
-                        and real. I'm a huge Nintendo nerd, and a natural born
-                        Texan, currently residing in the beautiful{' '}
+                        I'm a programmer that also dabbles in other hobbies like
+                        drawing, crafting, sewing, cosplaying, writing and more!
+                        I love being creative and bringing something from an
+                        abstract idea into something tangible and real. I'm a
+                        huge Nintendo nerd, and a natural born Texan, currently
+                        residing in the beautiful{' '}
                         <span className="emphasis">Austin, Texas</span>! I'm a
                         huge fan of pastel anything and my current obsession is
                         cute, colorful, pastel keyboards. I'm also a huge fan of
