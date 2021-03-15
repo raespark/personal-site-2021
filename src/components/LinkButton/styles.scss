@@ -6,10 +6,6 @@
     width: min-content;
     padding: 10px 15px;
     border-radius: 5px;
-    align-items: center;
-    display: grid;
-    grid-template-columns: min-content min-content;
-    justify-content: center;
 
     &:hover {
         cursor: pointer;
@@ -33,21 +29,28 @@
         }
     }
 
-    .button-text {
+    .button-content {
+        align-items: center;
         display: grid;
-        margin-bottom: 0;
-        text-align: end;
-        white-space: nowrap;
-        font-family: $accent-fonts;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-weight: 800;
-        color: white;
-        margin-right: 5px;
-    }
+        grid-template-columns: min-content min-content;
+        justify-content: center;
 
-    .arrow-icon {
-        stroke: white;
-        transition: margin ease $animation-time;
+        .button-text {
+            display: grid;
+            margin-bottom: 0;
+            text-align: end;
+            white-space: nowrap;
+            font-family: $accent-fonts;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: white;
+            margin-right: 5px;
+        }
+
+        .arrow-icon {
+            stroke: white;
+            transition: margin ease $animation-time;
+        }
     }
 }

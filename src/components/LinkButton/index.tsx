@@ -25,8 +25,10 @@ const WorkWithMe: React.FC<WorkWitMeProps> = ({
                     inverse: inverse,
                 })}
             >
-                <h4 className="button-text">{text}</h4>
-                <ArrowUpRight className="arrow-icon" />
+                <div className="button-content">
+                    <h4 className="button-text">{text}</h4>
+                    <ArrowUpRight className="arrow-icon" />
+                </div>
             </button>
         </Link>
     );
