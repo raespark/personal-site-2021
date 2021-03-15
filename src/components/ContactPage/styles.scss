@@ -137,11 +137,14 @@
                         text-transform: uppercase;
                         font-size: 16px;
                         box-shadow: $shadow;
-                        display: grid;
-                        justify-content: center;
-                        align-items: center;
                         height: 40px;
                         width: 150px;
+
+                        .button-content {
+                            display: grid;
+                            justify-content: center;
+                            align-items: center;
+                        }
 
                         .button-loading-icon {
                             animation: spin infinite linear 1.5s;

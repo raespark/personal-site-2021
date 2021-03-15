@@ -24,10 +24,10 @@ const ContactPage: React.FC = () => {
 
     // CSS for the tooltip doesn't load on page load for some reason,
     //so don't have tooltip in the dom at page load
-    const [tooltipLoaded, setTooltiploaded] = useState(false);
+    const [tooltipLoaded, setTooltipLoaded] = useState(false);
 
     useEffect(() => {
-        setTooltiploaded(true);
+        setTooltipLoaded(true);
     });
 
     const handleChange = (e) => {
@@ -138,11 +138,13 @@ const ContactPage: React.FC = () => {
                                 })}
                                 type="submit"
                             >
-                                {loading ? (
-                                    <Loader className="button-loading-icon" />
-                                ) : (
-                                    'Send'
-                                )}
+                                <div className="button-content">
+                                    {loading ? (
+                                        <Loader className="button-loading-icon" />
+                                    ) : (
+                                        'Send'
+                                    )}
+                                </div>
                             </button>
                         </div>
                     </form>
