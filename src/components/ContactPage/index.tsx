@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import { navigate } from 'gatsby-link';
 import Tooltip from 'react-tooltip';
@@ -21,6 +21,14 @@ const ContactPage: React.FC = () => {
 
     const [state, setState] = useState({});
     const [loading, setLoading] = useState(false);
+
+    // CSS for the tooltip doesn't load on page load for some reason,
+    //so don't have tooltip in the dom at page load
+    const [tooltipLoaded, setTooltiploaded] = useState(false);
+
+    useEffect(() => {
+        setTooltiploaded(true);
+    });
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
@@ -95,16 +103,18 @@ const ContactPage: React.FC = () => {
                                 onChange={handleChange}
                                 required
                             />
-                            <Tooltip
-                                id="email-tooltip"
-                                effect="solid"
-                                className="info-tip"
-                                backgroundColor="#f2f2f2"
-                                textColor="#434343"
-                            >
-                                I need this to know how to contact you back, no
-                                spam I promise!
-                            </Tooltip>
+                            {tooltipLoaded && (
+                                <Tooltip
+                                    id="email-tooltip"
+                                    effect="solid"
+                                    className="info-tip"
+                                    backgroundColor="#f2f2f2"
+                                    textColor="#434343"
+                                >
+                                    I need this to know how to contact you back,
+                                    no spam I promise!
+                                </Tooltip>
+                            )}
                         </div>
 
                         <div className="form-field">
