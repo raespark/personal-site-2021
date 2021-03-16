@@ -15,14 +15,14 @@ export enum NavSelected {
 
 interface HeaderProps {
     selected: NavSelected;
-    homePage?: boolean;
+    heroPage?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
     selected,
-    homePage = false,
+    heroPage = false,
 }: HeaderProps) => {
-    const [topOfPage, setTopOfPage] = useState(homePage);
+    const [topOfPage, setTopOfPage] = useState(heroPage);
     const [showMenu, setShowMenu] = useState(false);
 
     const handleScroll = () => {
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
     useEffect(() => {
         // Due to the nature of how scroll events work on mobile
         // I disable to scroll animation to optimize the mobile experience
-        if (homePage && isDesktop) {
+        if (heroPage && isDesktop) {
             window.onscroll = handleScroll;
             handleScroll();
         } else {

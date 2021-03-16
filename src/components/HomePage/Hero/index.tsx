@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
                 <div className="hero-image-container">
                     <StaticImage
                         className="hero-image"
-                        src="self-portrait-cropped.png"
+                        src="about-hero.png"
                         alt="A stylized drawing of me, Rachael Metcalf, at a computer"
                         placeholder="tracedSVG"
                         quality={95}

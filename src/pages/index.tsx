@@ -11,7 +11,7 @@ import '../global.scss';
 const HomePage: React.FC = () => (
     <Layout>
         <SEO title="Rachael Metcalf" />
-        <Header selected={NavSelected.about} homePage />
+        <Header selected={NavSelected.about} heroPage />
         <HomePageContents />
     </Layout>
 );

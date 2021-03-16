@@ -1,0 +1,139 @@
+@import 'src/global.scss';
+
+.project-hero {
+    width: 100vw;
+    padding: 80px $mobile-side-padding 0;
+    background-color: $brand2-light;
+    margin-bottom: $section-margin-bottom;
+    display: grid;
+    position: relative;
+
+    @media (min-width: $md-screen-min) {
+        padding: 100px $tablet-side-padding 0;
+    }
+
+    @media (min-width: $lg-screen-min) {
+        padding: 150px $desktop-side-padding 0;
+    }
+
+    .project-hero-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: $max-width;
+        justify-self: center;
+        grid-gap: 40px;
+        grid-template-areas:
+            'text'
+            'image';
+
+        @media (min-width: $md-screen-min) {
+            grid-template-columns: unset;
+            grid-template-areas: 'image text';
+        }
+
+        @media (min-width: $lg-screen-min) {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .project-hero-text {
+            z-index: 1;
+            justify-self: start;
+            background-color: white;
+            width: 100%;
+            padding: 50px 60px;
+            border-radius: 8px;
+            box-shadow: $shadow;
+            height: min-content;
+            grid-area: text;
+
+            @media (min-width: $md-screen-min) {
+                margin-bottom: 100px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                width: 600px;
+            }
+        }
+
+        .project-hero-quote {
+            color: black;
+            font-family: $accent-fonts;
+            font-size: 24px;
+            margin-bottom: 18px;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 34px;
+            }
+        }
+
+        .project-hero-description {
+            margin-top: 20px;
+            padding: 0 30px;
+            font-family: $accent-fonts;
+            display: grid;
+
+            @media (min-width: $md-screen-min) {
+                margin-top: 40px;
+            }
+
+            .project-hero-description-text {
+                text-align: center;
+                margin: 0;
+                font-weight: 400;
+                font-size: 18px;
+
+                @media (min-width: $md-screen-min) {
+                    font-size: 22px;
+                }
+            }
+
+            .project-hero-hr {
+                width: 30px;
+                justify-self: center;
+                margin: 6px;
+
+                @media (min-width: $md-screen-min) {
+                    margin: 8px;
+                }
+            }
+
+            .subtitle {
+                font-size: 12px;
+
+                @media (min-width: $md-screen-min) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .project-hero-image-container {
+            background-color: $brand1-light;
+            z-index: 1;
+            padding: 20px;
+            align-self: end;
+            justify-self: center;
+            border-radius: 8px;
+            margin-bottom: -40px;
+            box-shadow: $shadow;
+            grid-area: image;
+
+            @media (min-width: $md-screen-min) {
+                justify-self: end;
+                padding: 40px;
+                margin-bottom: -80px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                margin-top: 100px;
+            }
+
+            .project-hero-image {
+                max-width: 200px;
+
+                @media (min-width: $lg-screen-min) {
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+}
