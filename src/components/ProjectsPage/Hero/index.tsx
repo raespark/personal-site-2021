@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
                         </h2>
                         <hr className="project-hero-hr" />
                         <h3 className="project-hero-description-text subtitle">
-                            Portfolio of my <br />
+                            A portfolio of my <br />
                             personal/professional work
                         </h3>
                     </div>

@@ -19,27 +19,30 @@
     .project-hero-container {
         display: grid;
         grid-template-columns: 1fr;
-        max-width: $max-width;
         justify-self: center;
         grid-gap: 40px;
         grid-template-areas:
             'text'
             'image';
+        width: 100%;
 
         @media (min-width: $md-screen-min) {
             grid-template-columns: unset;
-            grid-template-areas: 'image text';
+            max-width: 700px;
         }
 
         @media (min-width: $lg-screen-min) {
+            max-width: $max-width;
             grid-template-columns: 1fr 2fr;
+            grid-template-areas: 'image text';
+            width: unset;
         }
 
         .project-hero-text {
             z-index: 1;
-            justify-self: start;
+            justify-self: center;
             background-color: white;
-            width: 100%;
+            max-width: 600px;
             padding: 50px 60px;
             border-radius: 8px;
             box-shadow: $shadow;
@@ -47,11 +50,14 @@
             grid-area: text;
 
             @media (min-width: $md-screen-min) {
-                margin-bottom: 100px;
+                justify-self: end;
+                max-width: 75%;
             }
 
             @media (min-width: $lg-screen-min) {
-                width: 600px;
+                margin-bottom: 100px;
+                padding: 50px 120px;
+                max-width: 600px;
             }
         }
 
@@ -118,7 +124,7 @@
             grid-area: image;
 
             @media (min-width: $md-screen-min) {
-                justify-self: end;
+                justify-self: start;
                 padding: 40px;
                 margin-bottom: -80px;
             }
@@ -128,10 +134,14 @@
             }
 
             .project-hero-image {
-                max-width: 200px;
+                max-width: 175px;
+
+                @media (min-width: $md-screen-min) {
+                    max-width: 200px;
+                }
 
                 @media (min-width: $lg-screen-min) {
-                    max-width: 250px;
+                    max-width: 225px;
                 }
             }
         }
