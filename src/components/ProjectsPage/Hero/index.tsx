@@ -9,7 +9,8 @@ const Hero: React.FC = () => {
             <div className="project-hero-container">
                 <div className="project-hero-text">
                     <h1 className="project-hero-quote text-center">
-                        What have I <span className="emphasis">built</span>?
+                        What have I <br />
+                        already <span className="emphasis">built</span>?
                     </h1>
                     <div className="project-hero-description">
                         <h2 className="project-hero-description-text">

@@ -6,9 +6,11 @@
     box-shadow: $shadow;
     transition: margin ease $animation-time;
 
-    &:hover {
-        margin-top: -10px;
-        margin-bottom: 10px;
+    @media (min-width: $md-screen-min) {
+        &:hover {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
     }
 
     @media (min-width: $lg-screen-min) {

@@ -66,7 +66,7 @@
             }
 
             @media (min-width: $lg-screen-min) {
-                grid-gap: 60px;
+                grid-gap: 50px;
                 grid-template-columns: repeat(
                     3,
                     minmax(calc(33% - 120px), 320px)
