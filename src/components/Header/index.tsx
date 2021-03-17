@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { Menu, GitHub, Linkedin } from 'react-feather';
 import { Link } from 'gatsby';
 import { isDesktop } from 'react-device-detect';
+import _ from 'lodash';
 
 import SideMenu from '../SideMenu';
 import './styles.scss';
@@ -40,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({
         // Due to the nature of how scroll events work on mobile
         // I disable to scroll animation to optimize the mobile experience
         if (heroPage && isDesktop) {
-            window.onscroll = handleScroll;
+            window.onscroll = _.throttle(handleScroll, 100);
             handleScroll();
         } else {
             setTopOfPage(false);

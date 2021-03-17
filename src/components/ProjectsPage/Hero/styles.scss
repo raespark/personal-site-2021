@@ -4,16 +4,17 @@
     width: 100vw;
     padding: 80px $mobile-side-padding 0;
     background-color: $brand2-light;
-    margin-bottom: $section-margin-bottom;
+    margin-bottom: 80px;
     display: grid;
     position: relative;
 
     @media (min-width: $md-screen-min) {
         padding: 100px $tablet-side-padding 0;
+        margin-bottom: $section-margin-bottom;
     }
 
     @media (min-width: $lg-screen-min) {
-        padding: 150px $desktop-side-padding 0;
+        padding: 120px $desktop-side-padding 0;
     }
 
     .project-hero-container {
@@ -51,13 +52,15 @@
 
             @media (min-width: $md-screen-min) {
                 justify-self: end;
-                max-width: 75%;
+                width: 75%;
+                min-height: 250px;
             }
 
             @media (min-width: $lg-screen-min) {
                 margin-bottom: 100px;
                 padding: 50px 120px;
                 max-width: 600px;
+                width: auto;
             }
         }
 
@@ -129,18 +132,10 @@
                 margin-bottom: -80px;
             }
 
-            @media (min-width: $lg-screen-min) {
-                margin-top: 100px;
-            }
-
             .project-hero-image {
                 max-width: 175px;
 
                 @media (min-width: $md-screen-min) {
-                    max-width: 200px;
-                }
-
-                @media (min-width: $lg-screen-min) {
                     max-width: 225px;
                 }
             }

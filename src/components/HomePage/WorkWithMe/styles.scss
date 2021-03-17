@@ -23,7 +23,7 @@
         min-width: 300px;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba($text-dark, 0.075);
+        box-shadow: $shadow;
 
         @media (min-width: $lg-screen-min) {
             grid-template-columns: min-content min-content;

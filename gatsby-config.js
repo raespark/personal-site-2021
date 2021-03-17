@@ -24,10 +24,18 @@ module.exports = {
         },
         `gatsby-plugin-sass`,
         {
+            resolve: `gatsby-transformer-json`,
+            options: {
+                typeName: `Json`, // a fixed string
+            },
+        },
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/static/images`,
+                path: `${__dirname}/static/`,
             },
         },
         `gatsby-plugin-gatsby-cloud`,

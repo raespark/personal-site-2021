@@ -28,7 +28,8 @@ const Hero: React.FC = () => {
                         src="projects-hero.png"
                         alt="A stylized drawing of me, Rachael Metcalf, building up a tower out of blocks"
                         placeholder="tracedSVG"
-                        quality={95}
+                        layout="constrained"
+                        width={250}
                         formats={['auto', 'webp', 'avif']}
                     />
                 </div>
