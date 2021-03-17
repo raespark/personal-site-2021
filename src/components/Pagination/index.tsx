@@ -1,5 +1,6 @@
 import React, { useState, Children, useEffect } from 'react';
 import classnames from 'classnames';
+import { isMobile } from 'react-device-detect';
 import _ from 'lodash';
 
 import './styles.scss';
@@ -57,7 +58,7 @@ const Pagination: React.FC<PaginationProps> = ({
     };
 
     return (
-        <div className={'pagination'}>
+        <div className={'pagination'} id="pagination">
             <div className={`pagination-page ${className}`}>
                 {currentPageData}
             </div>
@@ -73,7 +74,25 @@ const Pagination: React.FC<PaginationProps> = ({
                                     'current-page': currentPage === index,
                                 }
                             )}
-                            onClick={() => changePage(index)}
+                            onClick={() => {
+                                if (!(currentPage === index)) {
+                                    changePage(index);
+                                    if (isMobile) {
+                                        const paginationElement = document.getElementById(
+                                            'pagination'
+                                        );
+                                        const pageLocation =
+                                            paginationElement.getBoundingClientRect()
+                                                .top +
+                                            window.pageYOffset -
+                                            150;
+                                        window.scrollTo({
+                                            top: pageLocation,
+                                            behavior: 'smooth',
+                                        });
+                                    }
+                                }
+                            }}
                         >
                             {numbered ? `${index + 1}` : '•'}
                         </div>

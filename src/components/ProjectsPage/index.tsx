@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import classnames from 'classnames';
+import { isMobile } from 'react-device-detect';
 
 import Hero from './Hero';
 import Pagination from '../Pagination';
@@ -43,11 +44,29 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
         setProjectsList(projects.filter((project) => project[field] === value));
     };
 
+    const scrollToTopOfProjects = () => {
+        setTimeout(() => {
+            if (isMobile) {
+                const filtersElement = document.getElementById(
+                    'projects-filters'
+                );
+                const pageLocation =
+                    filtersElement.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    80;
+                window.scrollTo({
+                    top: pageLocation,
+                    behavior: 'smooth',
+                });
+            }
+        }, 100);
+    };
+
     return (
         <div className="projects-page">
             <Hero />
             <div className="projects-page-contents">
-                <div className="projects-filters">
+                <div className="projects-filters" id="projects-filters">
                     <div
                         className={classnames('projects-filter', {
                             active: selected === 0,
@@ -55,6 +74,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         onClick={() => {
                             setSelected(0);
                             setProjectsList(projects);
+                            scrollToTopOfProjects();
                         }}
                     >
                         All
@@ -67,6 +87,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         onClick={() => {
                             setSelected(1);
                             filterProjectsList('professional', true);
+                            scrollToTopOfProjects();
                         }}
                     >
                         Professional
@@ -79,6 +100,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         onClick={() => {
                             setSelected(2);
                             filterProjectsList('professional', false);
+                            scrollToTopOfProjects();
                         }}
                     >
                         Personal
