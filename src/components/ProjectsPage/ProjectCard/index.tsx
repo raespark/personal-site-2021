@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { ProjectPreview } from '../index';
@@ -15,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }: ProjectCardProps) => {
     const image = getImage(project.previewImage);
     return (
-        <div className={`project-card ${className}`}>
+        <Link to={project.url} className={`project-card ${className}`}>
             <div className="project-card-background">
                 <div className="project-preview-image-container">
                     <GatsbyImage
@@ -41,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

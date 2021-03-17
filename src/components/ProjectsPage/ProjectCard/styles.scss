@@ -4,7 +4,6 @@
     width: 100%;
     border-radius: 5px;
     box-shadow: $shadow;
-    cursor: pointer;
     transition: margin ease $animation-time;
 
     &:hover {
@@ -28,6 +27,7 @@
             text-transform: capitalize;
             font-size: 16px;
             white-space: nowrap;
+            color: $text-dark;
         }
 
         .project-subtitle {

@@ -9,7 +9,7 @@
     grid-template-columns: 1fr;
     grid-gap: 20px;
     padding: 30px $mobile-side-padding;
-    background-color: $brand2-light;
+    background-color: rgba($brand2-light, 0.85);
     z-index: 10;
     transition: padding ease $animation-time;
 
@@ -24,7 +24,6 @@
 
     &.full-width {
         padding: 10px 40px;
-        background-color: rgba($brand2-light, 0.85);
 
         .header-menu {
             padding: 10px 0;
