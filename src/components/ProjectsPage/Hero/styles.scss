@@ -44,7 +44,7 @@
             justify-self: center;
             background-color: white;
             max-width: 600px;
-            padding: 50px 60px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: $shadow;
             height: min-content;
@@ -54,10 +54,11 @@
                 justify-self: end;
                 width: 75%;
                 min-height: 250px;
+                padding: 50px 60px;
             }
 
             @media (min-width: $lg-screen-min) {
-                margin-bottom: 100px;
+                margin-bottom: 140px;
                 padding: 50px 120px;
                 max-width: 600px;
                 width: auto;
@@ -133,7 +134,7 @@
             }
 
             .project-hero-image {
-                max-width: 175px;
+                max-width: 150px;
 
                 @media (min-width: $md-screen-min) {
                     max-width: 225px;

@@ -9,7 +9,7 @@ import ProjectsPage, { ProjectPreview } from '../../components/ProjectsPage';
 
 import '../../global.scss';
 
-type DataProps = {
+interface DataProps {
     json: {
         projects: {
             id: number;
@@ -22,7 +22,7 @@ type DataProps = {
             year: number;
         }[];
     };
-};
+}
 
 const Projects: React.FC<PageProps<DataProps>> = ({ data }) => {
     return (

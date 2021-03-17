@@ -3,8 +3,9 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 import classnames from 'classnames';
 
 import Hero from './Hero';
-import './styles.scss';
+import Pagination from '../Pagination';
 import ProjectCard from './ProjectCard';
+import './styles.scss';
 
 export enum ProjectMedia {
     video = 'video',
@@ -58,7 +59,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                     >
                         All
                     </div>
-                    <div className="projects-filter-divider">•</div>
+                    <div className="projects-filter-divider">|</div>
                     <div
                         className={classnames('projects-filter', {
                             active: selected === 1,
@@ -70,7 +71,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                     >
                         Professional
                     </div>
-                    <div className="projects-filter-divider">•</div>
+                    <div className="projects-filter-divider">|</div>
                     <div
                         className={classnames('projects-filter', {
                             active: selected === 2,
@@ -83,7 +84,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         Personal
                     </div>
                 </div>
-                <div className="projects-list">
+                <Pagination pageSize={6} className="projects-list">
                     {projectsList.map((project) => (
                         <ProjectCard
                             key={project.id}
@@ -91,7 +92,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                             project={project}
                         />
                     ))}
-                </div>
+                </Pagination>
             </div>
         </div>
     );

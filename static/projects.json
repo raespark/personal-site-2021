@@ -47,7 +47,7 @@
         },
         {
             "id": 4,
-            "title": "Smooth inventory drag-n-drop",
+            "title": "Smooth drag-n-drop",
             "url": "drag-n-drop",
             "builtFor": "Nexus",
             "type": "Web Dev",

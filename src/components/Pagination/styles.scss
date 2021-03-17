@@ -1,0 +1,58 @@
+@import 'src/global.scss';
+
+.pagination {
+    $nav-height: 35px;
+    $nav-margin-top: 40px;
+
+    .pagination-nav {
+        margin-top: $nav-margin-top;
+        height: $nav-margin-top;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: min-content;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+
+        .pagination-nav-element {
+            padding: 5px;
+            width: min-content;
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: 800;
+            color: $brand1-light;
+
+            &.current-page {
+                color: $brand1-dark;
+            }
+
+            &:hover {
+                color: $brand1-dark;
+            }
+
+            &.numbered {
+                padding: 5px 15px;
+                font-size: 18px;
+                font-weight: 600;
+                border-radius: 3px;
+
+                &.current-page {
+                    background-color: $brand1-dark;
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: $brand1-light;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .pagination-nav-spacer {
+        @media (min-width: $lg-screen-min) {
+            height: $nav-height;
+            margin-top: $nav-margin-top;
+        }
+    }
+}

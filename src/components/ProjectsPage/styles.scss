@@ -2,31 +2,39 @@
 
 .projects-page {
     .projects-page-contents {
-        padding: 0 $mobile-side-padding;
+        padding: 20px $mobile-side-padding;
         justify-content: center;
         display: grid;
 
         @media (min-width: $md-screen-min) {
-            padding: 0 $tablet-side-padding;
+            padding: 20px $tablet-side-padding;
         }
 
         @media (min-width: $lg-screen-min) {
-            padding: 0 $desktop-side-padding;
+            padding: 20px $desktop-side-padding;
         }
 
         .projects-filters {
             display: grid;
             grid-template-columns: repeat(5, min-content);
-            grid-gap: 10px;
+            grid-gap: 5px;
             justify-self: center;
             margin-bottom: 40px;
             cursor: pointer;
 
+            @media (min-width: $md-screen-min) {
+                grid-gap: 10px;
+            }
+
             .projects-filter {
-                padding: 0 10px;
+                padding: 0 5px;
                 transition: all ease $animation-time;
                 border-radius: 3px;
                 font-weight: 600;
+
+                @media (min-width: $md-screen-min) {
+                    padding: 0 10px;
+                }
 
                 &:hover {
                     background-color: $brand1-light;
@@ -49,15 +57,21 @@
         .projects-list {
             display: grid;
             grid-template-columns: 1fr;
-            grid-gap: 60px;
+            grid-gap: 40px;
             max-width: $max-width;
             justify-content: center;
 
+            @media (min-width: $md-screen-min) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             @media (min-width: $lg-screen-min) {
+                grid-gap: 60px;
                 grid-template-columns: repeat(
                     3,
                     minmax(calc(33% - 120px), 320px)
                 );
+                grid-template-rows: repeat(2, 1fr);
             }
         }
     }
