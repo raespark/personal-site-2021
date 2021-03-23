@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { IGatsbyImageData, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import { X } from 'react-feather';
+import ReactPlayer from 'react-player';
+import { isMobile } from 'react-device-detect';
 
 import {
     ReactIcon,
@@ -20,7 +22,7 @@ import './styles.scss';
 export enum MediaType {
     Video = 'video',
     ImageGallery = 'image-gallery',
-    Image = 'image',
+    YouTube = 'youtube',
 }
 
 export interface Project {
@@ -52,7 +54,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
     const [currentImage, setCurrentImage] = useState(0);
 
     const handleShowImage = (imageIndex: number): void => {
-        console.log(':D');
         if (currentImage != imageIndex) {
             setCurrentImage(imageIndex);
         }
@@ -70,11 +71,21 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                     <video
                         src={project.media as string}
                         className="project-video"
-                        poster={`/${project.previewImage}`}
                         autoPlay
                         loop
                         muted
                     />
+                );
+            case MediaType.YouTube:
+                return (
+                    <div className="youtube-player-container">
+                        <ReactPlayer
+                            url={project.media}
+                            className="youtube-player"
+                            volume={0.75}
+                            controls
+                        />
+                    </div>
                 );
             case MediaType.ImageGallery:
                 return (
@@ -99,13 +110,16 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                                         alt={`${project.title} image`}
                                         className="full-image"
                                     />
-                                    <div className="image-caption text-center">
-                                        {
-                                            project.imageGalleryMedia[
-                                                currentImage
-                                            ].caption
-                                        }
-                                    </div>
+                                    {!!project.imageGalleryMedia[currentImage]
+                                        .caption && (
+                                        <div className="image-caption text-center">
+                                            {
+                                                project.imageGalleryMedia[
+                                                    currentImage
+                                                ].caption
+                                            }
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         )}
@@ -122,7 +136,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                                         <div
                                             className="image-gallery-container"
                                             onClick={() => {
-                                                console.log('???????');
                                                 handleShowImage(index);
                                             }}
                                         >

@@ -23,7 +23,11 @@
     }
 
     &.full-width {
-        padding: 10px 40px;
+        padding: 10px $mobile-side-padding;
+
+        @media (min-width: $md-screen-min) {
+            padding: 10px 40px;
+        }
 
         .header-menu {
             padding: 10px 0;
@@ -58,10 +62,14 @@
         .header-brand {
             font-weight: bold;
             font-family: $accent-fonts;
-            font-size: 22px;
+            font-size: 20px;
             color: $text-dark;
             margin: 0;
             cursor: pointer;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 22px;
+            }
 
             &:hover {
                 color: $brand1-dark;

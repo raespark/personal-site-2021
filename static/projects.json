@@ -8,9 +8,12 @@
         "professional": false,
         "mediaType": "image-gallery",
         "imageGalleryMedia": [
-            {"caption": "The caption for the first image" , "image": "project-media/tip-confetti-preview.png"}, 
-            {"caption": "This shows my first rough design and also a long caption! Caption caption caption caption caption! caption? Caption.", "image": "project-media/bake-care-preview.png"}, 
-            {"caption": "Short Caption","image": "project-media/my-game-collection-preview.png"}
+            {"caption": "The original design of this website was done in a notebook and then mocked up with colors on my computer using my art drawing program. Not technically what it was built for, and all the scales of the elements are off, but it helped me get a general feel down for how I wanted to lay out the elements and how to color them." , "image": "project-media/website-image-1.png"}, 
+            {"caption": "The original design of this website was done in a notebook and then mocked up with colors on my computer using my art drawing program. Not technically what it was built for, and all the scales of the elements are off, but it helped me get a general feel down for how I wanted to lay out the elements and how to color them.", "image": "project-media/website-image-2.png"}, 
+            {"caption": "The compositions of the illustrations featured in the heroes on each page took some iteration to finalize.","image": "project-media/website-image-3.jpeg"},
+            {"caption": "Initial blocking out of the project page.", "image": "project-media/website-image-4.jpeg"},
+            {"caption": "Initial concept for the home page hero layout.", "image": "project-media/website-image-5.jpeg"},
+            {"caption": "Original drafts for the home page hero illustration as well as the contact button component, project cards, and the project page.", "image": "project-media/website-image-6.jpeg"}
         ],
         "previewImage":"project-media/this-website-preview.png",
         "year": 2021,
@@ -54,8 +57,8 @@
         "builtFor": "Personal",
         "type": "Game",
         "professional": false,
-        "mediaType": "video",
-        "media": "/project-media/drag-n-drop.mp4",
+        "mediaType": "youtube",
+        "media": "https://youtu.be/pJvBEUWo5RM?rel=0",
         "previewImage": "project-media/bake-care-preview.png",
         "year": 2020,
         "description": "A game I built for a game jam hosted by Extra Credits in 2020. The theme of the jam was \"Take Care\", and after going through a difficult few weeks leading up to the jam I decided to make a silly game about baking cookies. I made all the art pastel, round, cute and fun and focused the project/'s visual aspects and general game feel. I aimed to make the project as polished as possible in the limited time available. The gameplay consists of getting a random recipe and baking to it's specifications using the ingredients on the table, placing the dough on a baking sheet and seeing how the cookies came out. It's inspired by cooking mini-games in games I played growing up like in the Nancy Drew franchise.\n\nI spent most of the jam perfecting the visual aspects and testing the mechanics and game loop over and over until I felt like it read clearly, and that the charm and heart I was trying to convey came across. I iterated on how the specific interactions between the player and the game worked in order to reach a state where there's some level of effort, but that the chill relaxed and laid back vibe I was going for was achieved. During the jam I was also a mod for the jam's community spaces and managed answering questions and the chat for the finale stream to keep things running smoothly.",
@@ -79,7 +82,7 @@
         "previewImage": "project-media/drag-n-drop-preview.png",
         "year": 2020,
         "tagline": "",
-        "description": "",
+        "description": "A fun and alternative to the standard click flow for managing a creators store inventory. Tackling performance issues, while also allowing for custom styling that the default HTML drag and drop behavior doesn't alow. Due to handling the drag and drop manually, this could cause performance issues so I went though many iterations to nail it down to be performant and smooth.",
         "createdWith": [
             {"label": "React", "icon": "react"},
             {"label": "TypeScript", "icon": "typescript"},
@@ -95,10 +98,10 @@
         "type": "Web Dev",
         "professional": false,
         "mediaType": "video",
-        "media": "/project-media/drag-n-drop.mp4",
+        "media": "/project-media/word-search.mp4",
         "previewImage": "project-media/word-search-preview.png",
         "year": 2020,
-        "description": "",
+        "description": "As a big fan of word searches myself, I wanted to try and build something to randomly generate them for me to solve. I pull words using the node library \"random-words\", and lays them out ensuring they don't overwrite each other and that they have space to lay out on the board. I plan on adding the ability to solve them using the site itself but for now it's only simple puzzle generation. It can't do diagonal or backwards word layouts.",
         "createdWith": [
             {"label": "React", "icon": "react"},
             {"label": "JavaScript", "icon": "javascript"},
@@ -141,11 +144,15 @@
         "builtFor": "Personal",
         "type": "Game",
         "professional": false,
-        "mediaType": "video",
-        "media": "/project-media/drag-n-drop.mp4",
+        "mediaType": "image-gallery",
+        "imageGalleryMedia": [
+            {"image": "project-media/someone-is-typing-1.png"},
+            {"image": "project-media/someone-is-typing-2.png"},
+            {"image": "project-media/someone-is-typing-3.png"}
+        ],
         "previewImage": "project-media/someone-is-typing-preview.png",
         "year": 2019,
-        "description": "",
+        "description": "A conversation simulator built by me and a friend during a game jam in 2019. They did the writing and concept and I built the dialogue handling system. Despite the obfuscated text, there are multiple endings and branching dialogue. It's handled using a tree implemented in json giving each group of dialogue an id, potential player responses if applicable, and corresponding id to go to after the dialogue is finished. Each dialogue option also has the potential different id's depending on the players choices and decisions. To simulate typing time, lines of dialogue can also specify a delay. This is used to emulate the emotional state of the person on the other end of the phone, sending short messages with long timers to signify distress or hesitance.",
         "createdWith": [
             {"label": "Godot", "icon": "godot"}
         ],
@@ -181,8 +188,8 @@
         "builtFor": "Personal",
         "type": "Game",
         "professional": false,
-        "mediaType": "video",
-        "media": "/project-media/drag-n-drop.mp4",
+        "mediaType": "youtube",
+        "media": "https://youtu.be/-uHxOG-jPX0?rel=0",
         "previewImage": "project-media/grow-preview.png",
         "year": 2018,
         "tagline": "A zen moment in game form.",

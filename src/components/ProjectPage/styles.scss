@@ -73,7 +73,7 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
         .project-title {
             text-transform: capitalize;
             margin-bottom: 8px;
-            font-size: 24px;
+            font-size: 22px;
 
             @media (min-width: $md-screen-min) {
                 font-size: 26px;
@@ -155,6 +155,25 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
                 }
             }
 
+            .youtube-player-container {
+                height: 100%;
+                width: 90vw;
+
+                @media (min-width: $md-screen-min) {
+                    width: 600px;
+                }
+
+                @media (min-width: $lg-screen-min) {
+                    width: 888px;
+                }
+                .youtube-player {
+                    height: 100% !important;
+                    max-width: 100% !important;
+                    width: auto !important;
+                    box-shadow: $media-shadow;
+                }
+            }
+
             .open-image {
                 position: fixed;
                 top: 0;
@@ -181,6 +200,8 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
                     border-radius: 5px;
                     position: relative;
                     width: 95vw;
+                    display: grid;
+                    animation: $slow-animation-time fade-in ease-in;
 
                     @media (min-width: $md-screen-min) {
                         width: 600px;
@@ -188,7 +209,7 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
                     }
 
                     @media (min-width: $lg-screen-min) {
-                        width: 750px;
+                        width: 80vw;
                     }
 
                     .image-close {
@@ -197,6 +218,41 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
                         right: 5px;
                         stroke-width: 2px;
                         cursor: pointer;
+                    }
+
+                    .full-image {
+                        background-image: linear-gradient(
+                            to right,
+                            $text-lighter,
+                            rgba($text-dark, 0.35) 50%,
+                            $text-lighter 100%
+                        );
+                        box-shadow: $shadow;
+                        margin: 5px 0 20px;
+
+                        @media (min-width: $md-screen-min) {
+                            border-radius: 5px;
+                        }
+
+                        img {
+                            height: auto;
+                            object-fit: contain !important;
+                            width: 100%;
+                            display: block;
+
+                            @media (min-width: $md-screen-min) {
+                                height: 75vh;
+                            }
+                        }
+                    }
+
+                    .image-caption {
+                        padding: 0 10px;
+                        font-size: 14px;
+
+                        @media (min-width: $md-screen-min) {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -218,23 +274,28 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
                     width: 750px;
                 }
 
-                .image-gallery-image {
-                    animation: $slow-animation-time / 2 shadow-fade-in ease-in;
-                    box-shadow: $media-shadow;
-                    cursor: pointer;
+                .image-gallery-container {
+                    display: grid;
 
-                    img {
-                        height: auto;
-                        width: 250px;
-                        animation: $slow-animation-time / 2 fade-in ease-in;
+                    .image-gallery-image {
+                        animation: $slow-animation-time / 2 shadow-fade-in
+                            ease-in;
+                        box-shadow: $media-shadow;
+                        cursor: pointer;
 
-                        @media (min-width: $sm-screen-min) {
-                            width: 300px;
-                        }
+                        img {
+                            height: auto;
+                            width: 250px;
+                            animation: $slow-animation-time / 2 fade-in ease-in;
 
-                        @media (min-width: $md-screen-min) {
-                            height: $media-height;
-                            width: auto;
+                            @media (min-width: $sm-screen-min) {
+                                width: 300px;
+                            }
+
+                            @media (min-width: $md-screen-min) {
+                                height: $media-height;
+                                width: auto;
+                            }
                         }
                     }
                 }

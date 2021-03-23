@@ -41,8 +41,15 @@ const Pagination: React.FC<PaginationProps> = ({
     const updateChildren = (newChildren: React.ReactNode) => {
         const newChildrenArray = Children.toArray(newChildren);
         setChildrenArray(newChildrenArray);
-        changePage(startingPage);
         setPageCount(Math.ceil(newChildrenArray.length / pageSize));
+        setCurrentPage(startingPage);
+        const pageOffset = startingPage * pageSize;
+        setCurrentPageData(
+            newChildrenArray.slice(
+                pageOffset,
+                Math.min(pageOffset + pageSize, newChildrenArray.length)
+            )
+        );
     };
 
     useEffect(() => {

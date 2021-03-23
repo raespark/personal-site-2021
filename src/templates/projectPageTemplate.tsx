@@ -86,7 +86,12 @@ export const query = graphql`
                     imageGalleryMedia {
                         image {
                             childImageSharp {
-                                gatsbyImageData
+                                gatsbyImageData(
+                                    height: 500
+                                    placeholder: BLURRED
+                                    formats: [AUTO, WEBP, AVIF]
+                                    quality: 40
+                                )
                             }
                         }
                         caption
