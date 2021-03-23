@@ -115,6 +115,46 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         />
                     ))}
                 </Pagination>
+                <div className="projects-filters mobile-filters">
+                    <div
+                        className={classnames('projects-filter', {
+                            active: selected === 0,
+                        })}
+                        onClick={() => {
+                            setSelected(0);
+                            setProjectsList(projects);
+                            scrollToTopOfProjects();
+                        }}
+                    >
+                        All
+                    </div>
+                    <div className="projects-filter-divider">|</div>
+                    <div
+                        className={classnames('projects-filter', {
+                            active: selected === 1,
+                        })}
+                        onClick={() => {
+                            setSelected(1);
+                            filterProjectsList('professional', true);
+                            scrollToTopOfProjects();
+                        }}
+                    >
+                        Professional
+                    </div>
+                    <div className="projects-filter-divider">|</div>
+                    <div
+                        className={classnames('projects-filter', {
+                            active: selected === 2,
+                        })}
+                        onClick={() => {
+                            setSelected(2);
+                            filterProjectsList('professional', false);
+                            scrollToTopOfProjects();
+                        }}
+                    >
+                        Personal
+                    </div>
+                </div>
             </div>
         </div>
     );

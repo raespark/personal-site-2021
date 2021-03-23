@@ -22,6 +22,14 @@
             margin-bottom: 40px;
             cursor: pointer;
 
+            &.mobile-filters {
+                margin-top: 45px;
+
+                @media (min-width: $md-screen-min) {
+                    display: none;
+                }
+            }
+
             @media (min-width: $md-screen-min) {
                 grid-gap: 10px;
             }
