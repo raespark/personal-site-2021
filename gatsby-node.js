@@ -5,24 +5,6 @@
  */
 
 const path = require(`path`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
-
-exports.onCreateNode = ({ node, getNode, actions }) => {
-    const { createNodeField } = actions;
-
-    if (node.internal.type === `Json`) {
-        const url = createFilePath({
-            node,
-            getNode,
-            basePath: `pages/projects`,
-        });
-        createNodeField({
-            node,
-            name: `slug`,
-            value: slug,
-        });
-    }
-};
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;

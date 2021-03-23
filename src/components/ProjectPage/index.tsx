@@ -68,8 +68,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
         }
     };
 
-    console.log(project);
-
     return (
         <div className="project-page">
             <div className="project-page-contents">
