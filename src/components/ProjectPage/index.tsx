@@ -1,7 +1,7 @@
-import React from 'react';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-import classnames from 'classnames';
-import { isDesktop } from 'react-device-detect';
+import React, { useEffect, useState } from 'react';
+import { IGatsbyImageData, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+import { X } from 'react-feather';
 
 import {
     ReactIcon,
@@ -13,8 +13,9 @@ import {
     IconsEnum,
     Java,
 } from '../Icons';
+import Pagination from '../Pagination';
+
 import './styles.scss';
-import { Link } from 'gatsby';
 
 export enum MediaType {
     Video = 'video',
@@ -47,6 +48,100 @@ interface ProjectPageProps {
 const ProjectPage: React.FC<ProjectPageProps> = ({
     project,
 }: ProjectPageProps) => {
+    const [openImage, setOpenImage] = useState(false);
+    const [currentImage, setCurrentImage] = useState(0);
+
+    const handleShowImage = (imageIndex: number): void => {
+        console.log(':D');
+        if (currentImage != imageIndex) {
+            setCurrentImage(imageIndex);
+        }
+        setOpenImage(true);
+    };
+
+    const handleHideImage = (): void => {
+        setOpenImage(false);
+    };
+
+    const renderMedia = (project: Project) => {
+        switch (project.mediaType) {
+            case MediaType.Video:
+                return (
+                    <video
+                        src={project.media as string}
+                        className="project-video"
+                        poster={`/${project.previewImage}`}
+                        autoPlay
+                        loop
+                        muted
+                    />
+                );
+            case MediaType.ImageGallery:
+                return (
+                    <>
+                        {openImage && (
+                            <div className="open-image">
+                                <div
+                                    className="image-backdrop"
+                                    onClick={handleHideImage}
+                                />
+                                <div className="image-container">
+                                    <X
+                                        className="image-close"
+                                        onClick={handleHideImage}
+                                    />
+                                    <GatsbyImage
+                                        image={getImage(
+                                            project.imageGalleryMedia[
+                                                currentImage
+                                            ].image
+                                        )}
+                                        alt={`${project.title} image`}
+                                        className="full-image"
+                                    />
+                                    <div className="image-caption text-center">
+                                        {
+                                            project.imageGalleryMedia[
+                                                currentImage
+                                            ].caption
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        <Pagination
+                            pageSize={1}
+                            arrows
+                            startingPage={currentImage}
+                            className="image-gallery"
+                        >
+                            {project.imageGalleryMedia.map(
+                                (imageData, index) => {
+                                    const image = getImage(imageData.image);
+                                    return (
+                                        <div
+                                            className="image-gallery-container"
+                                            onClick={() => {
+                                                console.log('???????');
+                                                handleShowImage(index);
+                                            }}
+                                        >
+                                            <GatsbyImage
+                                                key={index}
+                                                image={image}
+                                                alt={`${project.title} image ${index}`}
+                                                className="image-gallery-image"
+                                            />
+                                        </div>
+                                    );
+                                }
+                            )}
+                        </Pagination>
+                    </>
+                );
+        }
+    };
+
     const toolIcon = (iconString: IconsEnum) => {
         switch (iconString) {
             case IconsEnum.react:
@@ -100,18 +195,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                         {project.tagline}
                     </h2>
                 )}
-                <div className="project-media">
-                    {project.mediaType === MediaType.Video && (
-                        <video
-                            src={project.media as string}
-                            className="project-video"
-                            poster={`/${project.previewImage}`}
-                            autoPlay
-                            loop
-                            muted
-                        />
-                    )}
-                </div>
+                <div className="project-media">{renderMedia(project)}</div>
                 <div className="project-description-container">
                     <h4 className="project-inner-header description-header">
                         What is it?
@@ -126,8 +210,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                     <>
                         <h4 className="project-inner-header">Links</h4>
                         <div className="project-links">
-                            {project.links.map((link) => (
+                            {project.links.map((link, index) => (
                                 <a
+                                    key={index}
                                     href={link.url}
                                     className="project-link"
                                     target="_blank"
@@ -150,8 +235,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                     <>
                         <h4 className="project-inner-header">Created Using</h4>
                         <div className="project-tools">
-                            {project.createdWith.map((tool) => (
-                                <div className="project-tool">
+                            {project.createdWith.map((tool, index) => (
+                                <div className="project-tool" key={index}>
                                     <div className="tool-bubble">
                                         {toolIcon(tool.icon)}
                                     </div>

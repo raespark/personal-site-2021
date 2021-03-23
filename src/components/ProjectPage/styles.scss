@@ -1,5 +1,28 @@
 @import 'src/global.scss';
 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+$media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
+    15px 0 15px -15px rgba($text-dark, 0.3);
+
+@keyframes shadow-fade-in {
+    from {
+        box-shadow: -15px 0 15px -15px rgba($text-dark, 0),
+            15px 0 15px -15px rgba($text-dark, 0);
+    }
+
+    to {
+        box-shadow: $media-shadow;
+    }
+}
+
 .project-page {
     margin-top: $header-height;
     height: 100%;
@@ -11,13 +34,22 @@
 
         .project-breadcrumb {
             display: grid;
-            padding-left: $desktop-side-padding;
+            padding-left: $mobile-side-padding;
             grid-template-columns: min-content min-content 1fr;
             grid-auto-flow: column;
             grid-gap: 10px;
             font-size: 16px;
-            margin: 10px 0;
+            margin: 10px 0 20px;
             font-weight: 800;
+
+            @media (min-width: $md-screen-min) {
+                padding-left: $tablet-side-padding;
+                margin: 10px 0;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                padding-left: $desktop-side-padding;
+            }
 
             .breadcrumb-link {
                 color: $brand1-dark;
@@ -41,14 +73,23 @@
         .project-title {
             text-transform: capitalize;
             margin-bottom: 8px;
+            font-size: 24px;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 26px;
+            }
         }
 
         .project-subtitle {
             display: grid;
             grid-gap: 5px;
             grid-template-columns: repeat(5, min-content);
-            font-size: 18px;
+            font-size: 16px;
             justify-content: center;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 18px;
+            }
 
             .project-info {
                 white-space: nowrap;
@@ -62,31 +103,141 @@
         }
 
         .project-tagline {
-            max-width: 450px;
-            margin: 20px $desktop-side-padding;
+            max-width: 80%;
+            margin: 30px $mobile-side-padding 10px;
             color: $brand1-dark;
             justify-self: center;
-            margin: 40px 0 20px;
+            font-size: 20px;
+
+            @media (min-width: $md-screen-min) {
+                margin: 40px $tablet-side-padding 20px;
+                max-width: 450px;
+                font-size: 24px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                margin: 40px $desktop-side-padding 20px;
+            }
         }
 
         $media-height: 500px;
 
         .project-media {
-            padding: 0 $desktop-side-padding;
+            padding: $mobile-side-padding;
             width: 100%;
-            margin: 40px 0;
-            max-height: $media-height;
+            margin: 20px 0;
             height: min-content;
             display: grid;
             justify-content: center;
             background-color: $brand2-light;
-            box-shadow: $shadow;
+
+            @media (min-width: $md-screen-min) {
+                height: $media-height;
+                padding: 0 $tablet-side-padding;
+                box-shadow: $shadow;
+                margin: 40px 0;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                padding: 0 $desktop-side-padding;
+            }
 
             .project-video {
                 max-width: 100%;
-                max-height: $media-height;
-                box-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
-                    15px 0 15px -15px rgba($text-dark, 0.3);
+                width: 100%;
+                height: auto;
+                box-shadow: $shadow;
+
+                @media (min-width: $md-screen-min) {
+                    box-shadow: $media-shadow;
+                    width: auto;
+                    height: $media-height;
+                }
+            }
+
+            .open-image {
+                position: fixed;
+                top: 0;
+                height: 100vh;
+                right: 0;
+                left: 0;
+                z-index: 20;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+
+                .image-backdrop {
+                    position: fixed;
+                    animation: $slow-animation-time fade-in ease-in;
+                    background-color: rgba($text-dark, 0.8);
+                    width: 100vw;
+                    height: 100vh;
+                }
+
+                .image-container {
+                    z-index: 30;
+                    background-color: white;
+                    padding: 30px 0;
+                    border-radius: 5px;
+                    position: relative;
+                    width: 95vw;
+
+                    @media (min-width: $md-screen-min) {
+                        width: 600px;
+                        padding: 30px;
+                    }
+
+                    @media (min-width: $lg-screen-min) {
+                        width: 750px;
+                    }
+
+                    .image-close {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        stroke-width: 2px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .image-gallery {
+                width: 250px;
+                display: grid;
+                justify-content: center;
+
+                @media (min-width: $sm-screen-min) {
+                    width: 300px;
+                }
+
+                @media (min-width: $md-screen-min) {
+                    width: 600px;
+                }
+
+                @media (min-width: $lg-screen-min) {
+                    width: 750px;
+                }
+
+                .image-gallery-image {
+                    animation: $slow-animation-time / 2 shadow-fade-in ease-in;
+                    box-shadow: $media-shadow;
+                    cursor: pointer;
+
+                    img {
+                        height: auto;
+                        width: 250px;
+                        animation: $slow-animation-time / 2 fade-in ease-in;
+
+                        @media (min-width: $sm-screen-min) {
+                            width: 300px;
+                        }
+
+                        @media (min-width: $md-screen-min) {
+                            height: $media-height;
+                            width: auto;
+                        }
+                    }
+                }
             }
         }
 
@@ -97,9 +248,17 @@
 
         .project-description-container {
             width: 100%;
-            padding: 20px $desktop-side-padding;
+            padding: 10px $mobile-side-padding;
             display: grid;
             justify-content: center;
+
+            @media (min-width: $md-screen-min) {
+                padding: 20px $tablet-side-padding;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                padding: 20px $desktop-side-padding;
+            }
 
             .project-description {
                 max-width: 750px;
@@ -117,12 +276,20 @@
         .project-links {
             display: grid;
             grid-auto-flow: column;
-            max-width: 800px;
+            max-width: 250px;
             grid-template-columns: repeat(auto-fit, min-content);
             grid-gap: 30px;
             justify-content: center;
             justify-self: center;
             margin-bottom: 20px;
+
+            @media (min-width: $md-screen-min) {
+                max-width: 600px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                max-width: 800px;
+            }
 
             .project-link {
                 justify-self: center;
@@ -151,13 +318,21 @@
         }
 
         .project-tools {
-            max-width: 800px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, 125px);
-            padding: 10px $desktop-side-padding;
-            grid-gap: 30px;
+            grid-template-columns: repeat(auto-fit, 75px);
+            grid-gap: 30px 60px;
             justify-self: center;
             justify-content: center;
+            max-width: 250px;
+
+            @media (min-width: $md-screen-min) {
+                max-width: 600px;
+                grid-gap: 40px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                max-width: 800px;
+            }
 
             .project-tool {
                 display: grid;

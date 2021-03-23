@@ -10,7 +10,8 @@
         "imageGalleryMedia": [
             {"caption": "The caption for the first image" , "image": "project-media/tip-confetti-preview.png"}, 
             {"caption": "This shows my first rough design and also a long caption! Caption caption caption caption caption! caption? Caption.", "image": "project-media/bake-care-preview.png"}, 
-            {"caption": "Short Caption","image": "project-media/my-game-collection-preview.png"}],
+            {"caption": "Short Caption","image": "project-media/my-game-collection-preview.png"}
+        ],
         "previewImage":"project-media/this-website-preview.png",
         "year": 2021,
         "tagline": "A display of design, and programming prowess",

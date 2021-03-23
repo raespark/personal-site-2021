@@ -1,8 +1,41 @@
 @import 'src/global.scss';
 
 .pagination {
+    position: relative;
+
+    .pagination-arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        font-size: 30px;
+        align-content: center;
+        display: grid;
+        z-index: 1;
+
+        @media (min-width: $md-screen-min) {
+            font-size: 40px;
+        }
+
+        &.left-arrow {
+            left: -25px;
+
+            @media (min-width: $md-screen-min) {
+                left: -35px;
+            }
+        }
+
+        &.right-arrow {
+            right: -25px;
+
+            @media (min-width: $md-screen-min) {
+                right: -35px;
+            }
+        }
+    }
+
     $nav-height: 35px;
-    $nav-margin-top: 20px;
+    $nav-margin-top: 10px;
 
     .pagination-nav {
         margin-top: $nav-margin-top;
