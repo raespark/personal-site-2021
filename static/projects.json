@@ -10,10 +10,10 @@
         "imageGalleryMedia": [
             {"caption": "The original design of this website was done in a notebook and then mocked up with colors on my computer using my art drawing program. Not technically what it was built for, and all the scales of the elements are off, but it helped me get a general feel down for how I wanted to lay out the elements and how to color them." , "image": "project-media/website-image-1.png"}, 
             {"caption": "The original design of this website was done in a notebook and then mocked up with colors on my computer using my art drawing program. Not technically what it was built for, and all the scales of the elements are off, but it helped me get a general feel down for how I wanted to lay out the elements and how to color them.", "image": "project-media/website-image-2.png"}, 
-            {"caption": "The compositions of the illustrations featured in the heroes on each page took some iteration to finalize.","image": "project-media/website-image-3.jpeg"},
-            {"caption": "Initial blocking out of the project page.", "image": "project-media/website-image-4.jpeg"},
-            {"caption": "Initial concept for the home page hero layout.", "image": "project-media/website-image-5.jpeg"},
-            {"caption": "Original drafts for the home page hero illustration as well as the contact button component, project cards, and the project page.", "image": "project-media/website-image-6.jpeg"}
+            {"caption": "The compositions of the illustrations featured in the heroes on each page took some iteration to finalize.","image": "project-media/website-image-3.png"},
+            {"caption": "Initial blocking out of the project page.", "image": "project-media/website-image-4.png"},
+            {"caption": "Initial concept for the home page hero layout.", "image": "project-media/website-image-5.png"},
+            {"caption": "Original drafts for the home page hero illustration as well as the contact button component, project cards, and the project page.", "image": "project-media/website-image-6.png"}
         ],
         "previewImage":"project-media/this-website-preview.png",
         "year": 2021,
