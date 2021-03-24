@@ -12,6 +12,7 @@
         align-content: center;
         display: grid;
         z-index: 1;
+        user-select: none;
 
         @media (min-width: $md-screen-min) {
             font-size: 40px;

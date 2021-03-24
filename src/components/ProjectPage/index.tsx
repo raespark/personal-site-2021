@@ -138,11 +138,14 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                                             onClick={() => {
                                                 handleShowImage(index);
                                             }}
+                                            key={index}
                                         >
                                             <GatsbyImage
-                                                key={index}
                                                 image={image}
-                                                alt={`${project.title} image ${index}`}
+                                                alt={`${project.title} image ${
+                                                    index + 1
+                                                }`}
+                                                title={imageData.caption}
                                                 className="image-gallery-image"
                                             />
                                         </div>

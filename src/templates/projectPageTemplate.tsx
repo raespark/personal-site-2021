@@ -40,7 +40,9 @@ interface DataProps {
 const ProjectPageTemplate: React.FC<PageProps<DataProps>> = ({ data }) => {
     return (
         <Layout>
-            <SEO title={` - Rachael Metcalf`} />
+            <SEO
+                title={`${data.allJson.edges[0].node.title} - Rachael Metcalf`}
+            />
             <Header selected={NavSelected.projects} />
             <ProjectPage project={data.allJson.edges[0].node as Project} />
         </Layout>
