@@ -144,12 +144,8 @@
         "builtFor": "Personal",
         "type": "Game",
         "professional": false,
-        "mediaType": "image-gallery",
-        "imageGalleryMedia": [
-            {"image": "project-media/someone-is-typing-1.png"},
-            {"image": "project-media/someone-is-typing-2.png"},
-            {"image": "project-media/someone-is-typing-3.png"}
-        ],
+        "mediaType": "video",
+        "media": "/project-media/someone-is-typing.mp4",
         "previewImage": "project-media/someone-is-typing-preview.png",
         "year": 2019,
         "description": "A conversation simulator built by me and a friend during a game jam in 2019. They did the writing and concept and I built the dialogue handling system. Despite the obfuscated text, there are actually multiple endings and branching dialogue that can be gleaned from message lengths and diverging player options. It's handled using a tree implemented in json giving each group of dialogue an id, potential player responses if applicable, and corresponding id to go to after the dialogue is finished. Each dialogue option also has the potential different id's depending on the players choices and decisions. To simulate typing time, lines of dialogue can also specify a delay. This is used to emulate the emotional state of the person on the other end of the phone, sending short messages with long timers to signify distress or hesitance.",
