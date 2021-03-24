@@ -1,57 +1,71 @@
 @import 'src/global.scss';
 
-.hero {
+.project-hero {
     width: 100vw;
     padding: 80px $mobile-side-padding 0;
     background-color: $brand2-light;
-    margin-bottom: $section-margin-bottom;
+    margin-bottom: 80px;
     display: grid;
     position: relative;
 
     @media (min-width: $md-screen-min) {
         padding: 100px $tablet-side-padding 0;
+        margin-bottom: $section-margin-bottom;
     }
 
     @media (min-width: $lg-screen-min) {
-        padding: 150px $desktop-side-padding 0;
+        padding: 120px $desktop-side-padding 0;
     }
 
-    .hero-container {
+    .project-hero-container {
         display: grid;
         grid-template-columns: 1fr;
-        max-width: $max-width;
         justify-self: center;
         grid-gap: 40px;
+        grid-template-areas:
+            'text'
+            'image';
+        width: 100%;
 
         @media (min-width: $md-screen-min) {
             grid-template-columns: unset;
+            max-width: 700px;
         }
 
         @media (min-width: $lg-screen-min) {
-            grid-template-columns: 2fr 1fr;
+            max-width: $max-width;
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas: 'image text';
+            width: unset;
         }
 
-        .hero-text {
+        .project-hero-text {
             z-index: 1;
-            justify-self: start;
+            justify-self: center;
             background-color: white;
-            width: 100%;
-            padding: 50px 60px;
+            max-width: 600px;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: $shadow;
             height: min-content;
+            grid-area: text;
 
             @media (min-width: $md-screen-min) {
-                max-width: 75%;
+                justify-self: end;
+                width: 75%;
+                min-height: 250px;
+                padding: 50px 60px;
             }
 
             @media (min-width: $lg-screen-min) {
-                margin-bottom: 100px;
+                margin-bottom: 140px;
+                padding: 50px 120px;
                 max-width: 600px;
+                width: auto;
             }
         }
 
-        .hero-quote {
+        .project-hero-quote {
             color: black;
             font-family: $accent-fonts;
             font-size: 24px;
@@ -62,7 +76,7 @@
             }
         }
 
-        .hero-description {
+        .project-hero-description {
             margin-top: 20px;
             padding: 0 30px;
             font-family: $accent-fonts;
@@ -72,7 +86,7 @@
                 margin-top: 40px;
             }
 
-            .hero-description-text {
+            .project-hero-description-text {
                 text-align: center;
                 margin: 0;
                 font-weight: 400;
@@ -83,7 +97,7 @@
                 }
             }
 
-            .hero-hr {
+            .project-hero-hr {
                 width: 30px;
                 justify-self: center;
                 margin: 6px;
@@ -102,30 +116,28 @@
             }
         }
 
-        .hero-image-container {
+        .project-hero-image-container {
             background-color: $brand1-light;
             z-index: 1;
             padding: 20px;
             align-self: end;
             justify-self: center;
             border-radius: 8px;
-            margin-bottom: -80px;
+            margin-bottom: -40px;
             box-shadow: $shadow;
+            grid-area: image;
 
             @media (min-width: $md-screen-min) {
-                justify-self: end;
+                justify-self: start;
                 padding: 40px;
+                margin-bottom: -80px;
             }
 
-            @media (min-width: $lg-screen-min) {
-                margin-top: 100px;
-            }
-
-            .hero-image {
-                max-width: 200px;
+            .project-hero-image {
+                max-width: 150px;
 
                 @media (min-width: $md-screen-min) {
-                    max-width: 250px;
+                    max-width: 225px;
                 }
             }
         }

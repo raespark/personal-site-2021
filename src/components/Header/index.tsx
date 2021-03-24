@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { Menu, GitHub, Linkedin } from 'react-feather';
 import { Link } from 'gatsby';
 import { isDesktop } from 'react-device-detect';
+import _ from 'lodash';
 
 import SideMenu from '../SideMenu';
 import './styles.scss';
@@ -15,14 +16,14 @@ export enum NavSelected {
 
 interface HeaderProps {
     selected: NavSelected;
-    homePage?: boolean;
+    heroPage?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
     selected,
-    homePage = false,
+    heroPage = false,
 }: HeaderProps) => {
-    const [topOfPage, setTopOfPage] = useState(homePage);
+    const [topOfPage, setTopOfPage] = useState(heroPage);
     const [showMenu, setShowMenu] = useState(false);
 
     const handleScroll = () => {
@@ -39,8 +40,8 @@ const Header: React.FC<HeaderProps> = ({
     useEffect(() => {
         // Due to the nature of how scroll events work on mobile
         // I disable to scroll animation to optimize the mobile experience
-        if (homePage && isDesktop) {
-            window.onscroll = handleScroll;
+        if (heroPage && isDesktop) {
+            window.onscroll = _.throttle(handleScroll, 100);
             handleScroll();
         } else {
             setTopOfPage(false);

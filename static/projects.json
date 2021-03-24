@@ -1,0 +1,225 @@
+[
+    {
+        "id": 1,
+        "title": "This website",
+        "url": "this-website",
+        "builtFor": "Personal",
+        "type": "Web Dev",
+        "professional": false,
+        "mediaType": "image-gallery",
+        "imageGalleryMedia": [
+            {"caption": "The original design of this website was done in a notebook and then mocked up with colors on my computer using my art drawing program. Not technically what it was built for, and all the scales of the elements are off, but it helped me get a general feel down for how I wanted to lay out the elements and how to color them." , "image": "project-media/website-image-1.png"}, 
+            {"caption": "The original design of this website was done in a notebook and then mocked up with colors on my computer using my art drawing program. Not technically what it was built for, and all the scales of the elements are off, but it helped me get a general feel down for how I wanted to lay out the elements and how to color them.", "image": "project-media/website-image-2.png"}, 
+            {"caption": "The compositions of the illustrations featured in the heroes on each page took some iteration to finalize.","image": "project-media/website-image-3.jpeg"},
+            {"caption": "Initial blocking out of the project page.", "image": "project-media/website-image-4.jpeg"},
+            {"caption": "Initial concept for the home page hero layout.", "image": "project-media/website-image-5.jpeg"},
+            {"caption": "Original drafts for the home page hero illustration as well as the contact button component, project cards, and the project page.", "image": "project-media/website-image-6.jpeg"}
+        ],
+        "previewImage":"project-media/this-website-preview.png",
+        "year": 2021,
+        "tagline": "A display of design, and programming prowess",
+        "description": "I created this website entirely from scratch. Initially bootstrapped using Gatsby, I built up from that foundation to fill this site with content and style. All the pages and layouts on the site were designed and implemented by me, including the contact form which hooks into netlify to pass along interest messages. I sketched up layout designs in my notebook and developed that into the final designs you see now. All the art/self portraits used are also drawn and rendered by me! \n\nI wanted this project to serve as a living resume, featuring my work history, information about me, and a list of notable projects I worked on or contributed to. It serves as both a source of that information and a demonstration of my abilities as both a designer and a developer. I aimed to make it as delightful and smooth to use as possible, and tested on multiple devices over the course of development to ensure it was responsive and accessible. ",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "TypeScript", "icon": "typescript"},
+            {"label": "CSS", "icon": "css"},
+            {"label": "Node", "icon": "node"}
+        ], 
+        "links": [{"text": "Source code", "url": "https://github.com/raespark/personal-site-2021"}] 
+    },
+    {
+        "id": 2,
+        "title": "Tip confetti animation",
+        "url": "tip-confetti",
+        "builtFor": "Nexus",
+        "type": "Web Dev",
+        "professional": true,
+        "mediaType": "video",
+        "media": "/project-media/tip-confetti.mp4",
+        "previewImage":"project-media/tip-confetti-preview.png",
+        "year": 2021,
+        "tagline": "Adding delight for both customers and creators",
+        "description": "Put together in one work day as a hack-a-thon style collaborative effort between development and design. I worked 1-on-1 with one of the designers to iterate quickly through options and solutions. We worked through multiple iterations of how the confetti could look and behave, finding and referencing other examples we could find online and taking inspiration from those. We ended up landing on the confetti count growing as the tip amount increased, and having all the buttons fire their confetti when the \"Custom\" option is selected.\n\nWorking in a collaborative space, feedback from me and others outside the design team came together to reach the final product that we were all proud about. In the end we ended up with something that encourages and rewards tipping, helping the customer feel celebrated for wanting to support creators they love, and helping creators through this encouraging and more fun tipping process.",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "TypeScript", "icon": "typescript"},
+            {"label": "CSS", "icon": "css"},
+            {"label": "Node", "icon": "node"}
+        ], 
+        "links": [
+            {"text": "Feature announcement", "url": "https://twitter.com/join_nexus/status/1364687832757985284?s=20"}
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Bake Care",
+        "url": "bake-care",
+        "builtFor": "Personal",
+        "type": "Game",
+        "professional": false,
+        "mediaType": "youtube",
+        "media": "https://youtu.be/pJvBEUWo5RM?rel=0",
+        "previewImage": "project-media/bake-care-preview.png",
+        "year": 2020,
+        "description": "A game I built for a game jam hosted by Extra Credits in 2020. The theme of the jam was \"Take Care\", and after going through a difficult few weeks leading up to the jam I decided to make a silly game about baking cookies. I made all the art pastel, round, cute and fun and focused the project/'s visual aspects and general game feel. I aimed to make the project as polished as possible in the limited time available. The gameplay consists of getting a random recipe and baking to it's specifications using the ingredients on the table, placing the dough on a baking sheet and seeing how the cookies came out. It's inspired by cooking mini-games in games I played growing up like in the Nancy Drew franchise.\n\nI spent most of the jam perfecting the visual aspects and testing the mechanics and game loop over and over until I felt like it read clearly, and that the charm and heart I was trying to convey came across. I iterated on how the specific interactions between the player and the game worked in order to reach a state where there's some level of effort, but that the chill relaxed and laid back vibe I was going for was achieved. During the jam I was also a mod for the jam's community spaces and managed answering questions and the chat for the finale stream to keep things running smoothly.",
+        "tagline": "A recipe for polish, cookies, and good vibes.",
+        "createdWith": [
+            {"label": "Godot", "icon": "godot"}
+        ],
+        "links": [
+            {"text": "Full game page", "url": "https://raespark.itch.io/bake-care"}
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Smooth drag-n-drop",
+        "url": "drag-n-drop",
+        "builtFor": "Nexus",
+        "type": "Web Dev",
+        "professional": true,
+        "mediaType": "video",
+        "media": "/project-media/drag-n-drop.mp4",
+        "previewImage": "project-media/drag-n-drop-preview.png",
+        "year": 2020,
+        "tagline": "",
+        "description": "A fun alternative to the standard click flow for creators to manage their store inventory. Tackling performance issues, while also allowing for custom styling that the default HTML drag and drop behavior doesn't alow. Due to handling the drag and drop manually, this could cause performance issues so I went though many iterations to nail it down to be performant and smooth. I worked with product and design to iterate, bug test and push to it's limits to ensure it worked as well as possible.",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "TypeScript", "icon": "typescript"},
+            {"label": "CSS", "icon": "css"},
+            {"label": "Node", "icon": "node"}
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Word search web app",
+        "url": "simple-word-search",
+        "builtFor": "Personal",
+        "type": "Web Dev",
+        "professional": false,
+        "mediaType": "video",
+        "media": "/project-media/word-search.mp4",
+        "previewImage": "project-media/word-search-preview.png",
+        "year": 2020,
+        "description": "As a big fan of word searches myself, I wanted to try and build something to randomly generate them for me to solve. I pull words using the node library \"random-words\", and lay them out ensuring they don't overwrite each other and that they have space to lay out on the board. I plan on adding the ability to solve them using the site itself but for now it's only simple puzzle generation. It can't do diagonal or backwards word layouts yet, but this is also a planned feature alongside a difficulty selection that can turn those options on or off for each generated puzzle.",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "JavaScript", "icon": "javascript"},
+            {"label": "CSS", "icon": "css"}
+        ],
+        "links": [
+            {"text": "Try it yourself", "url": "https://rmetcalf-wordsearch-beta.netlify.app/"}, 
+            {"text": "Source code", "url": "https://github.com/raespark/node-wordsearch"}
+        ]
+    },
+    {
+        "id": 6,
+        "title": "My Game Collection",
+        "url": "my-game-collection",
+        "builtFor": "Personal",
+        "type": "Web Dev",
+        "professional": false,
+        "mediaType": "video",
+        "media": "/project-media/my-game-collection.mp4",
+        "previewImage": "project-media/my-game-collection-preview.png",
+        "year": 2019,
+        "tagline": "I can't decide what to play today...lets look through the collection!",
+        "description": "An in progress website to track a users' personal game collection across multiple platforms to be able to search and view all the games that you own in one place. A user can view game information, and take notes on the games in their library. There's also search and filtering capability to try and nail down the exact game that you're in the mood for. The idea came from me having a physical bookshelf with some of my games on it that could be fun to peruse when trying to figure out what kind of game I wanted to play that evening, and not feeling like there was a good solution for digital game collections.\n\nSince game libraries now are often spread across physical copies spanning multiple consoles and multiple online stories, it can also be hard to have a true stock of every game you own. Planned features include the ability to mass import steam games, and integration with Internet Games Database to populate game data and pull things like screenshots and ESRB ratings to reduce the requirement for hand inputed data that it's currently using.",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "JavaScript", "icon": "javascript"},
+            {"label": "CSS", "icon": "css"},
+            {"label": "Node", "icon": "node"},
+            {"label": "Java", "icon": "java"}
+        ],
+        "links": [
+            {"text": "UI source", "url": "https://github.com/raespark/node-my-game-collection"},
+            {"text": "API source", "url": "https://github.com/raespark/my-games-collection-api"}
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Someone is typing...",
+        "url": "someone-is-typing",
+        "builtFor": "Personal",
+        "type": "Game",
+        "professional": false,
+        "mediaType": "image-gallery",
+        "imageGalleryMedia": [
+            {"image": "project-media/someone-is-typing-1.png"},
+            {"image": "project-media/someone-is-typing-2.png"},
+            {"image": "project-media/someone-is-typing-3.png"}
+        ],
+        "previewImage": "project-media/someone-is-typing-preview.png",
+        "year": 2019,
+        "description": "A conversation simulator built by me and a friend during a game jam in 2019. They did the writing and concept and I built the dialogue handling system. Despite the obfuscated text, there are actually multiple endings and branching dialogue that can be gleaned from message lengths and diverging player options. It's handled using a tree implemented in json giving each group of dialogue an id, potential player responses if applicable, and corresponding id to go to after the dialogue is finished. Each dialogue option also has the potential different id's depending on the players choices and decisions. To simulate typing time, lines of dialogue can also specify a delay. This is used to emulate the emotional state of the person on the other end of the phone, sending short messages with long timers to signify distress or hesitance.",
+        "createdWith": [
+            {"label": "Godot", "icon": "godot"}
+        ],
+        "links": [
+            {"text": "Full game page", "url": "https://raespark.itch.io/someoneistyping"},
+            {"text": "Source code", "url": "https://github.com/raespark/SomeoneIsTyping"}
+        ]
+    },
+    { 
+        "id": 8,
+        "title": "Responsive profile page",
+        "url": "vrbo-profile-page",
+        "builtFor": "Vrbo/ Expedia",
+        "type": "Web Dev",
+        "professional": true,
+        "mediaType": "video",
+        "media": "/project-media/vrbo-profile.mp4",
+        "previewImage": "project-media/vrbo-profile-preview.png",
+        "year": 2019,
+        "tagline": "Started with a general list of requirements, and reached a releasable product",
+        "description": "As project lead, I was given the original epic and responsible for breaking it down into workable tickets and pacing out our sprints to reach completion. I worked closely with design to take their initial concept and address any bumps in the road, and resolve issues as quickly as possible. This project had some hiccups along the way, including priority changes requiring us to put it on the back burner, but through it all I did all I could to keep it making progress. ",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "JavaScript", "icon": "javascript"},
+            {"label": "CSS", "icon": "css"},
+            {"label": "Node", "icon": "node"}
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Grow",
+        "url": "grow",
+        "builtFor": "Personal",
+        "type": "Game",
+        "professional": false,
+        "mediaType": "youtube",
+        "media": "https://youtu.be/-uHxOG-jPX0?rel=0",
+        "previewImage": "project-media/grow-preview.png",
+        "year": 2018,
+        "tagline": "A zen moment in game form.",
+        "description": "An interactive experience made over the course of 4 days for the ExtraCredits Holiday 2018 Game Jam, and was chosen to be featured on the ExtraCredits YouTube channel for interesting design. Levels are procedurely laid out adhering to specific rules to create an immersive and relaxing simulation of a walk in the forest. It was one of my first experimentations with polished small product over a wide showcase of half baked features.",
+        "createdWith": [
+            {"label": "Godot", "icon": "godot"}
+        ],
+        "links": [
+            {"text": "Full game page", "url": "https://raespark.itch.io/grow"},
+            {"text": "Extra Credits video", "url": "https://youtu.be/Gs8lQFh7Ghk"}
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Tilted",
+        "url": "tilted",
+        "builtFor": "Personal",
+        "type": "Game",
+        "professional": false,
+        "mediaType": "video",
+        "media": "/project-media/tilted.mp4",
+        "previewImage": "project-media/tilted-preview.png",
+        "year": 2018,
+        "description": "A puzzle platformer that challenges the player by having the world around them shift as they move. I built this as a challenge to myself to simplify the art style and focus entirely on gameplay and player experience. Created as a solo project for the very first ExtraCredits Game jam over a single weekend. Features one of the first songs I've ever written! It was one of my first projects built in Godot, which is an open source game engine that features a python like programming language called GDScript. I learned a lot through making it, both for game development and for good code management and documentation.",
+        "createdWith": [
+            {"label": "Godot", "icon": "godot"}
+        ],
+        "links": [
+            {"text": "Full game page", "url": "https://raespark.itch.io/tilted"}, 
+            {"text": "Source code", "url": "https://github.com/raespark/Tilted"}
+        ]
+    }
+]

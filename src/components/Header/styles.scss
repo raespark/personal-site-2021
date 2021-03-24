@@ -9,7 +9,7 @@
     grid-template-columns: 1fr;
     grid-gap: 20px;
     padding: 30px $mobile-side-padding;
-    background-color: $brand2-light;
+    background-color: rgba($brand2-light, 0.85);
     z-index: 10;
     transition: padding ease $animation-time;
 
@@ -23,8 +23,11 @@
     }
 
     &.full-width {
-        padding: 10px 40px;
-        background-color: rgba($brand2-light, 0.85);
+        padding: 10px $mobile-side-padding;
+
+        @media (min-width: $md-screen-min) {
+            padding: 10px 40px;
+        }
 
         .header-menu {
             padding: 10px 0;
@@ -59,10 +62,14 @@
         .header-brand {
             font-weight: bold;
             font-family: $accent-fonts;
-            font-size: 22px;
+            font-size: 20px;
             color: $text-dark;
             margin: 0;
             cursor: pointer;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 22px;
+            }
 
             &:hover {
                 color: $brand1-dark;
@@ -90,7 +97,7 @@
             font-size: 1.05rem;
             padding: 15px 8px;
             margin-bottom: 3px;
-            transition: border 0.07s;
+            transition: all ease 0.07s;
             width: 100px;
 
             $selected-underline: 3px solid $brand2-dark;

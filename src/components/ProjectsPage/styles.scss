@@ -1,19 +1,86 @@
 @import 'src/global.scss';
 
 .projects-page {
-    justify-content: center;
-    display: grid;
-    margin-top: $header-height;
-    height: 100%;
-
     .projects-page-contents {
-        width: 100vw;
-        height: 100%;
+        padding: 20px $mobile-side-padding;
+        justify-content: center;
         display: grid;
-        align-content: center;
 
-        .wip-text {
-            text-align: center;
+        @media (min-width: $md-screen-min) {
+            padding: 20px $tablet-side-padding;
+        }
+
+        @media (min-width: $lg-screen-min) {
+            padding: 20px $desktop-side-padding;
+        }
+
+        .projects-filters {
+            display: grid;
+            grid-template-columns: repeat(5, min-content);
+            grid-gap: 5px;
+            justify-self: center;
+            margin-bottom: 40px;
+            cursor: pointer;
+
+            &.mobile-filters {
+                margin-top: 45px;
+
+                @media (min-width: $md-screen-min) {
+                    display: none;
+                }
+            }
+
+            @media (min-width: $md-screen-min) {
+                grid-gap: 10px;
+            }
+
+            .projects-filter {
+                padding: 0 5px;
+                transition: all ease $animation-time;
+                border-radius: 3px;
+                font-weight: 600;
+
+                @media (min-width: $md-screen-min) {
+                    padding: 0 10px;
+                }
+
+                &:hover {
+                    background-color: $brand1-light;
+                    color: white;
+                }
+
+                &.active {
+                    background-color: $brand1-dark;
+                    color: white;
+                    cursor: default;
+                }
+            }
+
+            .projects-filter-divider {
+                font-weight: 800;
+                color: $brand2-dark;
+            }
+        }
+
+        .projects-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 40px;
+            max-width: $max-width;
+            justify-content: center;
+
+            @media (min-width: $md-screen-min) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: $lg-screen-min) {
+                grid-gap: 50px;
+                grid-template-columns: repeat(
+                    3,
+                    minmax(calc(33% - 120px), 320px)
+                );
+                grid-template-rows: repeat(2, 1fr);
+            }
         }
     }
 }

@@ -1,0 +1,433 @@
+@import 'src/global.scss';
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+$media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
+    15px 0 15px -15px rgba($text-dark, 0.3);
+
+@keyframes shadow-fade-in {
+    from {
+        box-shadow: -15px 0 15px -15px rgba($text-dark, 0),
+            15px 0 15px -15px rgba($text-dark, 0);
+    }
+
+    to {
+        box-shadow: $media-shadow;
+    }
+}
+
+.project-page {
+    margin-top: $header-height;
+    height: 100%;
+
+    .project-page-contents {
+        width: 100vw;
+        display: grid;
+        padding: 20px 0;
+
+        .project-breadcrumb {
+            display: grid;
+            padding-left: $mobile-side-padding;
+            grid-template-columns: min-content min-content 1fr;
+            grid-auto-flow: column;
+            grid-gap: 10px;
+            font-size: 16px;
+            margin: 10px 0 20px;
+            font-weight: 800;
+
+            @media (min-width: $md-screen-min) {
+                padding-left: $tablet-side-padding;
+                margin: 10px 0;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                padding-left: $desktop-side-padding;
+            }
+
+            .breadcrumb-link {
+                color: $brand1-dark;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .breadcrumb-divider {
+                font-weight: 600;
+                color: $brand2-dark;
+            }
+
+            .breadcrumb-current {
+                text-transform: capitalize;
+                color: $text-dark;
+            }
+        }
+
+        .project-title {
+            text-transform: capitalize;
+            margin-bottom: 8px;
+            font-size: 22px;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 26px;
+            }
+        }
+
+        .project-subtitle {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(5, min-content);
+            font-size: 16px;
+            justify-content: center;
+
+            @media (min-width: $md-screen-min) {
+                font-size: 18px;
+            }
+
+            .project-info {
+                white-space: nowrap;
+                color: $text-light;
+            }
+
+            .project-info-divider {
+                color: $brand1-dark;
+                font-weight: 800;
+            }
+        }
+
+        .project-tagline {
+            max-width: 80%;
+            margin: 30px $mobile-side-padding 10px;
+            color: $brand1-dark;
+            justify-self: center;
+            font-size: 20px;
+
+            @media (min-width: $md-screen-min) {
+                margin: 40px $tablet-side-padding 20px;
+                max-width: 450px;
+                font-size: 24px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                margin: 40px $desktop-side-padding 20px;
+            }
+        }
+
+        $media-height: 500px;
+
+        .project-media {
+            padding: $mobile-side-padding;
+            width: 100%;
+            margin: 20px 0;
+            height: min-content;
+            display: grid;
+            justify-content: center;
+            background-color: $brand2-light;
+
+            @media (min-width: $md-screen-min) {
+                height: $media-height;
+                padding: 0 $tablet-side-padding;
+                box-shadow: $shadow;
+                margin: 40px 0;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                padding: 0 $desktop-side-padding;
+            }
+
+            .project-video {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                box-shadow: $shadow;
+
+                @media (min-width: $md-screen-min) {
+                    box-shadow: $media-shadow;
+                    width: auto;
+                    height: $media-height;
+                }
+            }
+
+            .youtube-player-container {
+                height: 100%;
+                width: 90vw;
+
+                @media (min-width: $md-screen-min) {
+                    width: 600px;
+                }
+
+                @media (min-width: $lg-screen-min) {
+                    width: 888px;
+                }
+                .youtube-player {
+                    height: 100% !important;
+                    max-width: 100% !important;
+                    width: auto !important;
+                    box-shadow: $media-shadow;
+                }
+            }
+
+            .open-image {
+                position: fixed;
+                top: 0;
+                height: 100vh;
+                right: 0;
+                left: 0;
+                z-index: 20;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+
+                .image-backdrop {
+                    position: fixed;
+                    animation: $slow-animation-time fade-in ease-in;
+                    background-color: rgba($text-dark, 0.8);
+                    width: 100vw;
+                    height: 100vh;
+                }
+
+                .image-container {
+                    z-index: 30;
+                    background-color: white;
+                    padding: 30px 0;
+                    border-radius: 5px;
+                    position: relative;
+                    width: 95vw;
+                    display: grid;
+                    animation: $slow-animation-time fade-in ease-in;
+
+                    @media (min-width: $md-screen-min) {
+                        width: 600px;
+                        padding: 30px;
+                    }
+
+                    @media (min-width: $lg-screen-min) {
+                        width: 80vw;
+                    }
+
+                    .image-close {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        stroke-width: 2px;
+                        cursor: pointer;
+                    }
+
+                    .full-image {
+                        background-image: linear-gradient(
+                            to right,
+                            $text-lighter,
+                            rgba($text-dark, 0.35) 50%,
+                            $text-lighter 100%
+                        );
+                        box-shadow: $shadow;
+                        margin: 5px 0 20px;
+
+                        @media (min-width: $md-screen-min) {
+                            border-radius: 5px;
+                        }
+
+                        img {
+                            height: auto;
+                            object-fit: contain !important;
+                            width: 100%;
+                            display: block;
+
+                            @media (min-width: $md-screen-min) {
+                                height: 75vh;
+                            }
+                        }
+                    }
+
+                    .image-caption {
+                        padding: 0 10px;
+                        font-size: 14px;
+
+                        @media (min-width: $md-screen-min) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .image-gallery {
+                width: 250px;
+                display: grid;
+                justify-content: center;
+
+                @media (min-width: $sm-screen-min) {
+                    width: 300px;
+                }
+
+                @media (min-width: $md-screen-min) {
+                    width: 600px;
+                }
+
+                @media (min-width: $lg-screen-min) {
+                    width: 750px;
+                }
+
+                .image-gallery-container {
+                    display: grid;
+
+                    .image-gallery-image {
+                        animation: $slow-animation-time / 2 shadow-fade-in
+                            ease-in;
+                        box-shadow: $media-shadow;
+                        cursor: pointer;
+
+                        img {
+                            height: auto;
+                            width: 250px;
+                            animation: $slow-animation-time / 2 fade-in ease-in;
+
+                            @media (min-width: $sm-screen-min) {
+                                width: 300px;
+                            }
+
+                            @media (min-width: $md-screen-min) {
+                                height: $media-height;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-hr {
+            width: 50px;
+            margin: 40px auto;
+        }
+
+        .project-description-container {
+            width: 100%;
+            padding: 10px $mobile-side-padding;
+            display: grid;
+            justify-content: center;
+
+            @media (min-width: $md-screen-min) {
+                padding: 20px $tablet-side-padding;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                padding: 20px $desktop-side-padding;
+            }
+
+            .project-description {
+                max-width: 750px;
+                font-size: 16px;
+                margin-bottom: 0;
+                white-space: pre-line;
+            }
+        }
+
+        .project-inner-header {
+            text-align: center;
+            margin: 20px 0 30px;
+        }
+
+        .project-links {
+            display: grid;
+            grid-auto-flow: column;
+            max-width: 250px;
+            grid-template-columns: repeat(auto-fit, min-content);
+            grid-gap: 30px;
+            justify-content: center;
+            justify-self: center;
+            margin-bottom: 20px;
+
+            @media (min-width: $md-screen-min) {
+                max-width: 600px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                max-width: 800px;
+            }
+
+            .project-link {
+                justify-self: center;
+
+                .project-link-button {
+                    min-width: 200px;
+                    padding: 10px;
+                    background-color: $brand1-dark;
+                    color: white;
+                    font-family: $accent-fonts;
+                    border: none;
+                    height: 50px;
+                    border-radius: 50px;
+                    font-size: 14px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    white-space: nowrap;
+
+                    &:hover {
+                        background-color: $brand2-dark;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .project-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 75px);
+            grid-gap: 30px 60px;
+            justify-self: center;
+            justify-content: center;
+            max-width: 250px;
+
+            @media (min-width: $md-screen-min) {
+                max-width: 600px;
+                grid-gap: 40px;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                max-width: 800px;
+            }
+
+            .project-tool {
+                display: grid;
+                justify-content: center;
+                transition: margin ease $animation-time;
+
+                $hover-offset: 8px;
+
+                &:hover {
+                    margin-top: -$hover-offset;
+                    margin-bottom: $hover-offset;
+                }
+
+                .tool-bubble {
+                    background-color: $brand-accent;
+                    border-radius: 50%;
+                    height: 75px;
+                    width: 75px;
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+
+                    .tool-icon {
+                        height: 50px;
+                        width: 50px;
+                        fill: $brand-accent-dark;
+                    }
+                }
+
+                .tool-label {
+                    margin-top: 10px;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

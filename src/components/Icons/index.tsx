@@ -8,6 +8,8 @@ export enum IconsEnum {
     communication = 'communication',
     css = 'css',
     git = 'git',
+    godot = 'godot',
+    html = 'html',
     java = 'java',
     javascript = 'javascript',
     leadership = 'leadership',
@@ -23,6 +25,7 @@ export enum IconsEnum {
 import Communication from './IconFiles/communication';
 import CSS from './IconFiles/css';
 import Git from './IconFiles/git';
+import Godot from './IconFiles/godot';
 import HTML from './IconFiles/html';
 import Java from './IconFiles/java';
 import JavaScript from './IconFiles/javascript';
@@ -40,6 +43,7 @@ export {
     Communication,
     CSS,
     Git,
+    Godot,
     HTML,
     Java,
     JavaScript,

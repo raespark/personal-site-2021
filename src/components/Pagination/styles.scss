@@ -1,0 +1,91 @@
+@import 'src/global.scss';
+
+.pagination {
+    position: relative;
+
+    .pagination-arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        font-size: 30px;
+        align-content: center;
+        display: grid;
+        z-index: 1;
+        user-select: none;
+
+        @media (min-width: $md-screen-min) {
+            font-size: 40px;
+        }
+
+        &.left-arrow {
+            left: -25px;
+
+            @media (min-width: $md-screen-min) {
+                left: -35px;
+            }
+        }
+
+        &.right-arrow {
+            right: -25px;
+
+            @media (min-width: $md-screen-min) {
+                right: -35px;
+            }
+        }
+    }
+
+    $nav-height: 35px;
+    $nav-margin-top: 10px;
+
+    .pagination-nav {
+        margin-top: $nav-margin-top;
+        height: $nav-margin-top;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: min-content;
+        justify-content: center;
+        align-items: center;
+
+        .pagination-nav-element {
+            padding: 0 10px;
+            width: min-content;
+            cursor: pointer;
+            font-size: 35px;
+            font-weight: 800;
+            color: $brand1-light;
+
+            &.current-page {
+                color: $brand1-dark;
+            }
+
+            &:hover {
+                color: $brand1-dark;
+            }
+
+            &.numbered {
+                padding: 5px 15px;
+                font-size: 18px;
+                font-weight: 600;
+                border-radius: 3px;
+
+                &.current-page {
+                    background-color: $brand1-dark;
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: $brand1-light;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .pagination-nav-spacer {
+        @media (min-width: $lg-screen-min) {
+            height: $nav-height;
+            margin-top: $nav-margin-top;
+        }
+    }
+}
