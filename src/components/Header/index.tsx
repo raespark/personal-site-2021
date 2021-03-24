@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({
                         About
                     </Link>
                     <Link
-                        to="/projects"
+                        to="/projects/"
                         className={classnames('nav-link', 'text-center', {
                             selected: selected === NavSelected.projects,
                         })}

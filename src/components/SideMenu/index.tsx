@@ -67,7 +67,7 @@ const SideMenu: React.FC<MenuProps> = ({
                             </button>
                         </Link>
                         <Link
-                            to="/projects"
+                            to="/projects/"
                             onClick={() => {
                                 if (currentPage === NavSelected.projects) {
                                     onHide();
