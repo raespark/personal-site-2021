@@ -69,16 +69,12 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
     const scrollToTopOfProjects = () => {
         setTimeout(() => {
             if (isMobile) {
-                const filtersElement = document.getElementById(
-                    'projects-filters'
-                );
+                const filtersElement = document.getElementById('projects');
                 const pageLocation =
                     filtersElement.getBoundingClientRect().top +
-                    window.pageYOffset -
-                    80;
+                    window.pageYOffset;
                 window.scrollTo({
                     top: pageLocation,
-                    behavior: 'smooth',
                 });
             }
         }, 100);
@@ -118,10 +114,10 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         active: selected === index,
                     })}
                     onClick={() => {
+                        scrollToTopOfProjects();
                         savePage(0);
                         setStartingPage(0);
                         filterProjectsList(index);
-                        scrollToTopOfProjects();
                     }}
                 >
                     {filterList[index].label}
@@ -148,7 +144,10 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                 <Pagination
                     pageSize={6}
                     className="projects-list"
-                    onPage={savePage}
+                    onPage={(pageNumber) => {
+                        scrollToTopOfProjects();
+                        savePage(pageNumber);
+                    }}
                     startingPage={startingPage}
                 >
                     {projectsList.map((project) => (
@@ -159,10 +158,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         />
                     ))}
                 </Pagination>
-                <div
-                    className="projects-filters mobile-filters"
-                    id="projects-filters"
-                >
+                <div className="projects-filters mobile-filters">
                     {renderFilters()}
                 </div>
             </div>
