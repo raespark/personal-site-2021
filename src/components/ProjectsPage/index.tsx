@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import classnames from 'classnames';
 import { isMobile } from 'react-device-detect';
@@ -40,9 +40,31 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
     const [projectsList, setProjectsList] = useState(projects);
     const [selected, setSelected] = useState(0);
 
-    const filterProjectsList = (field: string, value: any): void => {
-        setProjectsList(projects.filter((project) => project[field] === value));
-    };
+    const [startingPage, setStartingPage] = useState(0);
+
+    const currentPageKey = 'projects-page-index';
+    const currentFilterKey = 'projects-filter-index';
+
+    const filterList = [
+        { label: 'All' },
+        { label: 'Professional', filterKey: 'professional', filterValue: true },
+        { label: 'Personal', filterKey: 'professional', filterValue: false },
+    ];
+
+    useEffect(() => {
+        if (!!window.sessionStorage.getItem(currentFilterKey)) {
+            const filterIndex = parseInt(
+                window.sessionStorage.getItem(currentFilterKey)
+            );
+            setSelected(filterIndex);
+            filterProjectsList(filterIndex);
+        }
+        if (!!window.sessionStorage.getItem(currentPageKey)) {
+            setStartingPage(
+                parseInt(window.sessionStorage.getItem(currentPageKey))
+            );
+        }
+    }, []);
 
     const scrollToTopOfProjects = () => {
         setTimeout(() => {
@@ -62,51 +84,73 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
         }, 100);
     };
 
+    const savePage = (pageNumber: number) => {
+        if (!!window) {
+            window.sessionStorage.setItem(currentPageKey, `${pageNumber}`);
+        }
+    };
+
+    const saveFilter = (filterIndex: number) => {
+        if (!!window) {
+            window.sessionStorage.setItem(currentFilterKey, `${filterIndex}`);
+        }
+    };
+
+    const filterProjectsList = (filterIndex: number): void => {
+        saveFilter(filterIndex);
+        setSelected(filterIndex);
+        let filteredProjects = projects;
+        if (!!filterList[filterIndex].filterKey) {
+            const filterKey = filterList[filterIndex].filterKey;
+            const filterValue = filterList[filterIndex].filterValue;
+            filteredProjects = projects.filter(
+                (project) => project[filterKey] === filterValue
+            );
+        }
+        setProjectsList(filteredProjects);
+    };
+
+    const renderFilters = () => {
+        return filterList.map((filter, index) => {
+            let filterComponent = (
+                <div
+                    className={classnames('projects-filter', {
+                        active: selected === index,
+                    })}
+                    onClick={() => {
+                        savePage(0);
+                        setStartingPage(0);
+                        filterProjectsList(index);
+                        scrollToTopOfProjects();
+                    }}
+                >
+                    {filterList[index].label}
+                </div>
+            );
+            if (index < filterList.length - 1) {
+                return (
+                    <>
+                        {filterComponent}
+                        <div className="projects-filter-divider">|</div>
+                    </>
+                );
+            } else {
+                return filterComponent;
+            }
+        });
+    };
+
     return (
         <div className="projects-page">
             <Hero />
-            <div className="projects-page-contents">
-                <div className="projects-filters" id="projects-filters">
-                    <div
-                        className={classnames('projects-filter', {
-                            active: selected === 0,
-                        })}
-                        onClick={() => {
-                            setSelected(0);
-                            setProjectsList(projects);
-                            scrollToTopOfProjects();
-                        }}
-                    >
-                        All
-                    </div>
-                    <div className="projects-filter-divider">|</div>
-                    <div
-                        className={classnames('projects-filter', {
-                            active: selected === 1,
-                        })}
-                        onClick={() => {
-                            setSelected(1);
-                            filterProjectsList('professional', true);
-                            scrollToTopOfProjects();
-                        }}
-                    >
-                        Professional
-                    </div>
-                    <div className="projects-filter-divider">|</div>
-                    <div
-                        className={classnames('projects-filter', {
-                            active: selected === 2,
-                        })}
-                        onClick={() => {
-                            setSelected(2);
-                            filterProjectsList('professional', false);
-                            scrollToTopOfProjects();
-                        }}
-                    >
-                        Personal
-                    </div>
-                </div>
-                <Pagination pageSize={6} className="projects-list">
+            <div className="projects-page-contents" id="projects">
+                <div className="projects-filters">{renderFilters()}</div>
+                <Pagination
+                    pageSize={6}
+                    className="projects-list"
+                    onPage={savePage}
+                    startingPage={startingPage}
+                >
                     {projectsList.map((project) => (
                         <ProjectCard
                             key={project.id}
@@ -115,45 +159,11 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
                         />
                     ))}
                 </Pagination>
-                <div className="projects-filters mobile-filters">
-                    <div
-                        className={classnames('projects-filter', {
-                            active: selected === 0,
-                        })}
-                        onClick={() => {
-                            setSelected(0);
-                            setProjectsList(projects);
-                            scrollToTopOfProjects();
-                        }}
-                    >
-                        All
-                    </div>
-                    <div className="projects-filter-divider">|</div>
-                    <div
-                        className={classnames('projects-filter', {
-                            active: selected === 1,
-                        })}
-                        onClick={() => {
-                            setSelected(1);
-                            filterProjectsList('professional', true);
-                            scrollToTopOfProjects();
-                        }}
-                    >
-                        Professional
-                    </div>
-                    <div className="projects-filter-divider">|</div>
-                    <div
-                        className={classnames('projects-filter', {
-                            active: selected === 2,
-                        })}
-                        onClick={() => {
-                            setSelected(2);
-                            filterProjectsList('professional', false);
-                            scrollToTopOfProjects();
-                        }}
-                    >
-                        Personal
-                    </div>
+                <div
+                    className="projects-filters mobile-filters"
+                    id="projects-filters"
+                >
+                    {renderFilters()}
                 </div>
             </div>
         </div>

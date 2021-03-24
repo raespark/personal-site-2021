@@ -7,6 +7,7 @@ import './styles.scss';
 
 interface PaginationProps {
     pageSize: number;
+    onPage?: (pageNumber: number) => void;
     startingPage?: number;
     numbered?: boolean;
     arrows?: boolean;
@@ -17,6 +18,7 @@ interface PaginationProps {
 const Pagination: React.FC<PaginationProps> = ({
     pageSize,
     startingPage = 0,
+    onPage,
     numbered = false,
     arrows = false,
     nav = true,
@@ -57,6 +59,7 @@ const Pagination: React.FC<PaginationProps> = ({
     }, [children]);
 
     const changePage = (pageNumber: number) => {
+        onPage(pageNumber);
         setCurrentPage(pageNumber);
         const pageOffset = pageNumber * pageSize;
         setCurrentPageData(

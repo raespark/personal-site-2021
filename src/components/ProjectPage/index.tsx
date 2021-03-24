@@ -183,10 +183,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
         <div className="project-page">
             <div className="project-page-contents">
                 <div className="project-breadcrumb">
-                    <Link
-                        to="/projects/#projects-filters"
-                        className="breadcrumb-link"
-                    >
+                    <Link to="/projects/#projects" className="breadcrumb-link">
                         Projects
                     </Link>
                     <span className="breadcrumb-divider">{'>'}</span>
