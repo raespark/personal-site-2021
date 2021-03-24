@@ -59,7 +59,9 @@ const Pagination: React.FC<PaginationProps> = ({
     }, [children]);
 
     const changePage = (pageNumber: number) => {
-        onPage(pageNumber);
+        if (!!onPage) {
+            onPage(pageNumber);
+        }
         setCurrentPage(pageNumber);
         const pageOffset = pageNumber * pageSize;
         setCurrentPageData(

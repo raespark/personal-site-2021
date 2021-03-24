@@ -7,7 +7,6 @@
     .footer {
         font-size: 12px;
         font-family: $body-fonts;
-        text-align: center;
         background-color: $text-lighter;
         color: $text-dark;
         position: absolute;
@@ -15,15 +14,32 @@
         display: grid;
         white-space: nowrap;
         grid-gap: 5px;
-        grid-template-columns: min-content min-content;
+        grid-template-columns: 1fr 1fr;
         align-content: center;
-        justify-content: center;
         bottom: 0;
         left: 0;
         right: 0;
+        padding: 0 $mobile-side-padding;
 
-        a {
+        @media (min-width: $md-screen-min) {
+            padding: 0 40px;
+        }
+
+        .left-footer {
+            justify-content: start;
+        }
+
+        .right-footer {
+            justify-content: end;
+            text-align: end;
+        }
+
+        .footer-link {
             color: #2ea9f5;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
