@@ -1,27 +1,4 @@
-export interface SVGProps {
-    width?: number;
-    height?: number;
-    className?: string;
-}
-
-export enum IconsEnum {
-    communication = 'communication',
-    css = 'css',
-    git = 'git',
-    godot = 'godot',
-    html = 'html',
-    java = 'java',
-    javascript = 'javascript',
-    leadership = 'leadership',
-    mentorship = 'mentorship',
-    mocha = 'mocha',
-    node = 'node',
-    python = 'python',
-    react = 'react',
-    redux = 'redux',
-    typescript = 'typescript',
-}
-
+import Collaboration from './IconFiles/collaboration';
 import Communication from './IconFiles/communication';
 import CSS from './IconFiles/css';
 import Git from './IconFiles/git';
@@ -39,7 +16,33 @@ import ReactIcon from './IconFiles/react';
 import Redux from './IconFiles/redux';
 import TypeScript from './IconFiles/typescript';
 
+export interface SVGProps {
+    width?: number;
+    height?: number;
+    className?: string;
+}
+
+export enum IconsEnum {
+    collaboration = 'collaboration',
+    communication = 'communication',
+    css = 'css',
+    git = 'git',
+    godot = 'godot',
+    html = 'html',
+    java = 'java',
+    javascript = 'javascript',
+    leadership = 'leadership',
+    mentorship = 'mentorship',
+    mocha = 'mocha',
+    node = 'node',
+    python = 'python',
+    react = 'react',
+    redux = 'redux',
+    typescript = 'typescript',
+}
+
 export {
+    Collaboration,
     Communication,
     CSS,
     Git,

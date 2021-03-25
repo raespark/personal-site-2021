@@ -17,6 +17,7 @@ import {
     ReactIcon,
     Redux,
     TypeScript,
+    Collaboration,
 } from '../../Icons';
 
 import './styles.scss';
@@ -97,6 +98,10 @@ const skillList: SkillCategory[] = [
             {
                 name: 'Communication',
                 icon: Communication,
+            },
+            {
+                name: 'Collaboration',
+                icon: Collaboration,
             },
             {
                 name: 'Mentorship',

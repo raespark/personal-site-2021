@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }: ProjectCardProps) => {
     const image = getImage(project.previewImage);
     return (
-        <Link to={project.url} className={`project-card ${className}`}>
+        <Link to={`${project.url}/`} className={`project-card ${className}`}>
             <div className="project-card-background">
                 <div className="project-preview-image-container">
                     <GatsbyImage
