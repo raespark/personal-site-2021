@@ -36,16 +36,16 @@ const About: React.FC = () => {
                             the University of Texas
                         </span>{' '}
                         with a BS in Computer Science in 2017. Since then, I
-                        have gained experience building a product from
-                        pre-launch to launch phases, and working within teams
-                        and ecosystems big and small.{' '}
+                        have gained experience building products from pre-launch
+                        to launch phases, and working within teams and
+                        ecosystems big and small.{' '}
                         <span className="emphasis">
                             I have a huge passion for building unique and
                             pleasant user experiences.
                         </span>{' '}
-                        I'm UX and UI obsessed and also dabble in designing UI's
+                        I'm UX and UI obsessed and have also designed some UI's
                         myself. I'm a strong advocate for the user and work to
-                        ensure my code is clean, readable and will result in a
+                        ensure code is clean, readable and will result in a
                         fantastic user experience. In my free time, I also do
                         game development and content creation, creating art to
                         share with the world.

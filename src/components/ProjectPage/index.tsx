@@ -74,6 +74,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                         autoPlay
                         loop
                         muted
+                        playsInline
+                        poster={`/${project.previewImage}`}
                     />
                 );
             case MediaType.YouTube:
@@ -146,6 +148,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
                                                     index + 1
                                                 }`}
                                                 title={imageData.caption}
+                                                loading={'eager'}
                                                 className="image-gallery-image"
                                             />
                                         </div>

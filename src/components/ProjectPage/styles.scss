@@ -338,14 +338,15 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
 
         .project-links {
             display: grid;
-            max-width: 250px;
-            grid-template-columns: repeat(auto-fit, 200px);
+            max-width: 80%;
+            grid-template-columns: 1fr;
             grid-gap: 30px;
             justify-content: center;
             justify-self: center;
             margin-bottom: 20px;
 
             @media (min-width: $md-screen-min) {
+                grid-template-columns: repeat(auto-fit, 250px);
                 max-width: 600px;
             }
 
@@ -357,7 +358,7 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
                 justify-self: center;
 
                 .project-link-button {
-                    width: 200px;
+                    width: 250px;
                     padding: 10px;
                     background-color: $brand1-dark;
                     color: white;
@@ -382,14 +383,15 @@ $media-shadow: -15px 0 15px -15px rgba($text-dark, 0.3),
         .project-tools {
             display: grid;
             grid-template-columns: repeat(auto-fit, 75px);
-            grid-gap: 30px 60px;
+            grid-column-gap: 60px;
+            grid-row-gap: 40px;
             justify-self: center;
             justify-content: center;
             max-width: 250px;
 
             @media (min-width: $md-screen-min) {
                 max-width: 600px;
-                grid-gap: 40px;
+                grid-column-gap: 80px;
             }
 
             @media (min-width: $lg-screen-min) {

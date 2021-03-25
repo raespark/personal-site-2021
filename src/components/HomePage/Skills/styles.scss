@@ -45,7 +45,7 @@
             @media (min-width: $lg-screen-min) {
                 max-width: 800px;
                 grid-row-gap: 80px;
-                grid-column-gap: 120px;
+                grid-column-gap: 90px;
             }
 
             .skill {
@@ -83,6 +83,7 @@
                     text-align: center;
                     margin-top: 10px;
                     cursor: default;
+                    font-weight: 300;
                 }
             }
         }

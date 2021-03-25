@@ -50,8 +50,33 @@
             {"text": "Feature announcement", "url": "https://twitter.com/join_nexus/status/1364687832757985284?s=20"}
         ]
     },
+
     {
         "id": 3,
+        "title": "Onboarding checklist",
+        "url": "onboarding-checklist",
+        "builtFor": "Nexus",
+        "type": "Web Dev",
+        "professional": true,
+        "mediaType": "image-gallery",
+        "imageGalleryMedia": [
+            {"caption": "Upon initial nexus store creation the creator is directed to their dashboard, where the checklist is automatically opened for them to see. If on mobile this isn't the case, and instead a pulsing animation plays to draw the user's eye." , "image": "project-media/launch-checklist-1.png"}, 
+            {"caption": "The checklist items have tooltips to describe what to do, and link to the page where the action can be completed" , "image": "project-media/launch-checklist-2.png"}, 
+            {"caption": "The checklist items fill out as the user completes them quickly and responsively. The checklist also stays open between page loads until required steps are completed so they know what they need to complete.","image": "project-media/launch-checklist-3.png"}, 
+            {"caption": "Once all the required fields have been met, the launch button appears.", "image": "project-media/launch-checklist-4.png"}
+        ],
+        "previewImage":"project-media/launch-checklist-preview.png",
+        "year": 2021,
+        "description": "Working alongside product, we wanted to help creators be as successful as possible when launching their stores. We discussed and iterated on what actions were biggest factors in a successful store, and which ones were most important and should be required. We went back on forth on the best behavior and layout for the checklist, whether it should propagate between pages, be opened automatically on page load and so on. We landed on having it being on ever page in the dashboard and be integrated into the save bar to have it be in a consistent and fixed position across pages. The list is also automatically opened on desktop to ensure the creator sees what they need to do whenever they navigate to a page, at least until they've completed the initial required steps. On mobile a pulsing animation plays to draw attention to the button without covering all the page contents on page load, once the list has been opened once the pulsing animation stops to as not distract and annoy the user.\n\nThere was a big emphasis on collaboration for this project and my input directly lead to the decisions we reached as well as greatly improved the overall user experience to decrease the likely-hood of creators bouncing on the product before completing onboarding. The list carrying between pages, the mobile behavior, and the splitting out of the required, tooltip descriptions, and optional actions being split into a different category were all the end results of my suggestions and feedback. I also worked closely with the backend developer to best implement the data model for what items were completed and how to represent that data.",
+        "createdWith": [
+            {"label": "React", "icon": "react"},
+            {"label": "TypeScript", "icon": "typescript"},
+            {"label": "CSS", "icon": "css"},
+            {"label": "Node", "icon": "node"}
+        ]
+    },
+    {
+        "id": 4,
         "title": "Bake Care",
         "url": "bake-care",
         "builtFor": "Personal",
@@ -71,7 +96,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Smooth drag-n-drop",
         "url": "drag-n-drop",
         "builtFor": "Nexus",
@@ -91,7 +116,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Word search web app",
         "url": "simple-word-search",
         "builtFor": "Personal",
@@ -113,7 +138,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "My Game Collection",
         "url": "my-game-collection",
         "builtFor": "Personal",
@@ -138,7 +163,7 @@
         ]
     },
     {
-        "id": 7,
+        "id": 8,
         "title": "Someone is typing...",
         "url": "someone-is-typing",
         "builtFor": "Personal",
@@ -158,7 +183,7 @@
         ]
     },
     { 
-        "id": 8,
+        "id": 9,
         "title": "Responsive profile page",
         "url": "vrbo-profile-page",
         "builtFor": "Vrbo/ Expedia",
@@ -178,7 +203,7 @@
         ]
     },
     {
-        "id": 9,
+        "id": 10,
         "title": "Grow",
         "url": "grow",
         "builtFor": "Personal",
@@ -199,7 +224,7 @@
         ]
     },
     {
-        "id": 10,
+        "id": 11,
         "title": "Tilted",
         "url": "tilted",
         "builtFor": "Personal",

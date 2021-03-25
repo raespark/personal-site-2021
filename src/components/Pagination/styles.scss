@@ -6,13 +6,14 @@
     .pagination-arrow {
         cursor: pointer;
         position: absolute;
-        top: 0;
-        bottom: 0;
+        top: 50px;
+        bottom: 50px;
         font-size: 30px;
         align-content: center;
         display: grid;
         z-index: 1;
         user-select: none;
+        padding: 10px;
 
         @media (min-width: $md-screen-min) {
             font-size: 40px;
@@ -23,6 +24,10 @@
 
             @media (min-width: $md-screen-min) {
                 left: -35px;
+
+                &:hover {
+                    left: -38px;
+                }
             }
         }
 
@@ -31,6 +36,10 @@
 
             @media (min-width: $md-screen-min) {
                 right: -35px;
+
+                &:hover {
+                    right: -38px;
+                }
             }
         }
     }

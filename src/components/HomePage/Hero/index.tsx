@@ -34,6 +34,7 @@ const Hero: React.FC = () => {
                         layout="constrained"
                         width={250}
                         quality={75}
+                        loading={'eager'}
                         formats={['auto', 'webp', 'avif']}
                     />
                 </div>

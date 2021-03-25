@@ -33,6 +33,7 @@ const Hero: React.FC = () => {
                         width={250}
                         quality={75}
                         formats={['auto', 'webp', 'avif']}
+                        loading={'eager'}
                     />
                 </div>
             </div>
