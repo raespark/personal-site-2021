@@ -13,20 +13,19 @@
         display: grid;
         z-index: 1;
         user-select: none;
-        padding: 10px;
 
         @media (min-width: $md-screen-min) {
             font-size: 40px;
+            padding: 10px;
         }
 
         &.left-arrow {
             left: -25px;
 
             @media (min-width: $md-screen-min) {
-                left: -35px;
-
+                left: 0;
                 &:hover {
-                    left: -38px;
+                    left: -3px;
                 }
             }
         }
@@ -35,10 +34,9 @@
             right: -25px;
 
             @media (min-width: $md-screen-min) {
-                right: -35px;
-
+                right: 0;
                 &:hover {
-                    right: -38px;
+                    right: -3px;
                 }
             }
         }
