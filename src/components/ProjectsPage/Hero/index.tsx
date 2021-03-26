@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
                         placeholder="tracedSVG"
                         layout="constrained"
                         width={250}
-                        quality={75}
+                        quality={90}
                         formats={['auto', 'webp', 'avif']}
                         loading={'eager'}
                     />
