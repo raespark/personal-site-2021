@@ -32,10 +32,10 @@ const Hero: React.FC = () => {
                         alt="A stylized drawing of me, Rachael Metcalf, at a computer"
                         placeholder="tracedSVG"
                         layout="constrained"
-                        width={250}
+                        max-width={300}
                         quality={90}
                         loading={'eager'}
-                        formats={['auto', 'webp', 'avif']}
+                        formats={['auto', 'webp']}
                     />
                 </div>
             </div>
