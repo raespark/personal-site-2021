@@ -53,7 +53,7 @@ export const query = graphql`
                                 height: 400
                                 placeholder: BLURRED
                                 formats: [AUTO, WEBP]
-                                quality: 40
+                                quality: 80
                             )
                         }
                     }
