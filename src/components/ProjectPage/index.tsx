@@ -69,14 +69,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
             case MediaType.Video:
                 return (
                     <video
-                        src={project.media as string}
                         className="project-video"
                         autoPlay
                         loop
                         muted
                         playsInline
                         poster={`/${project.previewImage}`}
-                    />
+                    >
+                        <source
+                            src={project.media as string}
+                            type="video/mp4"
+                        />
+                    </video>
                 );
             case MediaType.YouTube:
                 return (

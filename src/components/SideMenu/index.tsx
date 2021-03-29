@@ -34,11 +34,12 @@ const SideMenu: React.FC<MenuProps> = ({
                 <div className="menu-content">
                     <div className="menu-image-container">
                         <StaticImage
+                            width={150}
                             className="menu-image"
                             src="me-waving.png"
                             alt="A stylized drawing of me waving"
                             placeholder="tracedSVG"
-                            quality={95}
+                            quality={75}
                             formats={['auto', 'webp', 'avif']}
                         />
                     </div>
