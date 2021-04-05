@@ -32,7 +32,7 @@ const About: React.FC = () => {
                     <p className="about-paragraph">
                         I've been a professional software engineer for about
                         four years since graduating from the{' '}
-                        <span className="emphasis">University of Texas</span>
+                        <span className="emphasis">University of Texas</span>{' '}
                         with a BS in Computer Science in 2017. Since then, I
                         have gained experience building products from pre-launch
                         to launch phases and working within teams and ecosystems
