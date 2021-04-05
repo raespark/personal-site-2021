@@ -18,20 +18,20 @@ const WorkHistory: React.FC = () => {
                         </div>
                         <div className="job-years emphasis">2020-2021</div>
                         <p className="job-information">
-                            Nexus is a startup that provides content creators a
-                            platform to design and build their own game stores,
-                            giving them a portion of the revenue from each
-                            purchase they help to drive. Working in React and
-                            Typescript{' '}
+                            Nexus is a startup that provides content creators
+                            with a platform to design and build their own game
+                            stores, giving them a portion of the revenue from
+                            each purchase they help drive. Working in React and
+                            Typescript,{' '}
                             <span className="emphasis">
-                                I took it from prototype to launch and beyond,
-                            </span>{' '}
-                            continuing to support the product with frequent
-                            updates including bug fixes and new features. I
-                            worked closely with product and design to quickly
-                            deliver and craft the best experience for our
-                            creators, wearing multiple hats when necessary to
-                            reach our goals. I worked on both creator-facing and
+                                I took it from prototype to launch and beyond
+                            </span>
+                            , supporting the product with frequent updates,
+                            including bug fixes and new features. I worked
+                            closely with product and design to quickly deliver
+                            and craft the best experience for our creators,
+                            wearing multiple hats when necessary to reach our
+                            goals. I worked on both creator-facing and
                             customer-facing features, working in both the
                             front-end and back-end portions of the codebase. We
                             got up to an average monthly user base of 64k and an
@@ -48,7 +48,7 @@ const WorkHistory: React.FC = () => {
                         <div className="job-years emphasis">2017-2019</div>
                         <p className="job-information">
                             After two successful summer internships in 2015 and
-                            2016, I was hired on full-time to work on internal
+                            2016, Vrbo hired me full-time to work on internal
                             tools and applications.{' '}
                             <span className="emphasis">
                                 I designed and developed applications from
@@ -59,17 +59,18 @@ const WorkHistory: React.FC = () => {
                             MongoDB, and new internal application frameworks. I
                             worked to find issues and document and create
                             tutorials for their use within our tech stack. I
-                            then moved to working on the Profile team building
-                            out new features and pages for users to manage their
+                            then moved to work on the Profile team to build out
+                            new features and pages for users to manage their
                             data,{' '}
                             <span className="emphasis">
-                                taking epics and breaking them down into
-                                detailed workable tickets.
+                                take epics, and break them down into detailed,
+                                workable tickets.
                             </span>{' '}
                             Alongside that, I revived an internal training
-                            organization for junior developers. I organized and
-                            gave talks, taught, mentored in tooling, frameworks,
-                            career advice, etc.
+                            organization for junior developers. I organized
+                            presentations, managed volunteers, gave talks, and
+                            mentored members in tooling, frameworks, career
+                            advice, etc.
                         </p>
                     </div>
                 </div>
